@@ -1,0 +1,20 @@
+{
+	"name": "salesplug-adjust",
+	"version": "1.0.0",
+	"description": "retail management application",
+	"main": "server.js",
+	"scripts": {
+		"server": "nodemon server.js"
+	},
+	"keywords": [
+		"retail",
+		"sales",
+		"warehousing"
+	],
+	"author": "Ekene Idiagbor",
+	"license": "MIT",
+	"dependencies": {
+		"concurrently": "^5.2.0",
+		"express": "^4.17.1"
+	}
+}

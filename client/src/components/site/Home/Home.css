@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+/*============== Home Component Styling ==================*/
+.banner-1 {
+	background-image: url('/webImages/banner.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.banner-1 .intro {
+	padding: 100px 0px 100px 225px;
+	overflow-x: hidden;
+}
+
+.pandemic {
+	text-align: start;
+	padding: 10px;
+}
+
+.pandemic h2 {
+	font-family: var(--ComicNueue);
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--fade-black);
+	text-align: center;
+}
+
+.banner-txt {
+	color: rgb(48, 46, 46);
+	font-family: var(--Amiri);
+	letter-spacing: 2px;
+}
+
+.start-btn {
+	font-family: var(--Amiri);
+	font-size: 26px;
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.banner-base {
+	padding-bottom: 30px;
+	text-align: end;
+}
+
+.banner-base h4 {
+	text-align: center;
+	font-family: var(--ComicNueue);
+	font-weight: bold;
+	color: var(--fade-black);
+}
+
+.section-2 h5 {
+	padding-top: 40px;
+	text-align: center;
+	font-family: var(--ComicNueue);
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.section-2 .d-flex {
+	padding-top: 100px;
+}
+
+.d-flex .card {
+	width: 20vw;
+}
+
+.card .fas {
+	color: var(--primary-color);
+	padding: 20px 20px;
+}
+
+.card p {
+	font-size: 4px;
+	font-weight: bold;
+}
+
+.card span {
+	margin-top: 30px;
+	font-family: var(--Abel);
+	font-weight: bold;
+}
+
+.section2-btn {
+	background-color: var(--primary-color);
+	color: white;
+	width: 50%;
+	margin-left: 27.5%;
+	margin-right: 25%;
+}
+
+.section-3 {
+	background-color: white;
+}
+
+.section-3 .mr-md-5 {
+	margin: 100px 0 100px 0;
+	width: 50%;
+}
+
+.section-3 h5 {
+	font-family: var(--ComicNueue);
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.counter-img {
+	width: 100%;
+	height: 370px;
+	position: relative;
+	opacity: 0.9;
+}
+
+.section-3 .flex-fill {
+	margin: 100px 0 100px 0;
+	width: 50%;
+}
+
+.section-3 p {
+	font-family: var(--Abel);
+	font-size: 18px;
+	margin: 30px 0 30px 0;
+	line-height: 2rem;
+}
+
+.section-3 li {
+	font-family: var(--Abel);
+	list-style: disc;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 2.5rem;
+}
+
+.trial {
+	background-color: whitesmoke;
+	float: left;
+	width: 100%;
+	z-index: 1;
+}
+
+.trial h5 {
+	font-size: 38px;
+	letter-spacing: 2px;
+	line-height: 1.5rem;
+	padding: 100px 0;
+}
+/*=================== End of Home Component Styling ============*/
+
+/* ===========  Media Queries ===========*/
+
+/*========== Medium Sized Screens =================*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	/*Home Component Stying*/
+	.banner-1 .intro {
+		padding: 100px 0px 100px 100px;
+		overflow-x: hidden;
+	}
+
+	.d-flex .card {
+		width: 100%;
+		margin-right: 25px;
+	}
+
+	.section-3 .mr-md-5 {
+		width: 50%;
+	}
+
+	.section-3 .flex-fill {
+		width: 50%;
+	}
+
+	.section-3 p {
+		line-height: 1.8rem;
+	}
+
+	.section-3 li {
+		line-height: 1.7rem;
+	}
+
+	.counter-img {
+		height: 450px;
+	}
+
+	.trial h5 {
+		font-size: 30px;
+		text-align: center;
+		line-height: 2.5rem;
+	}
+}
+
+/*======================= Small Sized Screens =================*/
+@media (min-width: 100px) and (max-width: 767px) {
+	/*Home Component Stying*/
+
+	.banner-1 {
+		background-attachment: scroll;
+	}
+	.banner-1 .intro {
+		padding: 40px 0px 100px 50px;
+		overflow-x: hidden;
+	}
+
+	.start-btn {
+		font-size: 16px;
+	}
+
+	.banner-txt {
+		font-size: 20px;
+		font-weight: bolder;
+	}
+
+	.banner-base h4 {
+		font-size: 18px;
+	}
+
+	.pandemic h2 {
+		font-size: 14px;
+	}
+
+	.d-flex .card {
+		width: 100%;
+	}
+
+	.section-3 .mr-md-5 {
+		margin: 5px 0;
+	}
+
+	.counter-img {
+		width: 100%;
+		padding: 30px 0;
+	}
+
+	.section-3 p {
+		text-align: justify;
+	}
+
+	.section-3 li {
+		text-align: justify;
+		font-size: 16px;
+	}
+
+	.section-3 .mr-md-5 {
+		width: 100%;
+	}
+
+	.section-3 .flex-fill {
+		margin: 0 0;
+		width: 100%;
+		padding: 30px 0;
+	}
+
+	.trial h5 {
+		font-size: 26px;
+		text-align: center;
+		line-height: 2.5rem;
+	}
+}
+
+/*============= Ipad Pro and larger tablet devices ========*/
+@media (min-width: 1024px) and (max-width: 1250px) {
+	.trial h5 {
+		text-align: center;
+		line-height: 2.5rem;
+	}
+}

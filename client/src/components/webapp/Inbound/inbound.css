@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.wrapper {
+	float: left;
+	width: 100vw;
+}
+
+/* .pageContent {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+} */
+
+.productListWrap {
+	height: 55vh;
+}
+
+/* This class makes the element vertically scrollable */
+.scrollable-child {
+	overflow-y: auto;
+}
+
+.productListing {
+	width: 100%;
+}
+.productListing li {
+	list-style: none;
+}
+
+.productListing:hover {
+	background-color: whitesmoke;
+}
+
+.productListing a {
+	color: black;
+	font-family: var(--Abel);
+}
+
+.product .titleBar div {
+	padding: 10px 20px;
+}
+
+.titleBar p {
+	font-family: var(--Roboto);
+	color: var(--primary-color);
+	font-weight: bold;
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.nav {
+	border-bottom: 2px solid var(--primary-color);
+}
+
+.site-logo {
+	margin-top: 30px;
+	height: 100px;
+	width: 200px;
+}
+
+.row.nav {
+	background-color: white;
+	border-bottom: 5px solid var(--primary-color);
+}
+
+.col-7 {
+	top: 30px;
+	/*background-color: yellow;*/
+}
+
+.navbar-menu {
+	margin-top: 80px;
+	margin-bottom: 0;
+}
+.navbar-menu li {
+	display: inline;
+	padding: 10px 15px;
+}
+
+.navbar-menu li:hover {
+	border-top: 2px solid var(--primary-color);
+	background-color: whitesmoke;
+}
+
+.menu-item {
+	font-size: 17px;
+}
+
+.menu-item:hover {
+	text-decoration: none;
+}
+
+.nav-auth {
+	font-size: 14px;
+}
+.nav-auth:hover {
+	text-decoration: none;
+}
+
+.hamburger {
+	color: white;
+}
+
+.side-nav a {
+	display: none;
+}
+
+/* ==========Medium Screen Viewports ============= */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.col-7 {
+		visibility: hidden;
+	}
+
+	.nav-auth {
+		display: none;
+	}
+
+	.fa-user {
+		display: none;
+	}
+
+	.hamburger {
+		visibility: visible;
+		position: absolute;
+		left: 90%;
+		top: 20px;
+		font-size: 32px;
+		color: blue;
+	}
+
+	.side-nav {
+		background-color: whitesmoke;
+		width: 0;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 50%;
+		z-index: 1;
+		overflow-x: hidden;
+		padding-top: 60px;
+		opacity: 0.9;
+		transition: 1s linear, 1s ease-out;
+	}
+
+	.side-nav a {
+		display: block;
+		padding: 10px 5px 10px 30px;
+		font-size: 20px;
+	}
+
+	.btn-close {
+		position: relative;
+		left: 250px;
+		font-size: 54px;
+	}
+}
+
+/*============ Small Screen ViewPorts========= */
+@media (min-width: 100px) and (max-width: 767px) {
+	.wrapper-nav-menu {
+		display: none;
+	}
+
+	.nav-auth {
+		display: none;
+	}
+
+	.fa-user {
+		display: none;
+	}
+
+	.hamburger {
+		display: visible;
+		color: blue;
+	}
+
+	.site-logo {
+		margin-top: 0;
+		width: 100px;
+		height: 50px;
+	}
+
+	.hamburger {
+		position: absolute;
+		left: 90%;
+		top: 10px;
+	}
+
+	.side-nav {
+		background-color: whitesmoke;
+		width: 0;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 20%;
+		z-index: 1;
+		overflow-x: hidden;
+		padding-top: 60px;
+		opacity: 0.9;
+		transition: 1s linear, 1s ease-out;
+	}
+
+	.side-nav a {
+		display: block;
+		padding: 10px 5px 10px 30px;
+		font-size: 20px;
+	}
+
+	.btn-close {
+		position: relative;
+		left: 200px;
+	}
+}
+
+/*============= Ipad Pro and larger tablet devices ========*/
+@media (min-width: 1024px) and (max-width: 1250px) {
+	.nav-auth {
+		font-size: 14px;
+		display: block;
+	}
+}

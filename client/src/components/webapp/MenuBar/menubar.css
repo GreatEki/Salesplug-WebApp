@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+/* =================== Menu Nav =================== */
+.menuNav {
+	background-color: whitesmoke;
+	height: 100vh;
+	width: 100%;
+	padding: 30px 40px;
+}
+
+.menuList {
+	margin-top: 25%;
+
+	padding: 0 20px;
+}
+
+.menuItem {
+	margin: 20px 0;
+	font-family: var(--Roboto);
+	font-size: 18px;
+}
+
+.menuNav .hamburger {
+	color: var(--primary-color);
+}
+
+.menuNav a {
+	color: var(--fade-black);
+}
+
+.menuNav a:hover {
+	color: var(--primary-color);
+}
+
+/* ================== End of Menu Nav ============== */

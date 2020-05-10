@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* ===== Global Classes ===== */
+
+.h-center {
+	margin: 0 auto;
+}
+
+.Roboto {
+	font-family: var(--Roboto);
+}
+.Lato {
+	font-family: var(--Lato);
+}
+.Comic {
+	font-family: var(--ComicNueue);
+}
+.Abel {
+	font-family: var(--Abel);
+}
+.Amiri {
+	font-family: var(--Amiri);
+}
+
+.del {
+	text-decoration: line-through;
+	text-decoration-style: double;
+}
+
+/* ===== End of Global Classes ===== */

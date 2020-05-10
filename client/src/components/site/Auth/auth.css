@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.login-wrapper {
+	float: left;
+	width: 100vw;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.login-wrapper .row {
+	float: left;
+	width: 100%;
+}
+
+.side-right {
+	background-image: url('/webImages/salesplug-logo.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0;
+	margin: 0;
+}
+
+.side-right h5 {
+	color: white;
+}
+
+.side-left {
+	padding-top: 150px;
+	padding-bottom: 0.5px;
+	background-color: var(--primary-color);
+	opacity: 0.9;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	min-height: 100%;
+}
+
+.side-left img {
+	width: 200px;
+	height: 200px;
+	padding: 0 10px 30px 0;
+	margin: 0 auto;
+}
+
+.side-left .card {
+	width: 50%;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+form .label {
+	font-family: var(--Lato);
+	font-weight: bold;
+}
+
+.side-left p {
+	margin-top: 120px;
+}
+
+.siteBtn {
+	background-color: var(--primary-color) !important;
+	color: white;
+}
+
+/*========== Medium  Screen sized devices ================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.login-wrapper {
+		overflow: hidden;
+		background-color: var(--primary-color);
+	}
+	.side-left {
+		width: 100vw;
+	}
+	.side-left img {
+		margin: 0 auto;
+	}
+
+	.side-left .card {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		margin: 0 auto;
+	}
+
+	.side-right {
+		display: none;
+	}
+}
+
+/*============== End of Medium Screen Sized Devices ==================*/
+
+/*=============== Small Screen Sized Devices ==============*/
+@media (min-width: 100px) and (max-width: 767px) {
+	.side-right {
+		display: none;
+	}
+
+	.login-wrapper {
+		background-color: var(--primary-color);
+	}
+
+	.side-left {
+		width: 100vw;
+	}
+
+	.side-left .card {
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.side-left img {
+		margin: 0 22.5%;
+	}
+}
+
+/*================End of Small Screen Sized Devices ===================*/

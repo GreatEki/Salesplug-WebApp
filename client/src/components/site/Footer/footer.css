@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.footer-top {
+	float: left;
+	clear: none;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.footer-top .row {
+	margin: 50px 30px 0 35px;
+}
+
+.socials img {
+	height: 150px;
+}
+
+.social-link {
+	padding-top: 20px;
+}
+
+p.text-uppercase {
+	font-size: 24px;
+}
+
+small {
+	font-size: 16px;
+	font-family: var(--Roboto);
+}
+
+.footer-top a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.footer-bottom {
+	background-color: var(--primary-color);
+	float: left;
+	clear: none;
+	width: 100%;
+}
+
+.footer-bottom .text-justify {
+	color: white;
+	padding: 10px 0 0 0;
+}
+
+.footer-bottom .text-white {
+	padding-bottom: 10px;
+}
+
+.col-md-4 span {
+	text-transform: uppercase;
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.footer-top a {
+		font-size: 14px;
+	}
+
+	.col-md-4 span {
+		font-size: 16px;
+	}
+	.copyrights p {
+		font-size: 9px;
+	}
+}
+
+@media (min-width: 100px) and (max-width: 767px) {
+	.footer-top {
+		display: none;
+	}
+	.socials {
+		display: none;
+	}
+
+	.footer-links {
+		display: none;
+	}
+
+	.copyrights p {
+		font-size: 9px;
+	}
+}

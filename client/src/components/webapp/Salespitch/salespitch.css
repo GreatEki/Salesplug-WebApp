@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.content-wrapper {
+	margin: 0;
+}
+.wrapper {
+	float: left;
+	width: 100vw;
+}
+
+.topBar {
+	max-height: 10vh;
+	background-color: var(--primary-color);
+	padding: 20px 0;
+	color: white;
+	margin-left: 0 !important;
+	float: left;
+	width: 100vw;
+}
+
+h2.pageTitle {
+	color: var(--primary-color);
+}
+
+.productsDetails label {
+	font-family: var(--Abel);
+	font-size: 24px;
+}
+
+.clearBtn {
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+.addBtn {
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+.itemList {
+	margin: 0 auto;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.addQty div {
+	margin: 30px 0;
+}
+
+.addQty button {
+	background-color: var(--primary-color);
+	color: white;
+	font-family: var(--Abel);
+}
+
+.addQty label {
+	font-family: var(--Abel);
+}
