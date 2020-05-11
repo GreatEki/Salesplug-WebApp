@@ -9,6 +9,8 @@ import AddQty from './components/webapp/Inbound/AddQty';
 import ReportInbound from './components/webapp/Report/ReportInbound';
 import ReportSales from './components/webapp/Report/ReportSales';
 import StorageAdmin from './components/webapp/StorageAdmin/StorageAdmin';
+
+import NewProduct from './components/webapp/StorageAdmin/NewProduct';
 import StyleContextProvider from './contexts/StyleContext';
 
 function App() {
@@ -25,6 +27,11 @@ function App() {
 						<Route exact path='/report' component={ReportSales} />
 						<Route exact path='/report/inbound' component={ReportInbound} />
 						<Route exact path='/storage/admin' component={StorageAdmin} />
+						<Route
+							exact
+							path='/storage/admin/new-product'
+							component={NewProduct}
+						/>
 					</StyleContextProvider>
 				</Switch>
 			</BrowserRouter>

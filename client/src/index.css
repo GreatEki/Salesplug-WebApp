@@ -40,4 +40,8 @@ code {
 	text-decoration-style: double;
 }
 
+.bgPrimary {
+	background-color: var(--primary-color) !important;
+}
+
 /* ===== End of Global Classes ===== */
