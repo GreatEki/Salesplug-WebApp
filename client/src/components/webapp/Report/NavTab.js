@@ -18,7 +18,7 @@ const NavTab = () => {
 					</Link>
 				</li>
 				<li className='nav-item'>
-					<Link to='/storage/product/add' className='nav-link Abel'>
+					<Link to='/storage/admin/new-product' className='nav-link Abel'>
 						{' '}
 						Add New Product{' '}
 					</Link>

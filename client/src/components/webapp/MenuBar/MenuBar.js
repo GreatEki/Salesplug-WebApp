@@ -36,7 +36,7 @@ const MenuBar = () => {
 					</Link>
 				</li>
 				<li className='d-block menuItem'>
-					<Link to='/access-control'>
+					<Link to='/access'>
 						{' '}
 						<i className='fas fa-bars hamburger'></i> &nbsp; Access Control{' '}
 					</Link>

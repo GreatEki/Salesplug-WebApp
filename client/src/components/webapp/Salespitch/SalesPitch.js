@@ -9,7 +9,7 @@ const SalesPitch = () => {
 				<section className='col-md-2 p-0'>
 					<MenuBar />
 				</section>
-				<section className='col-md-10'>
+				<section className='col-md-10 pr-4'>
 					<div className='content-wrapper'>
 						<section className=' pageBody p-0'>
 							<h2 className='pageTitle p-4'> Sales Pitch </h2>

@@ -11,6 +11,7 @@ import ReportSales from './components/webapp/Report/ReportSales';
 import StorageAdmin from './components/webapp/StorageAdmin/StorageAdmin';
 
 import NewProduct from './components/webapp/StorageAdmin/NewProduct';
+import AccessControl from './components/webapp/AccessControl/AccessControl';
 import StyleContextProvider from './contexts/StyleContext';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 							path='/storage/admin/new-product'
 							component={NewProduct}
 						/>
+						<Route exact path='/access' component={AccessControl} />
 					</StyleContextProvider>
 				</Switch>
 			</BrowserRouter>

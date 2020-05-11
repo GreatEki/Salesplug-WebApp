@@ -13,10 +13,9 @@ const ReportSales = () => {
 
 				{/* ===== Main Content of Component ===== */}
 				<section className='col-md-10'>
-					<h2 className='pageTitle p-4'> Report Sales </h2>
+					<h2 className='pageTitle p-4'> Sales Report </h2>
 					<NavTab />
 
-					<small className='text-info my-4'> Click on item to inbound </small>
 					<hr />
 					<section className='row p-2 titleBar bg-light'>
 						<div className='col-2'>

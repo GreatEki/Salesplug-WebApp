@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.accessControl .titleBar p {
+	font-family: var(--Roboto);
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+.accessControl li {
+	list-style: none;
+}
+
+.accessControl .titleBar a {
+	color: black;
+	font-family: var(--Abel);
+}
+
+.accessControl .pageBottom {
+	margin-top: 50vh;
+}

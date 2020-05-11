@@ -16,7 +16,7 @@ const NewProduct = () => {
 					<h2 className='pageTitle p-4'> Sales Pitch </h2>
 					<NavTab />
 
-					<div className='card w-100 my-2 mx-auto bg-light'>
+					<div className='card w-100 my-2 mx-auto '>
 						<form className='h-center w-50 p-5 newProductForm'>
 							<h5 className='Abel text-center'> Register a New Product</h5>
 
@@ -99,7 +99,7 @@ const NewProduct = () => {
 							</div>
 
 							<div className='form-group w-50 h-center mt-3'>
-								<button className='btn btn-block btn-success rounded-0 Abel bgPrimary'>
+								<button className='btn btn-block text-white rounded-0 Abel bgPrimary'>
 									{' '}
 									Submit{' '}
 								</button>
