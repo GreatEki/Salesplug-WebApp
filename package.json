@@ -5,6 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"server": "nodemon server.js",
+		"json-server": "json-server --watch db.json --port 3004",
 		"client": "cd client && npm start",
 		"app": "concurrently \"npm run server\" \"npm run client\" "
 	},
