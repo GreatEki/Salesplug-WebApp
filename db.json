@@ -1,28 +1,41 @@
 {
-	"users": [
+	"staffs": [
 		{
 			"id": 1,
 			"firstname": "Jane",
 			"lastname": "Doe",
-			"unit": "Gadgets",
+			"dept": "Gadgets",
 			"role": "Teller"
 		},
 		{
 			"id": 2,
 			"firstname": "John",
 			"lastname": "Smith",
-			"unit": "Pharmacy",
+			"dept": "Pharmacy",
 			"role": "Teller"
 		},
 		{
 			"id": 3,
 			"firstname": "Ekene",
 			"lastname": "Idiagbor",
-			"unit": "Admin",
+			"dept": "Admin",
 			"role": "Admin"
+		},
+		{
+			"firstname": "Queen",
+			"lastname": "Okoye",
+			"dept": "Gadgets",
+			"role": "Teller",
+			"id": 4
+		},
+		{
+			"firstname": "Patience",
+			"lastname": "Edo",
+			"dept": "SuperMarket",
+			"role": "Teller",
+			"id": 5
 		}
 	],
-
 	"products": [
 		{
 			"productId": "100",

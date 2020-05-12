@@ -19,10 +19,16 @@ const AccessControl = () => {
 
 					<div className='my-3 d-flex flex-row'>
 						<div className='mr-5'>
-							<Link className='Comic'> Add New Staff </Link>
+							<Link to='/access/staff/add' className='Comic'>
+								{' '}
+								Add New Staff{' '}
+							</Link>
 						</div>
 						<div>
-							<Link className='Comic'> Add New Unit </Link>
+							<Link to='/' className='Comic'>
+								{' '}
+								Add New Unit{' '}
+							</Link>
 						</div>
 					</div>
 
@@ -38,7 +44,7 @@ const AccessControl = () => {
 							<p> Lastname</p>
 						</div>
 						<div className='col-2'>
-							<p> Unit</p>
+							<p> Department</p>
 						</div>
 						<div className='col-2'>
 							<p> Role</p>

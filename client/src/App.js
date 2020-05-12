@@ -12,29 +12,34 @@ import StorageAdmin from './components/webapp/StorageAdmin/StorageAdmin';
 
 import NewProduct from './components/webapp/StorageAdmin/NewProduct';
 import AccessControl from './components/webapp/AccessControl/AccessControl';
+import AddNewStaff from './components/webapp/AccessControl/AddNewStaff';
 import StyleContextProvider from './contexts/StyleContext';
+import AccessContextProvider from './contexts/AccessContext';
 
 function App() {
 	return (
 		<div className='App'>
 			<BrowserRouter>
 				<Switch>
-					<StyleContextProvider>
-						<Route exact path='/' component={Home} />
-						<Route path='/login' component={Auth} />
-						<Route path='/sales-pitch' component={Salespitch} />
-						<Route exact path='/inbound' component={Inbound} />
-						<Route exact path='/inbound/add-qty' component={AddQty} />
-						<Route exact path='/report' component={ReportSales} />
-						<Route exact path='/report/inbound' component={ReportInbound} />
-						<Route exact path='/storage/admin' component={StorageAdmin} />
-						<Route
-							exact
-							path='/storage/admin/new-product'
-							component={NewProduct}
-						/>
-						<Route exact path='/access' component={AccessControl} />
-					</StyleContextProvider>
+					<AccessContextProvider>
+						<StyleContextProvider>
+							<Route exact path='/' component={Home} />
+							<Route path='/login' component={Auth} />
+							<Route path='/sales-pitch' component={Salespitch} />
+							<Route exact path='/inbound' component={Inbound} />
+							<Route exact path='/inbound/add-qty' component={AddQty} />
+							<Route exact path='/report' component={ReportSales} />
+							<Route exact path='/report/inbound' component={ReportInbound} />
+							<Route exact path='/storage/admin' component={StorageAdmin} />
+							<Route
+								exact
+								path='/storage/admin/new-product'
+								component={NewProduct}
+							/>
+							<Route exact path='/access' component={AccessControl} />
+							<Route exact path='/access/staff/add' component={AddNewStaff} />
+						</StyleContextProvider>
+					</AccessContextProvider>
 				</Switch>
 			</BrowserRouter>
 		</div>
