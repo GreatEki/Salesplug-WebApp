@@ -10,19 +10,9 @@ const AccessContextProvider = (props) => {
 		role: '',
 	});
 
-	const [errMsg, setErrMsg] = useState({});
+	const [errMsg, setErrMsg] = useState([]);
 	const [allowSubmit, setAllowSubmit] = useState(false);
-
-	// useEffect(() => {
-	// 	let error = Object.values(errMsg);
-
-	// 	console.log(error);
-	// 	if (error.lenght > 0) {
-	// 		setAllowSubmit(false);
-	// 	} else {
-	// 		setAllowSubmit(true);
-	// 	}
-	// }, [errMsg]);
+	const [successMsg, setSuccessMsg] = useState('');
 
 	let ENDPOINT = 'http://localhost:3004';
 
@@ -35,25 +25,27 @@ const AccessContextProvider = (props) => {
 		// console.log(staff);
 	};
 
+	// This method is called on the OnClick() of the submit in the AddNewStaff Component
 	const handleAddStaffSubmit = (e, staff) => {
 		addNewStaff(e, staff);
 	};
 
+	// This method handles the validating form field in our AddNewStaff Component
 	function validation(staff) {
-		let err = { firstname: '', lastname: '', dept: '', role: '' };
+		let err = {};
 		const { firstname, lastname, dept, role } = staff;
 		if (!firstname) {
-			err.firstname = 'fistname cannot be empty';
+			err.firstname = 'firstname cannot be empty';
 		}
 		if (!lastname) {
 			err.lastname = 'lastname cannot be empty';
 		}
 
-		if (!dept) {
-			err.dept = 'dept cannot be blank';
+		if (!dept || dept == 'Select Dept') {
+			err.dept = 'department cannot be blank';
 		}
 
-		if (!role) {
+		if (!role || role == 'Select Role') {
 			err.role = 'role cannot be blank';
 		}
 
@@ -74,20 +66,17 @@ const AccessContextProvider = (props) => {
 
 			let errors = Object.values(valErr);
 
-			console.log(errors.length);
 			if (errors.length > 0) {
 				setAllowSubmit(false);
+				setErrMsg(errors);
+				console.log(errors);
+				return errMsg;
 			} else {
 				setAllowSubmit(true);
-			}
-
-			console.log(allowSubmit);
-			if (allowSubmit) {
+				setErrMsg({});
 				const res = await axios.post(`${ENDPOINT}/staffs`, staff, config);
-
-				console.log(res);
-			} else {
-				return errMsg;
+				setSuccessMsg('Staff saved successfully');
+				// console.log(res);
 			}
 		} catch (err) {
 			console.log(err.message);
@@ -96,7 +85,14 @@ const AccessContextProvider = (props) => {
 
 	return (
 		<AccessContext.Provider
-			value={{ handleInputStaff, handleAddStaffSubmit, staff, errMsg }}>
+			value={{
+				handleInputStaff,
+				handleAddStaffSubmit,
+				staff,
+				errMsg,
+				allowSubmit,
+				successMsg,
+			}}>
 			{props.children}
 		</AccessContext.Provider>
 	);

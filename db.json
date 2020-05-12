@@ -34,6 +34,13 @@
 			"dept": "SuperMarket",
 			"role": "Teller",
 			"id": 5
+		},
+		{
+			"firstname": "Grace",
+			"lastname": "Chris",
+			"dept": "Pharmacy",
+			"role": "Teller",
+			"id": 6
 		}
 	],
 	"products": [

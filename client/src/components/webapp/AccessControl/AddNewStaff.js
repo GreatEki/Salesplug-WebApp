@@ -4,9 +4,13 @@ import NavTab from '../Report/NavTab';
 import { AccessContext } from '../../../contexts/AccessContext';
 
 const AddNewStaff = () => {
-	const { handleInputStaff, staff, handleAddStaffSubmit, errMsg } = useContext(
-		AccessContext
-	);
+	const {
+		handleInputStaff,
+		staff,
+		handleAddStaffSubmit,
+		errMsg,
+		successMsg,
+	} = useContext(AccessContext);
 	return (
 		<div>
 			<div className='row'>
@@ -21,7 +25,18 @@ const AddNewStaff = () => {
 					<NavTab />
 
 					<div className='pageContent addQty'>
-						{errMsg.length > 0 ? <h5> {errMsg} </h5> : <h5> </h5>}
+						{errMsg.length > 0 ? (
+							errMsg.map((er) => {
+								return (
+									<p className='text-center text-danger' key={er.length}>
+										{' '}
+										{er}{' '}
+									</p>
+								);
+							})
+						) : (
+							<h5 className='text-success text-center p-5'>{successMsg}</h5>
+						)}
 						<form
 							onSubmit={(e) => handleAddStaffSubmit(e, staff)}
 							className='w-50 h-center p-4'>
