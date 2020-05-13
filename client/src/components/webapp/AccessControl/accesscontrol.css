@@ -25,6 +25,15 @@
 	font-family: var(--Abel);
 }
 
+.accessControl .productListing {
+	font-family: var(--Abel);
+	color: black;
+}
+
+.accessControl .productListing:hover {
+	background-color: whitesmoke;
+}
+
 .accessControl .pageBottom {
-	margin-top: 50vh;
+	margin-top: 10vh;
 }

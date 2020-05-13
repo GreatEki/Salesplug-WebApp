@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from '../Report/NavTab';
 import './accesscontrol.css';
+import { AccessContext } from '../../../contexts/AccessContext';
 
 const AccessControl = () => {
+	const { fetchAllStaff, allStaffs, removeStaff } = useContext(AccessContext);
+
+	useEffect(() => {
+		fetchAllStaff();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<div className='row'>
@@ -13,7 +21,10 @@ const AccessControl = () => {
 				</section>
 				{/* ==== Main Content of Component ===== */}
 				<section className='col-md-10 pr-4 accessControl'>
-					<h2 className='pageTitle p-4'> Access Control </h2>
+					<h2 className='pageTitle py-auto text-center py-3 '>
+						{' '}
+						Access Control{' '}
+					</h2>
 
 					<NavTab />
 
@@ -34,62 +45,70 @@ const AccessControl = () => {
 
 					<hr />
 					<section className='row p-2 m-1 titleBar scrollable-child '>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Staff ID</p>
 						</div>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Firsname</p>
 						</div>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Lastname</p>
 						</div>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Department</p>
 						</div>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Role</p>
 						</div>
-						<div className='col-2'>
+						<div className='col-2 py-auto text-center py-3 '>
 							<p> Action </p>
 						</div>
 
 						<div className='w-100'> </div>
-
-						{/* ======================= Product Listing =========================== */}
-
-						<Link className='col-2'>
-							<li>
-								<span> 100 </span>
-							</li>
-						</Link>
-						<Link className='col-2'>
-							<li>
-								<span> Jane </span>
-							</li>
-						</Link>
-						<Link className='col-2'>
-							<li>
-								<span> Doe </span>
-							</li>
-						</Link>
-						<Link className='col-2'>
-							<li className=''>
-								<span> Mall </span>
-							</li>
-						</Link>
-						<Link className='col-2 '>
-							<li>
-								<span> Teller </span>
-							</li>
-						</Link>
-						<Link className='col-2'>
-							<li>
-								<span className='text-danger'> Remove </span>
-							</li>
-						</Link>
-
-						{/* ================= End of Product Listing =========================== */}
 					</section>
+
+					{/* ======================= Staff Listing =========================== */}
+
+					{allStaffs.map((staff) => {
+						return (
+							<Link to='/' className='row productListing' key={staff.id}>
+								<div className='col-2 py-auto text-center py-3 '>
+									<li>
+										<span> {staff.id} </span>
+									</li>
+								</div>
+								<div className='col-2 py-auto text-center py-3 '>
+									<li>
+										<span> {staff.firstname} </span>
+									</li>
+								</div>
+								<div className='col-2 py-auto text-center py-3 '>
+									<li>
+										<span> {staff.lastname} </span>
+									</li>
+								</div>
+								<div className='col-2 py-auto text-center py-3 '>
+									<li className=''>
+										<span> {staff.dept} </span>
+									</li>
+								</div>
+								<div className='col-2 py-auto text-center py-3  '>
+									<li>
+										<span> {staff.role} </span>
+									</li>
+								</div>
+								<div
+									onClick={(e) => removeStaff(e, staff.id)}
+									className='col-2 py-auto text-center py-3 btn'>
+									<li>
+										<span className='text-danger'> Remove </span>
+									</li>
+								</div>
+							</Link>
+						);
+					})}
+
+					{/* ================= End of Staff Listing =========================== */}
 
 					<section className='pageBottom'>
 						<nav className='pagination h-center w-25'>

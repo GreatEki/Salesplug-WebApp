@@ -1,228 +1,221 @@
 {
-	"staffs": [
-		{
-			"id": 1,
-			"firstname": "Jane",
-			"lastname": "Doe",
-			"dept": "Gadgets",
-			"role": "Teller"
-		},
-		{
-			"id": 2,
-			"firstname": "John",
-			"lastname": "Smith",
-			"dept": "Pharmacy",
-			"role": "Teller"
-		},
-		{
-			"id": 3,
-			"firstname": "Ekene",
-			"lastname": "Idiagbor",
-			"dept": "Admin",
-			"role": "Admin"
-		},
-		{
-			"firstname": "Queen",
-			"lastname": "Okoye",
-			"dept": "Gadgets",
-			"role": "Teller",
-			"id": 4
-		},
-		{
-			"firstname": "Patience",
-			"lastname": "Edo",
-			"dept": "SuperMarket",
-			"role": "Teller",
-			"id": 5
-		},
-		{
-			"firstname": "Grace",
-			"lastname": "Chris",
-			"dept": "Pharmacy",
-			"role": "Teller",
-			"id": 6
-		}
-	],
-	"products": [
-		{
-			"productId": "100",
-			"name": "BlueBand Mayonnaise",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 550,
-			"currentQty": 30,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "101",
-			"name": "Pears Baby Lotion",
-			"category": "Cosmetics",
-			"consumable": "No",
-			"price": 400,
-			"currentQty": 24,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "102",
-			"name": "Golden Penny Spaghetti",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 250,
-			"currentQty": 32,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "103",
-			"name": "Milo",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 1350,
-			"currentQty": 50,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "104",
-			"name": "Peak Milk",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 1700,
-			"currentQty": 100,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "105",
-			"name": "Eva Water",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 200,
-			"currentQty": 75,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "106",
-			"name": "Indomie HungryMan",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 150,
-			"currentQty": 400,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "107",
-			"name": "Golden Penny Poundo Yam",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 300,
-			"currentQty": 20,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "108",
-			"name": "St Remy",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 1800,
-			"currentQty": 30,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "109",
-			"name": "Cocacola",
-			"category": "Food and Drinks",
-			"consumable": "yes",
-			"price": 100,
-			"currentQty": 600,
-			"addedQty": 0,
-			"productDept": "SuperMarket"
-		},
-		{
-			"productId": "110",
-			"name": "UKa Smart Television",
-			"category": "Electronics",
-			"consumable": "No",
-			"price": 75000,
-			"currentQty": 600,
-			"addedQty": 0,
-			"productDept": "Gadgets"
-		},
-		{
-			"productId": "112",
-			"name": "Huwaei Y6",
-			"category": "Phones and Tablets",
-			"consumable": "No",
-			"price": 32500,
-			"currentQty": 2000,
-			"addedQty": 0,
-			"productDept": "Gadgets"
-		},
-		{
-			"productId": "113",
-			"name": "Apple MacBook Pro 16",
-			"category": "Laptops and Computers",
-			"consumable": "NO",
-			"price": 450000,
-			"currentQty": 35,
-			"addedQty": 0,
-			"productDept": "Gadgets"
-		},
-		{
-			"productId": "114",
-			"name": "Elepaq Generator",
-			"category": "Generator and Power",
-			"consumable": "No",
-			"price": 89900,
-			"currentQty": 60,
-			"addedQty": 0,
-			"productDept": "Gadgets"
-		},
-		{
-			"productId": "115",
-			"name": "Armatem Malaria Drug",
-			"category": "Total Health",
-			"consumable": "No",
-			"price": 1200,
-			"currentQty": 8,
-			"addedQty": 0,
-			"productDept": "Pharmacy"
-		},
-		{
-			"productId": "116",
-			"name": "Augmentin x360",
-			"category": "Total Health",
-			"consumable": "No",
-			"price": 2000,
-			"currentQty": 20,
-			"addedQty": 0,
-			"productDept": "Pharmacy"
-		},
-		{
-			"productId": "117",
-			"name": "Artefan ",
-			"category": "Total Health",
-			"consumable": "No",
-			"price": 600,
-			"currentQty": 20,
-			"addedQty": 0,
-			"productDept": "Pharmacy"
-		},
-		{
-			"productId": "117",
-			"name": "Gi Vital Softgel",
-			"category": "Vitamins $ Supplements",
-			"consumable": "No",
-			"price": 10000,
-			"currentQty": 43,
-			"addedQty": 0,
-			"productDept": "Pharmacy"
-		}
-	]
+  "staffs": [
+    {
+      "id": 2,
+      "firstname": "John",
+      "lastname": "Smith",
+      "dept": "Pharmacy",
+      "role": "Teller"
+    },
+    {
+      "id": 3,
+      "firstname": "Ekene",
+      "lastname": "Idiagbor",
+      "dept": "Admin",
+      "role": "Admin"
+    },
+    {
+      "firstname": "Jane ",
+      "lastname": "Doe",
+      "dept": "SuperMarket",
+      "role": "Teller",
+      "id": 4
+    },
+    {
+      "firstname": "Grace",
+      "lastname": "Chris",
+      "dept": "Pharmacy",
+      "role": "Teller",
+      "id": 5
+    },
+    {
+      "firstname": "Paul",
+      "lastname": "Uche",
+      "dept": "Gadgets",
+      "role": "Teller",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "productId": "100",
+      "name": "BlueBand Mayonnaise",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 550,
+      "currentQty": 30,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "101",
+      "name": "Pears Baby Lotion",
+      "category": "Cosmetics",
+      "consumable": "No",
+      "price": 400,
+      "currentQty": 24,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "102",
+      "name": "Golden Penny Spaghetti",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 250,
+      "currentQty": 32,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "103",
+      "name": "Milo",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 1350,
+      "currentQty": 50,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "104",
+      "name": "Peak Milk",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 1700,
+      "currentQty": 100,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "105",
+      "name": "Eva Water",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 200,
+      "currentQty": 75,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "106",
+      "name": "Indomie HungryMan",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 150,
+      "currentQty": 400,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "107",
+      "name": "Golden Penny Poundo Yam",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 300,
+      "currentQty": 20,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "108",
+      "name": "St Remy",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 1800,
+      "currentQty": 30,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "109",
+      "name": "Cocacola",
+      "category": "Food and Drinks",
+      "consumable": "yes",
+      "price": 100,
+      "currentQty": 600,
+      "addedQty": 0,
+      "productDept": "SuperMarket"
+    },
+    {
+      "productId": "110",
+      "name": "UKa Smart Television",
+      "category": "Electronics",
+      "consumable": "No",
+      "price": 75000,
+      "currentQty": 600,
+      "addedQty": 0,
+      "productDept": "Gadgets"
+    },
+    {
+      "productId": "112",
+      "name": "Huwaei Y6",
+      "category": "Phones and Tablets",
+      "consumable": "No",
+      "price": 32500,
+      "currentQty": 2000,
+      "addedQty": 0,
+      "productDept": "Gadgets"
+    },
+    {
+      "productId": "113",
+      "name": "Apple MacBook Pro 16",
+      "category": "Laptops and Computers",
+      "consumable": "NO",
+      "price": 450000,
+      "currentQty": 35,
+      "addedQty": 0,
+      "productDept": "Gadgets"
+    },
+    {
+      "productId": "114",
+      "name": "Elepaq Generator",
+      "category": "Generator and Power",
+      "consumable": "No",
+      "price": 89900,
+      "currentQty": 60,
+      "addedQty": 0,
+      "productDept": "Gadgets"
+    },
+    {
+      "productId": "115",
+      "name": "Armatem Malaria Drug",
+      "category": "Total Health",
+      "consumable": "No",
+      "price": 1200,
+      "currentQty": 8,
+      "addedQty": 0,
+      "productDept": "Pharmacy"
+    },
+    {
+      "productId": "116",
+      "name": "Augmentin x360",
+      "category": "Total Health",
+      "consumable": "No",
+      "price": 2000,
+      "currentQty": 20,
+      "addedQty": 0,
+      "productDept": "Pharmacy"
+    },
+    {
+      "productId": "117",
+      "name": "Artefan ",
+      "category": "Total Health",
+      "consumable": "No",
+      "price": 600,
+      "currentQty": 20,
+      "addedQty": 0,
+      "productDept": "Pharmacy"
+    },
+    {
+      "productId": "117",
+      "name": "Gi Vital Softgel",
+      "category": "Vitamins $ Supplements",
+      "consumable": "No",
+      "price": 10000,
+      "currentQty": 43,
+      "addedQty": 0,
+      "productDept": "Pharmacy"
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 import axios from 'axios';
 export const AccessContext = createContext();
 
@@ -13,6 +13,8 @@ const AccessContextProvider = (props) => {
 	const [errMsg, setErrMsg] = useState([]);
 	const [allowSubmit, setAllowSubmit] = useState(false);
 	const [successMsg, setSuccessMsg] = useState('');
+
+	const [allStaffs, setAllStaffs] = useState([]);
 
 	let ENDPOINT = 'http://localhost:3004';
 
@@ -41,11 +43,11 @@ const AccessContextProvider = (props) => {
 			err.lastname = 'lastname cannot be empty';
 		}
 
-		if (!dept || dept == 'Select Dept') {
+		if (!dept || dept === 'Select Dept') {
 			err.dept = 'department cannot be blank';
 		}
 
-		if (!role || role == 'Select Role') {
+		if (!role || role === 'Select Role') {
 			err.role = 'role cannot be blank';
 		}
 
@@ -74,12 +76,40 @@ const AccessContextProvider = (props) => {
 			} else {
 				setAllowSubmit(true);
 				setErrMsg({});
-				const res = await axios.post(`${ENDPOINT}/staffs`, staff, config);
+				await axios.post(`${ENDPOINT}/staffs`, staff, config);
 				setSuccessMsg('Staff saved successfully');
+
+				setStaff({
+					firstname: '',
+					lastname: '',
+					dept: '',
+					role: '',
+				});
 				// console.log(res);
 			}
 		} catch (err) {
 			console.log(err.message);
+		}
+	};
+
+	const fetchAllStaff = async () => {
+		try {
+			const res = await axios.get(`${ENDPOINT}/staffs`);
+
+			setAllStaffs(res.data);
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
+
+	const removeStaff = async (e, id) => {
+		e.preventDefault();
+		try {
+			await axios.delete(`${ENDPOINT}/staffs/${id}`);
+
+			window.location.reload(true);
+		} catch (err) {
+			console.log(err);
 		}
 	};
 
@@ -88,6 +118,9 @@ const AccessContextProvider = (props) => {
 			value={{
 				handleInputStaff,
 				handleAddStaffSubmit,
+				fetchAllStaff,
+				removeStaff,
+				allStaffs,
 				staff,
 				errMsg,
 				allowSubmit,
