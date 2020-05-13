@@ -14,6 +14,7 @@ import NewProduct from './components/webapp/StorageAdmin/NewProduct';
 import AccessControl from './components/webapp/AccessControl/AccessControl';
 import AddNewStaff from './components/webapp/AccessControl/AddNewStaff';
 import StyleContextProvider from './contexts/StyleContext';
+import AddNewDept from './components/webapp/AccessControl/AddNewDept';
 import AccessContextProvider from './contexts/AccessContext';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 							/>
 							<Route exact path='/access' component={AccessControl} />
 							<Route exact path='/access/staff/add' component={AddNewStaff} />
+							<Route exact path='/access/dept/add' component={AddNewDept} />
 						</StyleContextProvider>
 					</AccessContextProvider>
 				</Switch>

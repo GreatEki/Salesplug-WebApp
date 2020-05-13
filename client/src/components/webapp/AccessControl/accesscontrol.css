@@ -37,3 +37,16 @@
 .accessControl .pageBottom {
 	margin-top: 10vh;
 }
+
+/* ===== AddNewDept Component Styling ===== */
+
+.newDeptPanel {
+	margin: 7vh 20vh;
+	padding: 5% 10% 7% 10%;
+}
+
+.newDeptPanel Form {
+	margin: 10% 10%;
+}
+
+/* ===== End of AddBewDept Component Styling ===== */

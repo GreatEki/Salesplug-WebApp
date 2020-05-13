@@ -21,10 +21,7 @@ const AccessControl = () => {
 				</section>
 				{/* ==== Main Content of Component ===== */}
 				<section className='col-md-10 pr-4 accessControl'>
-					<h2 className='pageTitle py-auto text-center py-3 '>
-						{' '}
-						Access Control{' '}
-					</h2>
+					<h2 className='pageTitle py-auto py-3 '> Access Control </h2>
 
 					<NavTab />
 
@@ -36,9 +33,9 @@ const AccessControl = () => {
 							</Link>
 						</div>
 						<div>
-							<Link to='/' className='Comic'>
+							<Link to='/access/dept/add' className='Comic'>
 								{' '}
-								Add New Unit{' '}
+								Add New Dept{' '}
 							</Link>
 						</div>
 					</div>

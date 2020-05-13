@@ -36,6 +36,32 @@
       "id": 6
     }
   ],
+  "departments": [
+    {
+      "id": 200,
+      "name": "Admin"
+    },
+    {
+      "id": 201,
+      "name": "SuperMarket"
+    },
+    {
+      "id": 202,
+      "name": "Pharmacy"
+    },
+    {
+      "id": 203,
+      "name": "Gadgets"
+    },
+    {
+      "name": "Bakery",
+      "id": 204
+    },
+    {
+      "name": "Health and Fitness",
+      "id": 205
+    }
+  ],
   "products": [
     {
       "productId": "100",

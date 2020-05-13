@@ -16,8 +16,11 @@ const AccessContextProvider = (props) => {
 
 	const [allStaffs, setAllStaffs] = useState([]);
 
+	const [deptName, setDeptName] = useState('');
+
 	let ENDPOINT = 'http://localhost:3004';
 
+	// This method handles inputting values in our form field
 	const handleInputStaff = (e) => {
 		setStaff({
 			...staff,
@@ -92,6 +95,7 @@ const AccessContextProvider = (props) => {
 		}
 	};
 
+	// This fetches all registered staffs from our server
 	const fetchAllStaff = async () => {
 		try {
 			const res = await axios.get(`${ENDPOINT}/staffs`);
@@ -102,12 +106,39 @@ const AccessContextProvider = (props) => {
 		}
 	};
 
+	//This removes a staff from our databse server
 	const removeStaff = async (e, id) => {
 		e.preventDefault();
 		try {
 			await axios.delete(`${ENDPOINT}/staffs/${id}`);
 
 			window.location.reload(true);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	function submitDept(e, name) {
+		e.preventDefault();
+
+		const deptName = {
+			name: name,
+		};
+
+		addNewDept(deptName);
+	}
+
+	const addNewDept = async (deptName) => {
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+
+		try {
+			const res = await axios.post(`${ENDPOINT}/departments`, deptName, config);
+
+			console.log(res.data);
 		} catch (err) {
 			console.log(err);
 		}
@@ -120,6 +151,9 @@ const AccessContextProvider = (props) => {
 				handleAddStaffSubmit,
 				fetchAllStaff,
 				removeStaff,
+				setDeptName,
+				submitDept,
+				deptName,
 				allStaffs,
 				staff,
 				errMsg,
