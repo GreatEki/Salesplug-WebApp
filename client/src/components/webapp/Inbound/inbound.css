@@ -41,7 +41,7 @@
 	background-color: whitesmoke;
 }
 
-.productListing a {
+.productListing span {
 	color: black;
 	font-family: var(--Abel);
 }

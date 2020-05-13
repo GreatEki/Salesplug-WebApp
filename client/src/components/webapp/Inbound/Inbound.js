@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
 import { Link } from 'react-router-dom';
 import './inbound.css';
+import { InboundContext } from '../../../contexts/InboundContext';
 
 const Inbound = () => {
+	const {
+		fetchSupMktProducts,
+		userDept,
+		fetchGadgetProducts,
+		products,
+	} = useContext(InboundContext);
+
+	useEffect(() => {
+		if (userDept === 'SuperMarket') {
+			fetchSupMktProducts();
+		}
+		if (userDept === 'Gadgets') {
+			fetchGadgetProducts();
+		}
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<div className='row'>
@@ -60,33 +78,41 @@ const Inbound = () => {
 
 						<div className='productListWrap scrollable-child p-2 m-1'>
 							{/* ======================= Product Listing =========================== */}
-							<Link to='/inbound/add-qty' className='row productListing p-2 '>
-								<div className='col-2'>
-									<li>
-										<Link to='/inbound/add-qty'> 100 </Link>
-									</li>
-								</div>
-								<div className='col-3'>
-									<li>
-										<Link to='/inbound/add-qty'> Pears Baby Lotion </Link>
-									</li>
-								</div>
-								<div className='col-3'>
-									<li>
-										<Link to='/inbound/add-qty'> Skin Care and Cosmetics </Link>
-									</li>
-								</div>
-								<div className='col-2'>
-									<li className='text-center'>
-										<Link to='/inbound/add-qty'> No </Link>
-									</li>
-								</div>
-								<div className='col-2'>
-									<li className='text-center'>
-										<Link to='/inbound/add-qty'> 20 </Link>
-									</li>
-								</div>
-							</Link>
+
+							{products.map((prod) => {
+								return (
+									<Link
+										to='/inbound/add-qty'
+										className='row productListing p-2 '
+										key={prod.productId}>
+										<div className='col-2'>
+											<li>
+												<span to='/inbound/add-qty'> {prod.productId} </span>
+											</li>
+										</div>
+										<div className='col-3'>
+											<li>
+												<span to='/inbound/add-qty'> {prod.name}</span>
+											</li>
+										</div>
+										<div className='col-3'>
+											<li>
+												<span to='/inbound/add-qty'> {prod.category}</span>
+											</li>
+										</div>
+										<div className='col-2'>
+											<li className='text-center'>
+												<span to='/inbound/add-qty'> {prod.consumable} </span>
+											</li>
+										</div>
+										<div className='col-2'>
+											<li className='text-center'>
+												<span to='/inbound/add-qty'> {prod.currentQty} </span>
+											</li>
+										</div>
+									</Link>
+								);
+							})}
 
 							{/* ================= End of Product Listing =========================== */}
 						</div>

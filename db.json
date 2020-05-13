@@ -60,6 +60,10 @@
     {
       "name": "Health and Fitness",
       "id": 205
+    },
+    {
+      "name": "Fashion",
+      "id": 206
     }
   ],
   "products": [

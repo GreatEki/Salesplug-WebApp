@@ -16,32 +16,35 @@ import AddNewStaff from './components/webapp/AccessControl/AddNewStaff';
 import StyleContextProvider from './contexts/StyleContext';
 import AddNewDept from './components/webapp/AccessControl/AddNewDept';
 import AccessContextProvider from './contexts/AccessContext';
+import InboundContextProvider from './contexts/InboundContext';
 
 function App() {
 	return (
 		<div className='App'>
 			<BrowserRouter>
 				<Switch>
-					<AccessContextProvider>
-						<StyleContextProvider>
-							<Route exact path='/' component={Home} />
-							<Route path='/login' component={Auth} />
-							<Route path='/sales-pitch' component={Salespitch} />
-							<Route exact path='/inbound' component={Inbound} />
-							<Route exact path='/inbound/add-qty' component={AddQty} />
-							<Route exact path='/report' component={ReportSales} />
-							<Route exact path='/report/inbound' component={ReportInbound} />
-							<Route exact path='/storage/admin' component={StorageAdmin} />
-							<Route
-								exact
-								path='/storage/admin/new-product'
-								component={NewProduct}
-							/>
-							<Route exact path='/access' component={AccessControl} />
-							<Route exact path='/access/staff/add' component={AddNewStaff} />
-							<Route exact path='/access/dept/add' component={AddNewDept} />
-						</StyleContextProvider>
-					</AccessContextProvider>
+					<InboundContextProvider>
+						<AccessContextProvider>
+							<StyleContextProvider>
+								<Route exact path='/' component={Home} />
+								<Route path='/login' component={Auth} />
+								<Route path='/sales-pitch' component={Salespitch} />
+								<Route exact path='/inbound' component={Inbound} />
+								<Route exact path='/inbound/add-qty' component={AddQty} />
+								<Route exact path='/report' component={ReportSales} />
+								<Route exact path='/report/inbound' component={ReportInbound} />
+								<Route exact path='/storage/admin' component={StorageAdmin} />
+								<Route
+									exact
+									path='/storage/admin/new-product'
+									component={NewProduct}
+								/>
+								<Route exact path='/access' component={AccessControl} />
+								<Route exact path='/access/staff/add' component={AddNewStaff} />
+								<Route exact path='/access/dept/add' component={AddNewDept} />
+							</StyleContextProvider>
+						</AccessContextProvider>
+					</InboundContextProvider>
 				</Switch>
 			</BrowserRouter>
 		</div>

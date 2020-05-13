@@ -33,7 +33,7 @@ const AddNewDept = () => {
 								<input
 									type='text'
 									onChange={(e) => setDeptName(e.target.value)}
-									value={deptName.name}
+									value={deptName}
 									name='deptName'
 									className='form-control'
 									required
