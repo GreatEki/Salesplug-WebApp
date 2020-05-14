@@ -1,40 +1,33 @@
 import React, { useContext, useEffect } from 'react';
-import MenuBar from '../MenuBar/MenuBar';
 import { Link } from 'react-router-dom';
-import './inbound.css';
+import MenuBar from '../MenuBar/MenuBar';
 import { InboundContext } from '../../../contexts/InboundContext';
 
-const Inbound = () => {
+const InboundHistory = () => {
 	const {
-		fetchSupMktProducts,
+		getInboundHistoryforSupMarket,
+		inboundHistoryProduct,
 		userDept,
-		fetchGadgetProducts,
-		products,
 	} = useContext(InboundContext);
 
 	useEffect(() => {
 		if (userDept === 'SuperMarket') {
-			fetchSupMktProducts();
-		}
-		if (userDept === 'Gadgets') {
-			fetchGadgetProducts();
-		}
+			getInboundHistoryforSupMarket();
 
-		//eslint-disable-next-line react-hooks/exhaustive-deps
+			//eslint-disable-next-line react-hooks/exhaustive-deps
+		}
 	}, []);
 	return (
 		<div>
 			<div className='row'>
-				{/* =====  MenuBar =====  */}
-				<section className='col-md-2 p-0'>
+				<section className='col-md-2'>
 					<MenuBar />
 				</section>
-				{/* ===== End of Menu Bar ===== */}
 
-				{/* Main Content of Component */}
-				<section className='col-md-10 p-0'>
-					<h2 className='pageTitle p-4'> Inbound </h2>
-					{/* ===== Header ===== */}
+				{/* ===== Main Content of Component Starts Here ===== */}
+				<main className='col-md-10'>
+					<h2 className='pageTitle p-4'> Inbound History </h2>
+
 					<header className='d-flex flex-row p-4'>
 						<button className='btn btn-info mr-5 rounded-0'> Refresh </button>
 
@@ -50,7 +43,6 @@ const Inbound = () => {
 							</div>
 						</div>
 					</header>
-					{/* ===== End of Header ===== */}
 
 					{/* ====== Page Body ===== */}
 
@@ -63,21 +55,28 @@ const Inbound = () => {
 							<small>View Inbound History</small>
 						</Link>
 						<hr />
+
 						<section className='row p-2 m-1 titleBar bg-light'>
-							<div className='col-2'>
+							<div className='col-1'>
 								<p> Item ID</p>
 							</div>
-							<div className='col-3'>
+							<div className='col-2'>
 								<p> Item Name</p>
 							</div>
-							<div className='col-3'>
+							<div className='col-2'>
 								<p> Item Category</p>
 							</div>
-							<div className='col-2'>
-								<p> Consumable</p>
+							<div className='col-1'>
+								<p className='text-center'> Before INB</p>
+							</div>
+							<div className='col-1 ml-4'>
+								<p className='text-right'> Qty INB </p>
 							</div>
 							<div className='col-2'>
-								<p> Qty in Stock</p>
+								<p className='text-right'> INB BY </p>
+							</div>
+							<div className='col-2'>
+								<p className='text-right'> INB DATE </p>
 							</div>
 						</section>
 						<hr />
@@ -85,35 +84,54 @@ const Inbound = () => {
 						<div className='productListWrap scrollable-child p-2 m-1'>
 							{/* ======================= Product Listing =========================== */}
 
-							{products.map((prod) => {
+							{inboundHistoryProduct.map((prod) => {
 								return (
 									<Link
 										to={`/inbound/add-qty/${prod.id}`}
 										className='row productListing p-2 '
 										key={prod.id}>
+										<div className='col-1'>
+											<li>
+												<span to='/inbound/add-qty'> {prod.productId} </span>
+											</li>
+										</div>
 										<div className='col-2'>
 											<li>
-												<span to='/inbound/add-qty'> {prod.id} </span>
+												<span to='/inbound/add-qty' className='text-wrap'>
+													{' '}
+													{prod.productName}
+												</span>
 											</li>
 										</div>
-										<div className='col-3'>
+										<div className='col-2'>
 											<li>
-												<span to='/inbound/add-qty'> {prod.name}</span>
+												<span to='/inbound/add-qty' className='text-wrap'>
+													{' '}
+													{prod.productCategory}
+												</span>
 											</li>
 										</div>
-										<div className='col-3'>
-											<li>
-												<span to='/inbound/add-qty'> {prod.category}</span>
+										<div className='col-1'>
+											<li className='text-center'>
+												<span to='/inbound/add-qty'> {prod.existingQty} </span>
 											</li>
 										</div>
 										<div className='col-2'>
 											<li className='text-center'>
-												<span to='/inbound/add-qty'> {prod.consumable} </span>
+												<span to='/inbound/add-qty'> {prod.inboundedQty} </span>
 											</li>
 										</div>
 										<div className='col-2'>
 											<li className='text-center'>
-												<span to='/inbound/add-qty'> {prod.currentQty} </span>
+												<span to='/inbound/add-qty'> {prod.Personnel} </span>
+											</li>
+										</div>
+										<div className='col-2'>
+											<li className='text-center'>
+												<small to='/inbound/add-qty' className='date'>
+													{' '}
+													{prod.Date}{' '}
+												</small>
 											</li>
 										</div>
 									</Link>
@@ -123,12 +141,13 @@ const Inbound = () => {
 							{/* ================= End of Product Listing =========================== */}
 						</div>
 					</div>
+
 					{/* ===== End of PAge Body ===== */}
-				</section>
-				{/* End of Main Content of Component */}
+				</main>
+				{/* ===== End of Main Content of Component ===== */}
 			</div>
 		</div>
 	);
 };
 
-export default Inbound;
+export default InboundHistory;

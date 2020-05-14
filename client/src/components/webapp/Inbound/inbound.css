@@ -30,6 +30,10 @@
 	overflow-y: auto;
 }
 
+.scroll-x {
+	overflow-x: auto;
+}
+
 .productListing {
 	width: 100%;
 }
@@ -55,3 +59,10 @@
 	color: var(--primary-color);
 	font-weight: bold;
 }
+
+/* ===== Inbound History Component Styling =====  */
+
+.date {
+	font-size: 12px;
+}
+/* ===== End of Inbound History Component Styling ===== */

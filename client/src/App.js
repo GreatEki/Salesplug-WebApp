@@ -16,6 +16,7 @@ import AddNewStaff from './components/webapp/AccessControl/AddNewStaff';
 import StyleContextProvider from './contexts/StyleContext';
 import AddNewDept from './components/webapp/AccessControl/AddNewDept';
 import AccessContextProvider from './contexts/AccessContext';
+import InboundHistory from './components/webapp/Inbound/InboundHistory';
 import InboundContextProvider from './contexts/InboundContext';
 
 function App() {
@@ -31,6 +32,11 @@ function App() {
 								<Route path='/sales-pitch' component={Salespitch} />
 								<Route exact path='/inbound' component={Inbound} />
 								<Route exact path='/inbound/add-qty/:id' component={AddQty} />
+								<Route
+									exact
+									path='/inbound/history'
+									component={InboundHistory}
+								/>
 								<Route exact path='/report' component={ReportSales} />
 								<Route exact path='/report/inbound' component={ReportInbound} />
 								<Route exact path='/storage/admin' component={StorageAdmin} />

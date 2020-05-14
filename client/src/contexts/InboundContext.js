@@ -11,8 +11,9 @@ const InboundContextProvider = (props) => {
 
 	const [addedQty, setAddedQty] = useState(0);
 
-	const userDept = 'SuperMarket';
+	const [inboundHistoryProduct, setInboundHistoryProduct] = useState([]);
 
+	const userDept = 'SuperMarket';
 	const personnel = 'Patience Edo';
 
 	// Fetch SuperMarket Products
@@ -66,18 +67,10 @@ const InboundContextProvider = (props) => {
 		try {
 			/* 'PATCH' request to update the currentQty of selected product*/
 
-			const res = await Axios.patch(
-				`${calls.ENDPOINT}/products/${prod.id}`,
-				prod,
-				config
-			);
+			await Axios.patch(`${calls.ENDPOINT}/products/${prod.id}`, prod, config);
 
 			/* POST request to save records for every time we inbound a product */
-			const inboundRes = await Axios.post(
-				`${calls.ENDPOINT}/inbounds`,
-				inbound,
-				config
-			);
+			await Axios.post(`${calls.ENDPOINT}/inbounds`, inbound, config);
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -107,6 +100,7 @@ const InboundContextProvider = (props) => {
 
 		//Creating our inbound object
 		const inbound = {
+			id: prod.id,
 			productName: prod.name,
 			productCategory: prod.category,
 			existingQty: prod.currentQty,
@@ -118,6 +112,17 @@ const InboundContextProvider = (props) => {
 		updateProduQty(product, inbound);
 	};
 
+	const getInboundHistoryforSupMarket = async () => {
+		try {
+			const res = await Axios.get(
+				`${calls.ENDPOINT}/inbounds?productDept=SuperMarket`
+			);
+
+			setInboundHistoryProduct(res.data);
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
 	return (
 		<InboundContext.Provider
 			value={{
@@ -127,6 +132,8 @@ const InboundContextProvider = (props) => {
 				setAddedQty,
 				updateProduQty,
 				handleUpdateQtySubmit,
+				getInboundHistoryforSupMarket,
+				inboundHistoryProduct,
 				addedQty,
 				inboundProd,
 				products,

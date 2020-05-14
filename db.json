@@ -1,280 +1,279 @@
 {
-  "staffs": [
-    {
-      "id": 2,
-      "firstname": "John",
-      "lastname": "Smith",
-      "dept": "Pharmacy",
-      "role": "Teller"
-    },
-    {
-      "id": 3,
-      "firstname": "Ekene",
-      "lastname": "Idiagbor",
-      "dept": "Admin",
-      "role": "Admin"
-    },
-    {
-      "firstname": "Jane ",
-      "lastname": "Doe",
-      "dept": "SuperMarket",
-      "role": "Teller",
-      "id": 4
-    },
-    {
-      "firstname": "Grace",
-      "lastname": "Chris",
-      "dept": "Pharmacy",
-      "role": "Teller",
-      "id": 5
-    },
-    {
-      "firstname": "Paul",
-      "lastname": "Uche",
-      "dept": "Gadgets",
-      "role": "Teller",
-      "id": 6
-    }
-  ],
-  "departments": [
-    {
-      "id": 200,
-      "name": "Admin"
-    },
-    {
-      "id": 201,
-      "name": "SuperMarket"
-    },
-    {
-      "id": 202,
-      "name": "Pharmacy"
-    },
-    {
-      "id": 203,
-      "name": "Gadgets"
-    },
-    {
-      "name": "Bakery",
-      "id": 204
-    },
-    {
-      "name": "Health and Fitness",
-      "id": 205
-    },
-    {
-      "name": "Fashion",
-      "id": 206
-    }
-  ],
-  "products": [
-    {
-      "id": "100",
-      "name": "BlueBand Mayonnaise",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 550,
-      "currentQty": 70,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "101",
-      "name": "Pears Baby Lotion",
-      "category": "Cosmetics",
-      "consumable": "No",
-      "price": 400,
-      "currentQty": 54,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "102",
-      "name": "Golden Penny Spaghetti",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 250,
-      "currentQty": 32,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "103",
-      "name": "Milo",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 1350,
-      "currentQty": 50,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "104",
-      "name": "Peak Milk",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 1700,
-      "currentQty": 100,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "105",
-      "name": "Eva Water",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 200,
-      "currentQty": 100,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "106",
-      "name": "Indomie HungryMan",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 150,
-      "currentQty": 400,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "107",
-      "name": "Golden Penny Poundo Yam",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 300,
-      "currentQty": 20,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "108",
-      "name": "St Remy",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 1800,
-      "currentQty": 30,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "109",
-      "name": "Cocacola",
-      "category": "Food and Drinks",
-      "consumable": "yes",
-      "price": 100,
-      "currentQty": 600,
-      "productDept": "SuperMarket"
-    },
-    {
-      "id": "110",
-      "name": "UKa Smart Television",
-      "category": "Electronics",
-      "consumable": "No",
-      "price": 75000,
-      "currentQty": 600,
-      "productDept": "Gadgets"
-    },
-    {
-      "id": "112",
-      "name": "Huwaei Y6",
-      "category": "Phones and Tablets",
-      "consumable": "No",
-      "price": 32500,
-      "currentQty": 2000,
-      "productDept": "Gadgets"
-    },
-    {
-      "id": "113",
-      "name": "Apple MacBook Pro 16",
-      "category": "Laptops and Computers",
-      "consumable": "NO",
-      "price": 450000,
-      "currentQty": 35,
-      "productDept": "Gadgets"
-    },
-    {
-      "id": "114",
-      "name": "Elepaq Generator",
-      "category": "Generator and Power",
-      "consumable": "No",
-      "price": 89900,
-      "currentQty": 60,
-      "productDept": "Gadgets"
-    },
-    {
-      "id": "115",
-      "name": "Armatem Malaria Drug",
-      "category": "Total Health",
-      "consumable": "No",
-      "price": 1200,
-      "currentQty": 8,
-      "productDept": "Pharmacy"
-    },
-    {
-      "id": "116",
-      "name": "Augmentin x360",
-      "category": "Total Health",
-      "consumable": "No",
-      "price": 2000,
-      "currentQty": 20,
-      "productDept": "Pharmacy"
-    },
-    {
-      "id": "117",
-      "name": "Artefan ",
-      "category": "Total Health",
-      "consumable": "No",
-      "price": 600,
-      "currentQty": 20,
-      "productDept": "Pharmacy"
-    },
-    {
-      "id": "117",
-      "name": "Gi Vital Softgel",
-      "category": "Vitamins $ Supplements",
-      "consumable": "No",
-      "price": 10000,
-      "currentQty": 43,
-      "productDept": "Pharmacy"
-    }
-  ],
-  "inbounds": [
-    {
-      "id": "60000",
-      "productName": "Something Something",
-      "productCategory": "My Category",
-      "existingQty": 500,
-      "inboundedQty": 100,
-      "Date": "13-5-2020",
-      "Personnel": "Grace Chris"
-    },
-    {
-      "productName": "BlueBand Mayonnaise",
-      "productCategory": "Food and Drinks",
-      "existingQty": 30,
-      "inboundedQty": 40,
-      "Date": 1589420794522,
-      "Personnel": "Patience Edo",
-      "id": "4nEIoEi"
-    },
-    {
-      "productName": "Pears Baby Lotion",
-      "productCategory": "Cosmetics",
-      "existingQty": 24,
-      "inboundedQty": 30,
-      "Date": "Wed, May 13, 2020",
-      "Personnel": "Patience Edo",
-      "id": "AdlKx81"
-    },
-    {
-      "productName": "Eva Water",
-      "productCategory": "Food and Drinks",
-      "existingQty": 75,
-      "inboundedQty": 15,
-      "Date": "Wed, May 13, 2020",
-      "Personnel": "Patience Edo",
-      "id": "SdSXppz"
-    },
-    {
-      "productName": "Eva Water",
-      "productCategory": "Food and Drinks",
-      "existingQty": 90,
-      "inboundedQty": 10,
-      "Date": "Wed, May 13, 2020",
-      "Personnel": "Patience Edo",
-      "id": "EbOVReE"
-    }
-  ]
+	"staffs": [
+		{
+			"id": 2,
+			"firstname": "John",
+			"lastname": "Smith",
+			"dept": "Pharmacy",
+			"role": "Teller"
+		},
+		{
+			"id": 3,
+			"firstname": "Ekene",
+			"lastname": "Idiagbor",
+			"dept": "Admin",
+			"role": "Admin"
+		},
+		{
+			"firstname": "Jane ",
+			"lastname": "Doe",
+			"dept": "SuperMarket",
+			"role": "Teller",
+			"id": 4
+		},
+		{
+			"firstname": "Grace",
+			"lastname": "Chris",
+			"dept": "Pharmacy",
+			"role": "Teller",
+			"id": 5
+		},
+		{
+			"firstname": "Paul",
+			"lastname": "Uche",
+			"dept": "Gadgets",
+			"role": "Teller",
+			"id": 6
+		}
+	],
+	"departments": [
+		{
+			"id": 200,
+			"name": "Admin"
+		},
+		{
+			"id": 201,
+			"name": "SuperMarket"
+		},
+		{
+			"id": 202,
+			"name": "Pharmacy"
+		},
+		{
+			"id": 203,
+			"name": "Gadgets"
+		},
+		{
+			"name": "Bakery",
+			"id": 204
+		},
+		{
+			"name": "Health and Fitness",
+			"id": 205
+		},
+		{
+			"name": "Fashion",
+			"id": 206
+		}
+	],
+	"products": [
+		{
+			"id": "100",
+			"name": "BlueBand Mayonnaise",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 550,
+			"currentQty": 70,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "101",
+			"name": "Pears Baby Lotion",
+			"category": "Cosmetics",
+			"consumable": "No",
+			"price": 400,
+			"currentQty": 54,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "102",
+			"name": "Golden Penny Spaghetti",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 250,
+			"currentQty": 32,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "103",
+			"name": "Milo",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 1350,
+			"currentQty": 50,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "104",
+			"name": "Peak Milk",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 1700,
+			"currentQty": 100,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "105",
+			"name": "Eva Water",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 200,
+			"currentQty": 100,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "106",
+			"name": "Indomie HungryMan",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 150,
+			"currentQty": 400,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "107",
+			"name": "Golden Penny Poundo Yam",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 300,
+			"currentQty": 20,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "108",
+			"name": "St Remy",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 1800,
+			"currentQty": 30,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "109",
+			"name": "Cocacola",
+			"category": "Food and Drinks",
+			"consumable": "yes",
+			"price": 100,
+			"currentQty": 600,
+			"productDept": "SuperMarket"
+		},
+		{
+			"id": "110",
+			"name": "UKa Smart Television",
+			"category": "Electronics",
+			"consumable": "No",
+			"price": 75000,
+			"currentQty": 600,
+			"productDept": "Gadgets"
+		},
+		{
+			"id": "112",
+			"name": "Huwaei Y6",
+			"category": "Phones and Tablets",
+			"consumable": "No",
+			"price": 32500,
+			"currentQty": 2000,
+			"productDept": "Gadgets"
+		},
+		{
+			"id": "113",
+			"name": "Apple MacBook Pro 16",
+			"category": "Laptops and Computers",
+			"consumable": "NO",
+			"price": 450000,
+			"currentQty": 35,
+			"productDept": "Gadgets"
+		},
+		{
+			"id": "114",
+			"name": "Elepaq Generator",
+			"category": "Generator and Power",
+			"consumable": "No",
+			"price": 89900,
+			"currentQty": 60,
+			"productDept": "Gadgets"
+		},
+		{
+			"id": "115",
+			"name": "Armatem Malaria Drug",
+			"category": "Total Health",
+			"consumable": "No",
+			"price": 1200,
+			"currentQty": 8,
+			"productDept": "Pharmacy"
+		},
+		{
+			"id": "116",
+			"name": "Augmentin x360",
+			"category": "Total Health",
+			"consumable": "No",
+			"price": 2000,
+			"currentQty": 20,
+			"productDept": "Pharmacy"
+		},
+		{
+			"id": "117",
+			"name": "Artefan ",
+			"category": "Total Health",
+			"consumable": "No",
+			"price": 600,
+			"currentQty": 20,
+			"productDept": "Pharmacy"
+		},
+		{
+			"id": "117",
+			"name": "Gi Vital Softgel",
+			"category": "Vitamins $ Supplements",
+			"consumable": "No",
+			"price": 10000,
+			"currentQty": 43,
+			"productDept": "Pharmacy"
+		}
+	],
+	"inbounds": [
+		{
+			"productId": "100",
+			"productName": "BlueBand Mayonnaise",
+			"productCategory": "Food and Drinks",
+			"productDept": "SuperMarket",
+			"existingQty": 30,
+			"inboundedQty": 40,
+			"Date": 1589420794522,
+			"Personnel": "Patience Edo",
+			"id": "4nEIoEi"
+		},
+		{
+			"productId": "101",
+			"productName": "Pears Baby Lotion",
+			"productCategory": "Cosmetics",
+			"productDept": "SuperMarket",
+			"existingQty": 24,
+			"inboundedQty": 30,
+			"Date": "Wed, May 13, 2020",
+			"Personnel": "Patience Edo",
+			"id": "AdlKx81"
+		},
+		{
+			"productId": "105",
+			"productName": "Eva Water",
+			"productCategory": "Food and Drinks",
+			"productDept": "SuperMarket",
+			"existingQty": 75,
+			"inboundedQty": 15,
+			"Date": "Wed, May 13, 2020",
+			"Personnel": "Patience Edo",
+			"id": "SdSXppz"
+		},
+		{
+			"productId": "105",
+			"productName": "Eva Water",
+			"productCategory": "Food and Drinks",
+			"productDept": "SuperMarket",
+			"existingQty": 90,
+			"inboundedQty": 10,
+			"Date": "Wed, May 13, 2020",
+			"Personnel": "Patience Edo",
+			"id": "EbOVReE"
+		}
+	]
 }
