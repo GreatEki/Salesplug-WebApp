@@ -30,7 +30,7 @@ function App() {
 								<Route path='/login' component={Auth} />
 								<Route path='/sales-pitch' component={Salespitch} />
 								<Route exact path='/inbound' component={Inbound} />
-								<Route exact path='/inbound/add-qty' component={AddQty} />
+								<Route exact path='/inbound/add-qty/:id' component={AddQty} />
 								<Route exact path='/report' component={ReportSales} />
 								<Route exact path='/report/inbound' component={ReportInbound} />
 								<Route exact path='/storage/admin' component={StorageAdmin} />

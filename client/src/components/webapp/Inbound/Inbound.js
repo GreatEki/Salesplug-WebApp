@@ -82,12 +82,12 @@ const Inbound = () => {
 							{products.map((prod) => {
 								return (
 									<Link
-										to='/inbound/add-qty'
+										to={`/inbound/add-qty/${prod.id}`}
 										className='row productListing p-2 '
-										key={prod.productId}>
+										key={prod.id}>
 										<div className='col-2'>
 											<li>
-												<span to='/inbound/add-qty'> {prod.productId} </span>
+												<span to='/inbound/add-qty'> {prod.id} </span>
 											</li>
 										</div>
 										<div className='col-3'>

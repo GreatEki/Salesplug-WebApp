@@ -2,4 +2,4 @@
 
 /client/node_modules/*
 
-/client/src/components/webapp/utils/*
+/client/src/components/webapp/config/*
