@@ -35,12 +35,12 @@ const AddNewStaff = () => {
 								);
 							})
 						) : (
-							<h5 className='text-success text-center p-5'>{successMsg}</h5>
+							<h5 className='text-success text-center p-2'>{successMsg}</h5>
 						)}
 						<form
 							onSubmit={(e) => handleAddStaffSubmit(e, staff)}
 							className='w-50 h-center p-4'>
-							<h5 className='Comic my-4 p-2 siteFont'> Staff Data Entry </h5>
+							<h5 className='Comic my-2 p-2 siteFont'> Staff Data Entry </h5>
 							<div className='w-75'>
 								<label htmlFor='firstname'> Firstname </label>
 

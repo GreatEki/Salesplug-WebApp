@@ -6,11 +6,15 @@ import { SalesPitchContext } from '../../../contexts/SalesPitchContext';
 const SalesPitch = () => {
 	const {
 		fetchProducts,
-		getSelectedProduct,
+
 		setSelectedProdID,
 		selectedProdID,
 		selectedProduct,
 		products,
+		addToBasket,
+		basketItems,
+		setQty,
+		qty,
 	} = useContext(SalesPitchContext);
 
 	useEffect(() => {
@@ -41,6 +45,7 @@ const SalesPitch = () => {
 											<div className='form-group'>
 												<label htmlFor='itemName'> Item Name </label>
 
+												{/* Here we display a list of productnames and update the selectedProdID state on Change */}
 												<select
 													className='form-control'
 													value={selectedProdID}
@@ -54,8 +59,9 @@ const SalesPitch = () => {
 											</div>
 										</form>
 
+										{/* Displaying Details details of the selectedProduct */}
 										{selectedProduct.map((item) => (
-											<div className='wrapsTheMapping' key={item.value}>
+											<div className='wrapsTheMapping' key={item.name}>
 												<div className=''>
 													<h5 className='text-muted d-inline'>
 														{' '}
@@ -77,22 +83,38 @@ const SalesPitch = () => {
 													</h5>
 												</div>
 
-												<div className='d-flex flex-row'>
-													<div className=' p-5'>
-														<button className='form-control btn-danger clearBtn rounded-0'>
-															{' '}
-															Clear{' '}
-														</button>
+												<form className='form w-50 mt-5'>
+													<div className='form-group'>
+														<label htmlFor='qty'> Quantity </label>
+
+														<input
+															type='text'
+															name='qty'
+															onChange={(e) => setQty(parseInt(e.target.value))}
+															value={qty}
+															className='form-control'
+														/>
 													</div>
-													<div className=' p-5'>
-														<button className='form-control btn-success addBtn rounded-pill'>
-															{' '}
-															ADD{' '}
-														</button>
+													<div className='d-flex flex-row'>
+														<div className=' p-5'>
+															<button className='form-control btn-danger clearBtn rounded-0'>
+																{' '}
+																Clear{' '}
+															</button>
+														</div>
+														<div className=' p-5'>
+															<button
+																onClick={(e) => addToBasket(e, item, qty)}
+																className='form-control btn-success addBtn rounded-pill'>
+																{' '}
+																ADD{' '}
+															</button>
+														</div>
 													</div>
-												</div>
+												</form>
 											</div>
 										))}
+										{/*  End of Displaying Details of the selectedProduct */}
 									</section>
 									{/*====================== End of Products Details =====================*/}
 
