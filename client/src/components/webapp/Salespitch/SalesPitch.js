@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
 import './salespitch.css';
+import { SalesPitchContext } from '../../../contexts/SalesPitchContext';
 
 const SalesPitch = () => {
+	const {
+		fetchProducts,
+		getSelectedProduct,
+		setSelectedProdID,
+		selectedProdID,
+		selectedProduct,
+		products,
+	} = useContext(SalesPitchContext);
+
+	useEffect(() => {
+		fetchProducts();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<div className='row p-0'>
@@ -19,67 +34,65 @@ const SalesPitch = () => {
 									{/*====================== Products Details =====================*/}
 									<section className='col-6 productsDetails p-5'>
 										<h5 className='text-right w-75'>
-											Sales ID: <span> 000121</span>{' '}
+											{/* Sales ID: <span> 000121</span>{' '} */}
 										</h5>
+
 										<form className='w-75'>
 											<div className='form-group'>
 												<label htmlFor='itemName'> Item Name </label>
-												<select className='form-control'>
-													<option> Select Item</option>
-													<option> Pears Baby Lotion</option>
-													<option> Pears Baby Oil</option>
-													<option> Pears Baby Cream</option>
-													<option> Johnson Powder</option>
-													<option> Johnson Baby Lotion</option>
-													<option> Johnson Baby Oil</option>
-													<option> Caroline Lotion</option>
+
+												<select
+													className='form-control'
+													value={selectedProdID}
+													onChange={(e) => setSelectedProdID(e.target.value)}>
+													{products.map((prod) => (
+														<option value={prod.id} key={prod.id}>
+															{prod.name}
+														</option>
+													))}
 												</select>
 											</div>
-
-											<div className='form-group'>
-												<label htmlFor='ItemCategory'> Item Category</label>
-
-												<input
-													type='text'
-													name='itemCategory'
-													className='form-control'
-												/>
-											</div>
-
-											<section className='d-flex flex-row align-items-start'>
-												<div className='form-group'>
-													<label htmlFor='itemPrice'>
-														<del className='del'>N </del> Price
-													</label>
-
-													<input type='text' className='form-control' />
-												</div>
-
-												<div className='form-group ml-5'>
-													<label htmlFor='itemQty'> Qty</label>
-
-													<input type='text' className='form-control' />
-												</div>
-											</section>
-											<small className=''>
-												Date: <span> Mon, April, 2020</span>{' '}
-											</small>
-
-											<div className='d-flex flex-row'>
-												<div className='form-group p-5'>
-													<button className='form-control btn-danger clearBtn rounded-0'>
-														{' '}
-														Clear{' '}
-													</button>
-												</div>
-												<div className='form-group p-5'>
-													<button className='form-control btn-success addBtn rounded-pill'>
-														{' '}
-														ADD{' '}
-													</button>
-												</div>
-											</div>
 										</form>
+
+										{selectedProduct.map((item) => (
+											<div className='wrapsTheMapping' key={item.value}>
+												<div className=''>
+													<h5 className='text-muted d-inline'>
+														{' '}
+														Item Category{' '}
+													</h5>
+
+													<h5 className='d-inline text-info Abel'>
+														{' '}
+														{item.category}{' '}
+													</h5>
+												</div>
+												<div className=''>
+													<h5 className='text-muted d-inline'> Item Price </h5>
+
+													<h5 className='d-inline text-success Abel'>
+														{' '}
+														<del className='del'> N </del>
+														{item.price}{' '}
+													</h5>
+												</div>
+
+												<div className='d-flex flex-row'>
+													<div className=' p-5'>
+														<button className='form-control btn-danger clearBtn rounded-0'>
+															{' '}
+															Clear{' '}
+														</button>
+													</div>
+													<div className=' p-5'>
+														<button className='form-control btn-success addBtn rounded-pill'>
+															{' '}
+															ADD{' '}
+														</button>
+													</div>
+												</div>
+											</div>
+										))}
 									</section>
 									{/*====================== End of Products Details =====================*/}
 
