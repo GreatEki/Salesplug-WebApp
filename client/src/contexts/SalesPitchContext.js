@@ -85,6 +85,7 @@ const SalesPitchContextProvider = (props) => {
 				setQty,
 				qty,
 				basketItems,
+				basketPrice,
 				selectedProdID,
 				selectedProduct,
 				products,

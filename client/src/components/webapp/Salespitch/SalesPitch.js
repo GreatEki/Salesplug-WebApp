@@ -13,6 +13,7 @@ const SalesPitch = () => {
 		products,
 		addToBasket,
 		basketItems,
+		basketPrice,
 		setQty,
 		qty,
 	} = useContext(SalesPitchContext);
@@ -121,17 +122,24 @@ const SalesPitch = () => {
 									{/*======================= ProductSummary ========================*/}
 									<section className='col-6 productsSummary p-5'>
 										<div className='w-75 itemList '>
-											<ul className='list-group'>
-												<li className='list-group-item'>Cras justo odio</li>
-												<li className='list-group-item'>
-													Dapibus ac facilisis in
-												</li>
-												<li className='list-group-item'>Morbi leo risus</li>
-												<li className='list-group-item'>
-													Porta ac consectetur ac
-												</li>
-												<li className='list-group-item'>Vestibulum at eros</li>
-											</ul>
+											{basketItems.map((item) => (
+												<ul className='list-group'>
+													<li className='list-group-item'>
+														<span className='d-inline'> {item.name} </span>
+														<span className='d-inline'>
+															{' '}
+															<del className='del'> N </del>
+															{item.price}{' '}
+														</span>
+													</li>
+												</ul>
+											))}
+										</div>
+
+										<div>
+											<h5 className='Comic my-4 text-center'>
+												Total Price: <del className='del'>N </del> {basketPrice}{' '}
+											</h5>
 										</div>
 
 										<div className='d-flex flex-row w-100 p-5'>
