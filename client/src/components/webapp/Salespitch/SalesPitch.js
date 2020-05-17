@@ -16,6 +16,8 @@ const SalesPitch = () => {
 		basketPrice,
 		setQty,
 		qty,
+		sell,
+		msg,
 	} = useContext(SalesPitchContext);
 
 	useEffect(() => {
@@ -80,7 +82,7 @@ const SalesPitch = () => {
 													<h5 className='d-inline text-success Abel'>
 														{' '}
 														<del className='del'> N </del>
-														{item.price}{' '}
+														&nbsp; {item.price}{' '}
 													</h5>
 												</div>
 
@@ -121,6 +123,9 @@ const SalesPitch = () => {
 
 									{/*======================= ProductSummary ========================*/}
 									<section className='col-6 productsSummary p-5'>
+										<hr />
+										<h5 className='text-center Amiri'> Customer's Basket</h5>
+										<hr />
 										<div className='w-75 itemList '>
 											{basketItems.map((item) => (
 												<ul className='list-group'>
@@ -150,12 +155,16 @@ const SalesPitch = () => {
 												</button>
 											</div>
 											<div className='form-group h-center p-5'>
-												<button className='form-control btn-success addBtn rounded-pill'>
+												<button
+													onClick={(e) => sell(e, basketItems, basketPrice)}
+													className='form-control btn-success addBtn rounded-pill'>
 													{' '}
 													SUBMIT{' '}
 												</button>
 											</div>
 										</div>
+
+										<h5 className='text-center text-success'> {msg} </h5>
 									</section>
 									{/*========================== End of Product Summary =======================*/}
 								</div>

@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { calls } from '../components/webapp/config/calls';
+import { getDate } from '../components/webapp/utils/dateFormatter';
 import Axios from 'axios';
 
 export const SalesPitchContext = createContext();
@@ -11,6 +12,7 @@ const SalesPitchContextProvider = (props) => {
 	const [basketItems, setBasketItems] = useState([]);
 	const [basketPrice, setBasketPrice] = useState(0);
 	const [qty, setQty] = useState(0);
+	const [msg, setMsg] = useState('');
 
 	/* This UseEffect watches the selectedProdID state and
 		feteches details of the product. */
@@ -73,8 +75,65 @@ const SalesPitchContextProvider = (props) => {
 		setBasketItems((basketItems) => [...basketItems, product]);
 		setBasketPrice((basketPrice) => (basketPrice += product.price));
 
-		console.log(id);
+		setQty(0);
 	};
+
+	/* This method handles updating the current quamtity of each item sold in our database(store) and saving the sale transaction to SALEs document in our database */
+	const sell = async (e, basketItems, basketPrice) => {
+		e.preventDefault();
+
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+
+		try {
+			basketItems.map(async (item) => {
+				//Getting the product of each item in the basket in order to update "currentQty"
+				const res = await Axios.get(`${calls.ENDPOINT}/products/${item.id}`);
+
+				const prod = res.data;
+				let newCurrentProdQty = prod.currentQty - item.qty;
+
+				// create Object products that reflects the new quantity
+				let updateProduct = {
+					currentQty: newCurrentProdQty,
+				};
+
+				//updating the quantity of each item in the database
+				await Axios.patch(
+					`${calls.ENDPOINT}/products/${item.id}`,
+					updateProduct,
+					config
+				);
+			});
+
+			//Save record of Sale Transaction to SALES Document in database
+
+			// Create Object of Sale record
+			const saleTransaction = {
+				products: basketItems,
+				amount: basketPrice,
+				date: getDate(),
+			};
+
+			await Axios.post(`${calls.ENDPOINT}/sales`, saleTransaction, config);
+
+			setMsg('Transaction submitted successfully');
+
+			setTimeout(() => {
+				setMsg('');
+				setBasketItems([]);
+				setBasketPrice(0);
+			}, 3000);
+
+			return msg;
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
+
 	return (
 		<SalesPitchContext.Provider
 			value={{
@@ -83,12 +142,14 @@ const SalesPitchContextProvider = (props) => {
 				setSelectedProdID,
 				addToBasket,
 				setQty,
+				sell,
 				qty,
 				basketItems,
 				basketPrice,
 				selectedProdID,
 				selectedProduct,
 				products,
+				msg,
 			}}>
 			{props.children}
 		</SalesPitchContext.Provider>
