@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from '../Report/NavTab';
+import { StorageAdminContext } from '../../../contexts/StorageAdminContext';
 
 const StorageAdmin = () => {
+	const { allProducts, getAllProducts } = useContext(StorageAdminContext);
+
+	useEffect(() => {
+		getAllProducts();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<div className='row'>
@@ -54,33 +62,39 @@ const StorageAdmin = () => {
 
 					<div className='productListWrap scrollable-child p-2 m-1'>
 						{/* ======================= Product Listing =========================== */}
-						<Link to='/inbound/add-qty' className='row productListing p-2 '>
-							<div className='col-2'>
-								<li>
-									<Link to='/inbound/add-qty'> 100 </Link>
-								</li>
-							</div>
-							<div className='col-3'>
-								<li>
-									<Link to='/inbound/add-qty'> Pears Baby Lotion </Link>
-								</li>
-							</div>
-							<div className='col-3'>
-								<li>
-									<Link to='/inbound/add-qty'> Skin Care and Cosmetics </Link>
-								</li>
-							</div>
-							<div className='col-2'>
-								<li className='text-center'>
-									<Link to='/inbound/add-qty'> No </Link>
-								</li>
-							</div>
-							<div className='col-2'>
-								<li className='text-center'>
-									<Link to='/inbound/add-qty'> 20 </Link>
-								</li>
-							</div>
-						</Link>
+
+						{allProducts.map((prod, index) => (
+							<Link
+								to='/inbound/add-qty'
+								className='row productListing p-2 '
+								key={index}>
+								<div className='col-2'>
+									<li>
+										<Link to='/inbound/add-qty'> {prod.id} </Link>
+									</li>
+								</div>
+								<div className='col-3'>
+									<li>
+										<Link to='/inbound/add-qty'> {prod.name} </Link>
+									</li>
+								</div>
+								<div className='col-3'>
+									<li>
+										<Link to='/inbound/add-qty'> {prod.category} </Link>
+									</li>
+								</div>
+								<div className='col-2'>
+									<li className='text-center'>
+										<Link to='/inbound/add-qty'> {prod.consumable} </Link>
+									</li>
+								</div>
+								<div className='col-2'>
+									<li className='text-center'>
+										<Link to='/inbound/add-qty'> {prod.currentQty} </Link>
+									</li>
+								</div>
+							</Link>
+						))}
 
 						{/* ================= End of Product Listing =========================== */}
 					</div>
