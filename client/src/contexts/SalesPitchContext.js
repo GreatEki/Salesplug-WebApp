@@ -127,11 +127,16 @@ const SalesPitchContextProvider = (props) => {
 				setBasketItems([]);
 				setBasketPrice(0);
 			}, 3000);
-
-			return msg;
 		} catch (err) {
 			console.log(err.message);
 		}
+	};
+
+	const removeBasket = (e) => {
+		e.preventDefault();
+
+		setBasketItems([]);
+		setBasketPrice(0);
 	};
 
 	return (
@@ -143,6 +148,7 @@ const SalesPitchContextProvider = (props) => {
 				addToBasket,
 				setQty,
 				sell,
+				removeBasket,
 				qty,
 				basketItems,
 				basketPrice,

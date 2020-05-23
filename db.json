@@ -208,7 +208,7 @@
       "category": "Total Health",
       "consumable": "No",
       "price": 2000,
-      "currentQty": 20,
+      "currentQty": 18,
       "productDept": "Pharmacy"
     },
     {
@@ -226,7 +226,7 @@
       "category": "Vitamins $ Supplements",
       "consumable": "No",
       "price": 10000,
-      "currentQty": 43,
+      "currentQty": 42,
       "productDept": "Pharmacy"
     }
   ],
@@ -324,6 +324,27 @@
       "amount": 1700,
       "date": "Sat, May 16, 2020",
       "id": "iLtRJts"
+    },
+    {
+      "products": [
+        {
+          "id": "116",
+          "name": "Augmentin x360",
+          "category": "Total Health",
+          "price": 4000,
+          "qty": 2
+        },
+        {
+          "id": "118",
+          "name": "Gi Vital Softgel",
+          "category": "Vitamins $ Supplements",
+          "price": 10000,
+          "qty": 1
+        }
+      ],
+      "amount": 14000,
+      "date": "Sat, May 16, 2020",
+      "id": "dYfon0-"
     }
   ]
 }

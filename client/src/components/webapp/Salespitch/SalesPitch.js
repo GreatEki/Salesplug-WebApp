@@ -18,6 +18,7 @@ const SalesPitch = () => {
 		qty,
 		sell,
 		msg,
+		removeBasket,
 	} = useContext(SalesPitchContext);
 
 	useEffect(() => {
@@ -149,7 +150,9 @@ const SalesPitch = () => {
 
 										<div className='d-flex flex-row w-100 p-5'>
 											<div className='form-group h-center p-5 '>
-												<button className='form-control btn-danger clearBtn rounded-0'>
+												<button
+													onClick={(e) => removeBasket(e)}
+													className='form-control btn-danger clearBtn rounded-0'>
 													{' '}
 													REMOVE{' '}
 												</button>
