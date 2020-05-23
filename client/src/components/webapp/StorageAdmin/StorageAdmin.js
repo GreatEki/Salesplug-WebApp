@@ -5,7 +5,9 @@ import NavTab from '../Report/NavTab';
 import { StorageAdminContext } from '../../../contexts/StorageAdminContext';
 
 const StorageAdmin = () => {
-	const { allProducts, getAllProducts } = useContext(StorageAdminContext);
+	const { allProducts, getAllProducts, product, value, setValue } = useContext(
+		StorageAdminContext
+	);
 
 	useEffect(() => {
 		getAllProducts();
@@ -29,13 +31,20 @@ const StorageAdmin = () => {
 
 						<div className='input-group w-25'>
 							<input
+								onChange={(e) => setValue(e.target.value)}
+								value={value}
 								className='form-control'
 								type='text'
 								placeholder='Search Product'
 							/>
 
 							<div className='input-group-prepend'>
-								<span className='input-group-text'> @ </span>
+								<Link
+									to={`/storage/search/${value}`}
+									className='input-group-text'>
+									{' '}
+									@{' '}
+								</Link>
 							</div>
 						</div>
 					</section>
@@ -65,32 +74,32 @@ const StorageAdmin = () => {
 
 						{allProducts.map((prod, index) => (
 							<Link
-								to='/inbound/add-qty'
+								to={`/inbound/add-qty/${prod.id}`}
 								className='row productListing p-2 '
 								key={index}>
 								<div className='col-2'>
 									<li>
-										<Link to='/inbound/add-qty'> {prod.id} </Link>
+										<span to='/inbound/add-qty'> {prod.id} </span>
 									</li>
 								</div>
 								<div className='col-3'>
 									<li>
-										<Link to='/inbound/add-qty'> {prod.name} </Link>
+										<span to='/inbound/add-qty'> {prod.name} </span>
 									</li>
 								</div>
 								<div className='col-3'>
 									<li>
-										<Link to='/inbound/add-qty'> {prod.category} </Link>
+										<span to='/inbound/add-qty'> {prod.category} </span>
 									</li>
 								</div>
 								<div className='col-2'>
 									<li className='text-center'>
-										<Link to='/inbound/add-qty'> {prod.consumable} </Link>
+										<span to='/inbound/add-qty'> {prod.consumable} </span>
 									</li>
 								</div>
 								<div className='col-2'>
 									<li className='text-center'>
-										<Link to='/inbound/add-qty'> {prod.currentQty} </Link>
+										<span to='/inbound/add-qty'> {prod.currentQty} </span>
 									</li>
 								</div>
 							</Link>

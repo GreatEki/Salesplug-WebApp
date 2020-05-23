@@ -20,6 +20,7 @@ import InboundHistory from './components/webapp/Inbound/InboundHistory';
 import InboundContextProvider from './contexts/InboundContext';
 import SalesPitchContextProvider from './contexts/SalesPitchContext';
 import StorageAdminContextProvider from './contexts/StorageAdminContext';
+import SearchProd from './components/webapp/StorageAdmin/SearchProd';
 
 function App() {
 	return (
@@ -60,6 +61,11 @@ function App() {
 											exact
 											path='/storage/admin/new-product'
 											component={NewProduct}
+										/>
+										<Route
+											exact
+											path='/storage/search/:value'
+											component={SearchProd}
 										/>
 										<Route exact path='/access' component={AccessControl} />
 										<Route

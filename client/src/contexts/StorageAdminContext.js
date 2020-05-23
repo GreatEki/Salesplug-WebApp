@@ -6,6 +6,8 @@ export const StorageAdminContext = createContext();
 
 const StorageAdminContextProvider = (props) => {
 	const [allProducts, setAllProducts] = useState([]);
+	const [product, setProduct] = useState([]);
+	const [value, setValue] = useState('');
 
 	const getAllProducts = async () => {
 		try {
@@ -16,8 +18,27 @@ const StorageAdminContextProvider = (props) => {
 			console.log(err.message);
 		}
 	};
+
+	const searchProduct = async (e, val) => {
+		try {
+			e.preventDefault();
+			const res = await Axios.get(`${calls.ENDPOINT}/products/?q=${val}`);
+
+			setProduct(res.data);
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
 	return (
-		<StorageAdminContext.Provider value={{ allProducts, getAllProducts }}>
+		<StorageAdminContext.Provider
+			value={{
+				allProducts,
+				product,
+				value,
+				setValue,
+				getAllProducts,
+				searchProduct,
+			}}>
 			{' '}
 			{props.children}{' '}
 		</StorageAdminContext.Provider>
