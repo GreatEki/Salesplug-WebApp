@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from './NavTab';
+import { ReportContext } from '../../../contexts/ReportContext';
 
 const ReportInbound = () => {
+	const { allInbound, inbProducts } = useContext(ReportContext);
+
+	useEffect(() => {
+		allInbound();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<div className='row'>
@@ -11,59 +19,134 @@ const ReportInbound = () => {
 					<MenuBar />
 				</section>
 				<section className='col-md-10'>
-					<h2 className='pageTitle p-4'> Report Inbound</h2>
+					<h2 className='pageTitle p-4'> Inbound Report </h2>
 					<NavTab />
 
-					{/* Inbound Template Here */}
-					<small className='text-info ml-2'> Click on item to inbound </small>
-					<section className='row p-2 titleBar bg-light'>
-						<div className='col-2'>
+					{/* Filter Bar */}
+					<div className='d-flex flex-row'>
+						<small className='text-info ml-2 p-2'> Inbound Records </small>
+
+						<section className='ml-4 p-2 form-group'>
+							<label htmlFor='dept_filt'> Filter by Dept: </label>
+							&nbsp;
+							<select className='form-control' name='dept_filt'>
+								<option> SuperMarket</option>
+								<option> Pharmacy</option>
+								<option> Gadgets</option>
+								<option> Health and Fitness</option>
+								<option> Fashion</option>
+							</select>
+						</section>
+
+						<section className='ml-4 p-2 d-flex flex-row'>
+							<span htmlFor='dept_filt'> Filter by Date: </span>
+							&nbsp;
+							<div className='form-group mr-4'>
+								<label className='form-control' htmlFor='start_date'>
+									{' '}
+									Start Date{' '}
+								</label>
+								<select className='form-control'>
+									<option> Wed, May 13, 2020</option>
+									<option> Wed, May 13, 2020</option>
+									<option> Wed, May 13, 2020</option>
+								</select>
+							</div>
+							<div className='form-group'>
+								<label className='form-control' htmlFor='end_date'>
+									{' '}
+									End Date{' '}
+								</label>
+								<select className='form-control'>
+									<option> Wed, May 13, 2020</option>
+									<option> Wed, May 13, 2020</option>
+									<option> Wed, May 13, 2020</option>
+								</select>
+							</div>
+						</section>
+					</div>
+
+					<section className='row p-2 m-1 titleBar bg-light'>
+						<div className='col-1'>
 							<p> Item ID</p>
 						</div>
-						<div className='col-3'>
+						<div className='col-2'>
 							<p> Item Name</p>
 						</div>
-						<div className='col-3'>
+						<div className='col-2'>
 							<p> Item Category</p>
 						</div>
-						<div className='col-2'>
-							<p> Consumable</p>
+						<div className='col-1'>
+							<p className='text-center'> Before INB</p>
+						</div>
+						<div className='col-1 ml-4'>
+							<p className='text-right'> Qty INB </p>
 						</div>
 						<div className='col-2'>
-							<p> Qty in Stock</p>
+							<p className='text-right'> INB BY </p>
+						</div>
+						<div className='col-2'>
+							<p className='text-right'> INB DATE </p>
 						</div>
 					</section>
+					<hr />
 					<hr />
 
 					<div className='productListWrap scrollable-child p-2 m-1'>
 						{/* ======================= Product Listing =========================== */}
-						<Link to='/inbound/add-qty' className='row productListing p-2 '>
-							<div className='col-2'>
-								<li>
-									<Link to='/inbound/add-qty'> 100 </Link>
-								</li>
-							</div>
-							<div className='col-3'>
-								<li>
-									<Link to='/inbound/add-qty'> Pears Baby Lotion </Link>
-								</li>
-							</div>
-							<div className='col-3'>
-								<li>
-									<Link to='/inbound/add-qty'> Skin Care and Cosmetics </Link>
-								</li>
-							</div>
-							<div className='col-2'>
-								<li className='text-center'>
-									<Link to='/inbound/add-qty'> No </Link>
-								</li>
-							</div>
-							<div className='col-2'>
-								<li className='text-center'>
-									<Link to='/inbound/add-qty'> 20 </Link>
-								</li>
-							</div>
-						</Link>
+						{inbProducts.map((rec, index) => {
+							return (
+								<Link
+									to={`/inbound/add-qty/${rec.id}`}
+									className='row productListing p-2 '
+									key={index}>
+									<div className='col-1'>
+										<li>
+											<span to='/inbound/add-qty'> {rec.productId} </span>
+										</li>
+									</div>
+									<div className='col-2'>
+										<li>
+											<span to='/inbound/add-qty' className='text-wrap'>
+												{' '}
+												{rec.productName}
+											</span>
+										</li>
+									</div>
+									<div className='col-2'>
+										<li>
+											<span to='/inbound/add-qty' className='text-wrap'>
+												{' '}
+												{rec.productCategory}
+											</span>
+										</li>
+									</div>
+									<div className='col-1'>
+										<li className='text-center'>
+											<span to='/inbound/add-qty'> {rec.existingQty} </span>
+										</li>
+									</div>
+									<div className='col-2'>
+										<li className='text-center'>
+											<span to='/inbound/add-qty'> {rec.inboundedQty} </span>
+										</li>
+									</div>
+									<div className='col-2'>
+										<li className='text-center'>
+											<span to='/inbound/add-qty'> {rec.Personnel} </span>
+										</li>
+									</div>
+									<div className='col-2'>
+										<li className='text-center'>
+											<small to='/inbound/add-qty' className='date'>
+												{' '}
+												{rec.Date}{' '}
+											</small>
+										</li>
+									</div>
+								</Link>
+							);
+						})}
 
 						{/* ================= End of Product Listing =========================== */}
 					</div>
