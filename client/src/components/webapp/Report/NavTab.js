@@ -6,7 +6,7 @@ const NavTab = () => {
 		<div>
 			<ul className='nav nav-tabs p-2'>
 				<li className='nav-item'>
-					<Link to='/report' className='nav-link active Abel'>
+					<Link to='/report' className='nav-link Abel'>
 						{' '}
 						Sales{' '}
 					</Link>

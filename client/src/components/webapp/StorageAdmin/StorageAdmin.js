@@ -5,7 +5,7 @@ import NavTab from '../Report/NavTab';
 import { StorageAdminContext } from '../../../contexts/StorageAdminContext';
 
 const StorageAdmin = () => {
-	const { allProducts, getAllProducts, product, value, setValue } = useContext(
+	const { allProducts, getAllProducts, value, setValue } = useContext(
 		StorageAdminContext
 	);
 

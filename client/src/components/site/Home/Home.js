@@ -89,9 +89,9 @@ const Home = () => {
 
 							<p>
 								{' '}
-								Just get the code and sit tight, you will witness its power and
-								performance in lead generations. Its simple and yet powerful and
-								productive technology. Experience then believe
+								Efficient Business Solution to get your business retail system
+								started up and running. A robust system adaptable to meet
+								different retail ventures.
 							</p>
 
 							<li> Explore solutions butilt to help every business.</li>
@@ -111,9 +111,10 @@ const Home = () => {
 
 							<p>
 								{' '}
-								Just get the code and sit tight, you will witness its power and
-								performance in lead generations. Its simple and yet powerful and
-								productive technology. Experience then believe
+								Integrating teams and sub units into one platform. Providing
+								quick communications across teams and issue resolutions. A
+								platform with expandable feature, also providing reports on
+								activity trends and business growth.
 							</p>
 
 							<li> SMEs and LEs</li>

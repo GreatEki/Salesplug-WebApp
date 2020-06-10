@@ -19,7 +19,6 @@ const InboundContextProvider = (props) => {
 	// Fetch SuperMarket Products
 	const fetchSupMktProducts = async () => {
 		try {
-			console.log(calls.ENDPOINT);
 			const res = await Axios.get(
 				`${calls.ENDPOINT}/products?productDept=SuperMarket`
 			);

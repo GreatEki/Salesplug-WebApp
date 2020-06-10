@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from '../Report/NavTab';
 
@@ -13,7 +12,7 @@ const NewProduct = () => {
 
 				{/* ===== Main Content of Component ===== */}
 				<section className='col-md-10 pr-4'>
-					<h2 className='pageTitle p-4'> Sales Pitch </h2>
+					<h2 className='pageTitle p-4'> Storage Admin </h2>
 					<NavTab />
 
 					<div className='card w-100 my-2 mx-auto '>
@@ -75,7 +74,7 @@ const NewProduct = () => {
 
 							<div className='d-flex flex-row justify-content-between'>
 								<div className='form-group'>
-									<label htnlFor='costPrice' className='Abel'>
+									<label htmlFor='costPrice' className='Abel'>
 										<del className='del'>N </del> Cost Price{' '}
 									</label>
 
@@ -86,7 +85,7 @@ const NewProduct = () => {
 									/>
 								</div>
 								<div className='form-group'>
-									<label htnlFor='sellPrice' className='Abel'>
+									<label htmlFor='sellPrice' className='Abel'>
 										<del className='del'>N </del> Selling Price{' '}
 									</label>
 

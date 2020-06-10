@@ -13,9 +13,8 @@ const InboundHistory = () => {
 	useEffect(() => {
 		if (userDept === 'SuperMarket') {
 			getInboundHistoryforSupMarket();
-
-			//eslint-disable-next-line react-hooks/exhaustive-deps
 		}
+		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<div>

@@ -44,32 +44,32 @@ const ReportSales = () => {
 						<Link to='/inbound/add-qty' className='row productListing p-2'>
 							<div className='col-2'>
 								<li>
-									<Link to='/inbound/add-qty'> 5/9/20 2:56pm </Link>
+									<span to='/inbound/add-qty'> 5/9/20 2:56pm </span>
 								</li>
 							</div>
 							<div className='col-1'>
 								<li>
-									<Link to='/inbound/add-qty'> 100 </Link>
+									<span to='/inbound/add-qty'> 100 </span>
 								</li>
 							</div>
 							<div className='col-3'>
 								<li>
-									<Link to='/inbound/add-qty'> Pears Baby Lotion </Link>
+									<span to='/inbound/add-qty'> Pears Baby Lotion </span>
 								</li>
 							</div>
 							<div className='col-2'>
 								<li>
-									<Link to='/inbound/add-qty'> Skin Care and Cosmetics </Link>
+									<span to='/inbound/add-qty'> Skin Care and Cosmetics </span>
 								</li>
 							</div>
 							<div className='col-2 '>
 								<li className='text-center'>
-									<Link to='/inbound/add-qty'> No </Link>
+									<span to='/inbound/add-qty'> No </span>
 								</li>
 							</div>
 							<div className='col-2'>
 								<li className='text-center'>
-									<Link to='/inbound/add-qty'> 20 </Link>
+									<span to='/inbound/add-qty'> 20 </span>
 								</li>
 							</div>
 						</Link>
