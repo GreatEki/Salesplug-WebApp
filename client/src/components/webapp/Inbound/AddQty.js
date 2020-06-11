@@ -10,6 +10,7 @@ const AddQty = (props) => {
 		setAddedQty,
 		addedQty,
 		handleUpdateQtySubmit,
+		respMsg,
 	} = useContext(InboundContext);
 
 	const id = props.match.params.id;
@@ -32,6 +33,11 @@ const AddQty = (props) => {
 					<h2 className='pageTitle p-4'> {inboundProd.name} </h2>
 
 					<div className='pageContent addQty'>
+						{respMsg ? (
+							<p className='text-success text-center'> {respMsg} </p>
+						) : (
+							<p> </p>
+						)}
 						<form
 							onSubmit={(e) => handleUpdateQtySubmit(e, inboundProd, addedQty)}
 							className='w-50 h-center'>

@@ -1,17 +1,25 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from './NavTab';
 import { ReportContext } from '../../../contexts/ReportContext';
 
 const ReportInbound = () => {
-	const { allInbound, inbProducts } = useContext(ReportContext);
+	const {
+		setChosenDept,
+		chosenDept,
+		filterByDept,
+		filteredProducts,
+	} = useContext(ReportContext);
 
+	let history = useHistory();
+
+	// useEffect function to run with change in state to chosenDept
 	useEffect(() => {
-		allInbound();
+		filterByDept(chosenDept);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [chosenDept]);
 	return (
 		<div>
 			<div className='row'>
@@ -29,12 +37,16 @@ const ReportInbound = () => {
 						<section className='ml-4 p-2 form-group'>
 							<label htmlFor='dept_filt'> Filter by Dept: </label>
 							&nbsp;
-							<select className='form-control' name='dept_filt'>
-								<option> SuperMarket</option>
-								<option> Pharmacy</option>
-								<option> Gadgets</option>
-								<option> Health and Fitness</option>
-								<option> Fashion</option>
+							<select
+								className='form-control'
+								onChange={(e) => setChosenDept(e.target.value)}
+								value={chosenDept}>
+								<option value='nill'> Select Dept</option>
+								<option value='SuperMarket'> SuperMarket</option>
+								<option value='Pharmacy'> Pharmacy</option>
+								<option value='Gadgets'> Gadgets</option>
+								<option value='Health and Fitness'> Health and Fitness</option>
+								<option value='Fashion'> Fashion</option>
 							</select>
 						</section>
 
@@ -90,16 +102,12 @@ const ReportInbound = () => {
 						</div>
 					</section>
 					<hr />
-					<hr />
 
 					<div className='productListWrap scrollable-child p-2 m-1'>
 						{/* ======================= Product Listing =========================== */}
-						{inbProducts.map((rec, index) => {
+						{filteredProducts.map((rec, index) => {
 							return (
-								<Link
-									to={`/inbound/add-qty/${rec.id}`}
-									className='row productListing p-2 '
-									key={index}>
+								<Link to='#' className='row productListing p-2 ' key={index}>
 									<div className='col-1'>
 										<li>
 											<span to='/inbound/add-qty'> {rec.productId} </span>
@@ -123,12 +131,18 @@ const ReportInbound = () => {
 									</div>
 									<div className='col-1'>
 										<li className='text-center'>
-											<span to='/inbound/add-qty'> {rec.existingQty} </span>
+											<span to='/inbound/add-qty' className='text-danger'>
+												{' '}
+												{rec.existingQty}{' '}
+											</span>
 										</li>
 									</div>
 									<div className='col-2'>
 										<li className='text-center'>
-											<span to='/inbound/add-qty'> {rec.inboundedQty} </span>
+											<span to='/inbound/add-qty' className='text-success'>
+												{' '}
+												{rec.inboundedQty}{' '}
+											</span>
 										</li>
 									</div>
 									<div className='col-2'>

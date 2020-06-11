@@ -1,25 +1,35 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import Axios from 'axios';
 import { calls } from '../components/webapp/config/calls';
 
 export const ReportContext = createContext();
 
 const ReportContextProvider = (props) => {
-	const [inbProducts, setInbProducts] = useState([]);
+	const [filteredProducts, setFilteredProducts] = useState([]);
 
-	//Fetch All Inbound records for all prodcuts and dept
-	const allInbound = async () => {
+	const [chosenDept, setChosenDept] = useState('nill');
+
+	const filterByDept = async (dept) => {
 		try {
-			const res = await Axios.get(`${calls.ENDPOINT}/inbounds`);
+			const res = await Axios.get(
+				`${calls.ENDPOINT}/inbounds?productDept=${dept}`
+			);
 
-			setInbProducts(res.data);
+			// console.log(res.data);
+			setFilteredProducts(res.data);
 		} catch (err) {
 			console.log(err.message);
 		}
 	};
 
 	return (
-		<ReportContext.Provider value={{ allInbound, inbProducts }}>
+		<ReportContext.Provider
+			value={{
+				setChosenDept,
+				filterByDept,
+				filteredProducts,
+				chosenDept,
+			}}>
 			{props.children}
 		</ReportContext.Provider>
 	);

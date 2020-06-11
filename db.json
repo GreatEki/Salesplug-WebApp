@@ -34,6 +34,13 @@
       "dept": "Gadgets",
       "role": "Teller",
       "id": 6
+    },
+    {
+      "firstname": "Daniel",
+      "lastname": "Jackson",
+      "dept": "Bakery",
+      "role": "Teller",
+      "id": 7
     }
   ],
   "departments": [
@@ -73,7 +80,7 @@
       "category": "Food and Drinks",
       "consumable": "yes",
       "price": 550,
-      "currentQty": 68,
+      "currentQty": 135,
       "productDept": "SuperMarket"
     },
     {
@@ -82,7 +89,7 @@
       "category": "Cosmetics",
       "consumable": "No",
       "price": 400,
-      "currentQty": 96,
+      "currentQty": 136,
       "productDept": "SuperMarket"
     },
     {
@@ -100,7 +107,7 @@
       "category": "Food and Drinks",
       "consumable": "yes",
       "price": 1350,
-      "currentQty": 50,
+      "currentQty": 90,
       "productDept": "SuperMarket"
     },
     {
@@ -145,7 +152,7 @@
       "category": "Food and Drinks",
       "consumable": "yes",
       "price": 1800,
-      "currentQty": 30,
+      "currentQty": 80,
       "productDept": "SuperMarket"
     },
     {
@@ -154,7 +161,7 @@
       "category": "Food and Drinks",
       "consumable": "yes",
       "price": 100,
-      "currentQty": 600,
+      "currentQty": 642,
       "productDept": "SuperMarket"
     },
     {
@@ -172,7 +179,7 @@
       "category": "Phones and Tablets",
       "consumable": "No",
       "price": 32500,
-      "currentQty": 2000,
+      "currentQty": 3500,
       "productDept": "Gadgets"
     },
     {
@@ -190,7 +197,7 @@
       "category": "Generator and Power",
       "consumable": "No",
       "price": 89900,
-      "currentQty": 60,
+      "currentQty": 100,
       "productDept": "Gadgets"
     },
     {
@@ -199,7 +206,7 @@
       "category": "Total Health",
       "consumable": "No",
       "price": 1200,
-      "currentQty": 8,
+      "currentQty": 13,
       "productDept": "Pharmacy"
     },
     {
@@ -208,7 +215,7 @@
       "category": "Total Health",
       "consumable": "No",
       "price": 2000,
-      "currentQty": 18,
+      "currentQty": 20,
       "productDept": "Pharmacy"
     },
     {
@@ -217,7 +224,7 @@
       "category": "Total Health",
       "consumable": "No",
       "price": 600,
-      "currentQty": 20,
+      "currentQty": 30,
       "productDept": "Pharmacy"
     },
     {
@@ -240,7 +247,7 @@
       "inboundedQty": 40,
       "Date": 1589420794522,
       "Personnel": "Patience Edo",
-      "id": "4nEIoEi"
+      "id": "ghfhdjdkjd"
     },
     {
       "productId": "101",
@@ -251,7 +258,7 @@
       "inboundedQty": 30,
       "Date": "Wed, May 13, 2020",
       "Personnel": "Patience Edo",
-      "id": "AdlKx81"
+      "id": "hfjddksdk"
     },
     {
       "productId": "105",
@@ -262,7 +269,7 @@
       "inboundedQty": 15,
       "Date": "Wed, May 13, 2020",
       "Personnel": "Patience Edo",
-      "id": "SdSXppz"
+      "id": "hfhdjdd"
     },
     {
       "productId": "105",
@@ -273,7 +280,117 @@
       "inboundedQty": 10,
       "Date": "Wed, May 13, 2020",
       "Personnel": "Patience Edo",
-      "id": "EbOVReE"
+      "id": "ggjfdkdk"
+    },
+    {
+      "productId": "112",
+      "productName": "Huwaei Y6",
+      "productCategory": "Phones and Tablets",
+      "existingQty": 2000,
+      "inboundedQty": 1500,
+      "productDept": "Gadgets",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "jdfwehwo"
+    },
+    {
+      "productId": "114",
+      "productName": "Elepaq Generator",
+      "productCategory": "Generator and Power",
+      "existingQty": 60,
+      "inboundedQty": 40,
+      "productDept": "Gadgets",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "fdfil"
+    },
+    {
+      "productId": "103",
+      "productName": "Milo",
+      "productCategory": "Food and Drinks",
+      "existingQty": 50,
+      "inboundedQty": 10,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "dkidmmd"
+    },
+    {
+      "productId": "103",
+      "productName": "Milo",
+      "productCategory": "Food and Drinks",
+      "existingQty": 70,
+      "inboundedQty": 20,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "lgifide"
+    },
+    {
+      "productId": "108",
+      "productName": "St Remy",
+      "productCategory": "Food and Drinks",
+      "existingQty": 30,
+      "inboundedQty": 50,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "gfDPi58"
+    },
+    {
+      "productId": "109",
+      "productName": "Cocacola",
+      "productCategory": "Food and Drinks",
+      "existingQty": 600,
+      "inboundedQty": 30,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "ccoVYZU"
+    },
+    {
+      "productId": "109",
+      "productName": "Cocacola",
+      "productCategory": "Food and Drinks",
+      "existingQty": 630,
+      "inboundedQty": 12,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "GN6iLnW"
+    },
+    {
+      "productId": "117",
+      "productName": "Artefan ",
+      "productCategory": "Total Health",
+      "existingQty": 22,
+      "inboundedQty": 4,
+      "productDept": "Pharmacy",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "KC4a5ae"
+    },
+    {
+      "productId": "100",
+      "productName": "BlueBand Mayonnaise",
+      "productCategory": "Food and Drinks",
+      "existingQty": 90,
+      "inboundedQty": 45,
+      "productDept": "SuperMarket",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "tWD5lml"
+    },
+    {
+      "productId": "117",
+      "productName": "Artefan ",
+      "productCategory": "Total Health",
+      "existingQty": 26,
+      "inboundedQty": 4,
+      "productDept": "Pharmacy",
+      "Date": "Wed, Jun 10, 2020",
+      "Personnel": "Patience Edo",
+      "id": "ft4tU0Y"
     }
   ],
   "sales": [

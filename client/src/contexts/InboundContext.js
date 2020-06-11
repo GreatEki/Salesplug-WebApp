@@ -11,6 +11,8 @@ const InboundContextProvider = (props) => {
 
 	const [addedQty, setAddedQty] = useState(0);
 
+	const [respMsg, setRespMsg] = useState('');
+
 	const [inboundHistoryProduct, setInboundHistoryProduct] = useState([]);
 
 	const userDept = 'SuperMarket';
@@ -70,6 +72,13 @@ const InboundContextProvider = (props) => {
 
 			/* POST request to save records for every time we inbound a product */
 			await Axios.post(`${calls.ENDPOINT}/inbounds`, inbound, config);
+
+			setRespMsg('Product Inbound Successful');
+			setAddedQty(0);
+
+			setTimeout(() => {
+				setRespMsg('');
+			}, 3000);
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -97,13 +106,16 @@ const InboundContextProvider = (props) => {
 		//instantiating an object of the Date class.
 		let today = new Date();
 
+		let dept = '';
+
 		//Creating our inbound object
 		const inbound = {
-			id: prod.id,
+			productId: prod.id,
 			productName: prod.name,
 			productCategory: prod.category,
 			existingQty: prod.currentQty,
 			inboundedQty: addedQty,
+			productDept: prod.productDept,
 			Date: today.toLocaleDateString('en-US', dateStyle),
 			Personnel: personnel,
 		};
@@ -137,6 +149,7 @@ const InboundContextProvider = (props) => {
 				inboundProd,
 				products,
 				userDept,
+				respMsg,
 			}}>
 			{props.children}
 		</InboundContext.Provider>
