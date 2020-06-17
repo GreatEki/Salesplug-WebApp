@@ -74,7 +74,6 @@ const AccessContextProvider = (props) => {
 			if (errors.length > 0) {
 				setAllowSubmit(false);
 				setErrMsg(errors);
-				console.log(errors);
 				return errMsg;
 			} else {
 				setAllowSubmit(true);
@@ -88,7 +87,6 @@ const AccessContextProvider = (props) => {
 					dept: '',
 					role: '',
 				});
-				// console.log(res);
 			}
 		} catch (err) {
 			console.log(err.message);

@@ -28,7 +28,11 @@ const Auth = () => {
 									Password
 								</label>
 
-								<input type='text' name='password' className='form-control' />
+								<input
+									type='password'
+									name='password'
+									className='form-control'
+								/>
 							</div>
 
 							<div className='form-group'>
