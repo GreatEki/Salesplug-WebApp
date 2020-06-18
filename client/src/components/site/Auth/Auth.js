@@ -12,6 +12,7 @@ const Auth = () => {
 		userSignIn,
 		authErrMsg,
 	} = useContext(AuthContext);
+
 	return (
 		<div className='login-wrapper container-fluid'>
 			<div className='row'>

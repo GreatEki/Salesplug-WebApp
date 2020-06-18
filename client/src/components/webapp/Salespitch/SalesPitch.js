@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
 import './salespitch.css';
 import { SalesPitchContext } from '../../../contexts/SalesPitchContext';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const SalesPitch = () => {
 	const {
@@ -21,9 +22,11 @@ const SalesPitch = () => {
 		removeBasket,
 	} = useContext(SalesPitchContext);
 
+	const { setAuthenticatedUser, getSignedInUser } = useContext(AuthContext);
+
 	useEffect(() => {
 		fetchProducts();
-
+		getSignedInUser();
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (

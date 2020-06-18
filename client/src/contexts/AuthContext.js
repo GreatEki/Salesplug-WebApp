@@ -12,12 +12,19 @@ const AuthContextProvider = (props) => {
 
 	const [authErrMsg, setAuthErrMsg] = useState('');
 
-	const [authenticatedUser, setAuthenticatedUser] = useState({});
+	const [authenticatedUser, setAuthenticatedUser] = useState({
+		firstname: String,
+		lastname: String,
+		email: String,
+		dept: String,
+		role: String,
+	});
 
 	let history = useHistory();
 
 	useEffect(() => {
-		console.log(authenticatedUser);
+		sessionStorage.setItem('AuthUser', JSON.stringify(authenticatedUser));
+
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [authenticatedUser]);
 
@@ -45,7 +52,15 @@ const AuthContextProvider = (props) => {
 					setAuthErrMsg('Authentication Denied');
 					return authErrMsg;
 				} else {
-					setAuthenticatedUser(user[0]);
+					setAuthenticatedUser(() => {
+						return {
+							firstname: user[0].firstname,
+							lastname: user[0].lastname,
+							email: user[0].email,
+							dept: user[0].dept,
+							role: user[0].role,
+						};
+					});
 
 					history.push('/sales-pitch');
 				}
@@ -53,6 +68,11 @@ const AuthContextProvider = (props) => {
 		} catch (err) {
 			console.log(err.message);
 		}
+	};
+
+	const getSignedInUser = () => {
+		const sessionUser = sessionStorage.getItem('AuthUser');
+		setAuthenticatedUser(JSON.parse(sessionUser));
 	};
 	return (
 		<AuthContext.Provider
@@ -63,6 +83,9 @@ const AuthContextProvider = (props) => {
 				setPassword,
 				userSignIn,
 				authErrMsg,
+				authenticatedUser,
+				setAuthenticatedUser,
+				getSignedInUser,
 			}}>
 			{' '}
 			{props.children}{' '}
