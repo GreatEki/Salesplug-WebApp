@@ -78,6 +78,10 @@ form .label {
 	color: white;
 }
 
+.authErrText {
+	font-family: 18px !important;
+}
+
 /*========== Medium  Screen sized devices ================*/
 @media (min-width: 768px) and (max-width: 1023px) {
 	.login-wrapper {

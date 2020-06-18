@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './auth.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const Auth = () => {
+	const {
+		username,
+		setUsername,
+		password,
+		setPassword,
+		userSignIn,
+		authErrMsg,
+	} = useContext(AuthContext);
 	return (
 		<div className='login-wrapper container-fluid'>
 			<div className='row'>
@@ -13,14 +22,31 @@ const Auth = () => {
 						className='d-block'
 					/>
 					<div className='card bg-white'>
-						<form className='form px-4 pt-4'>
+						<form
+							onSubmit={(e) => userSignIn(e, username, password)}
+							className='form px-4 pt-4'>
+							{authErrMsg.length > 0 ? (
+								<h6 className='text-center text-danger authErrText'>
+									{' '}
+									{authErrMsg}{' '}
+								</h6>
+							) : (
+								<div> </div>
+							)}
 							<div className='form-group'>
 								<label htmlFor='username' className='label'>
 									{' '}
 									Username
 								</label>
 
-								<input type='text' name='username' className='form-control' />
+								<input
+									type='text'
+									name='username'
+									value={username}
+									onChange={(e) => setUsername(e.target.value)}
+									className='form-control'
+									required
+								/>
 							</div>
 							<div className='form-group'>
 								<label htmlFor='password' className='label'>
@@ -31,14 +57,17 @@ const Auth = () => {
 								<input
 									type='password'
 									name='password'
+									value={password}
+									onChange={(e) => setPassword(e.target.value)}
 									className='form-control'
+									required
 								/>
 							</div>
 
 							<div className='form-group'>
 								<input
 									type='checkbox'
-									ClassName='form-check-input'
+									className='form-check-input'
 									name='keepMeSignedIn'
 								/>
 								<label htmlFor='keepMeSignedIn' className='text-muted'>
