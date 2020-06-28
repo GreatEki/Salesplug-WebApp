@@ -13,11 +13,11 @@ const AuthContextProvider = (props) => {
 	const [authErrMsg, setAuthErrMsg] = useState('');
 
 	const [authenticatedUser, setAuthenticatedUser] = useState({
-		firstname: String,
-		lastname: String,
-		email: String,
-		dept: String,
-		role: String,
+		firstname: '',
+		lastname: '',
+		email: '',
+		dept: '',
+		role: '',
 	});
 
 	let history = useHistory();
@@ -31,11 +31,6 @@ const AuthContextProvider = (props) => {
 	const userSignIn = async (e, username, password) => {
 		e.preventDefault();
 
-		const config = {
-			headers: {
-				'Content-Type': 'application.json',
-			},
-		};
 		try {
 			//Find user via email
 
@@ -73,6 +68,16 @@ const AuthContextProvider = (props) => {
 	const getSignedInUser = () => {
 		const sessionUser = sessionStorage.getItem('AuthUser');
 		setAuthenticatedUser(JSON.parse(sessionUser));
+
+		return authenticatedUser;
+	};
+
+	const signOutUser = () => {
+		sessionStorage.setItem('AuthUser', JSON.stringify({}));
+		setAuthenticatedUser({});
+
+		history.push('login');
+		window.location.reload(true);
 	};
 	return (
 		<AuthContext.Provider
@@ -86,9 +91,10 @@ const AuthContextProvider = (props) => {
 				authenticatedUser,
 				setAuthenticatedUser,
 				getSignedInUser,
+				signOutUser,
 			}}>
 			{' '}
-			{props.children}{' '}
+			{props.children}
 		</AuthContext.Provider>
 	);
 };

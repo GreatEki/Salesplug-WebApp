@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './menubar.css';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const MenuBar = () => {
+	const { signOutUser, getSignedInUser, authenticatedUser } = useContext(
+		AuthContext
+	);
+
+	useEffect(() => {
+		getSignedInUser();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	const { firstname, lastname } = authenticatedUser;
+
 	return (
 		<main className='menuNav'>
 			<div className='d-block text-right'>
@@ -11,6 +24,16 @@ const MenuBar = () => {
 			</div>
 
 			<div className='d-flex flex-column menuList'>
+				<div>
+					<p className='accountHolder'>
+						{' '}
+						Account:{' '}
+						<span className='text-info'>
+							{' '}
+							{lastname} {firstname}{' '}
+						</span>
+					</p>
+				</div>
 				<li className='d-block menuItem'>
 					<Link to='/sales-pitch'>
 						{' '}
@@ -39,6 +62,13 @@ const MenuBar = () => {
 					<Link to='/access'>
 						{' '}
 						<i className='fas fa-bars hamburger'></i> &nbsp; Access Control{' '}
+					</Link>
+				</li>
+				<li onClick={() => signOutUser()} className='d-block menuItem'>
+					<Link to='#'>
+						{' '}
+						<i className='fas fa-bars hamburger'></i> &nbsp;{' '}
+						<span className='signOut'> Sign Out </span>{' '}
 					</Link>
 				</li>
 			</div>

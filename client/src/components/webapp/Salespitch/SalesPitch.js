@@ -22,7 +22,7 @@ const SalesPitch = () => {
 		removeBasket,
 	} = useContext(SalesPitchContext);
 
-	const { setAuthenticatedUser, getSignedInUser } = useContext(AuthContext);
+	const { getSignedInUser, authenticatedUser } = useContext(AuthContext);
 
 	useEffect(() => {
 		fetchProducts();
@@ -32,18 +32,18 @@ const SalesPitch = () => {
 	return (
 		<div>
 			<div className='row p-0'>
-				<section className='col-md-2 p-0'>
+				<section className='col-lg-2 col-4 p-0'>
 					<MenuBar />
 				</section>
-				<section className='col-md-10 pr-4'>
+				<section className='col-lg-10 col-8 pr-4'>
 					<div className='content-wrapper'>
-						<section className=' pageBody p-0'>
+						<section className=' pageBody p-0 '>
 							<h2 className='pageTitle p-4'> Sales Pitch </h2>
 
 							<div className='pageContent bg-light'>
 								<div className='row'>
 									{/*====================== Products Details =====================*/}
-									<section className='col-6 productsDetails p-5'>
+									<section className='col-md-6 col-sm-12 productsDetails p-5'>
 										<h5 className='text-right w-75'>
 											{/* Sales ID: <span> 000121</span>{' '} */}
 										</h5>
@@ -126,13 +126,13 @@ const SalesPitch = () => {
 									{/*====================== End of Products Details =====================*/}
 
 									{/*======================= ProductSummary ========================*/}
-									<section className='col-6 productsSummary p-5'>
+									<section className='col-md-6 col-sm-12 productsSummary p-5'>
 										<hr />
 										<h5 className='text-center Amiri'> Customer's Basket</h5>
 										<hr />
 										<div className='w-75 itemList '>
-											{basketItems.map((item) => (
-												<ul className='list-group'>
+											{basketItems.map((item, index) => (
+												<ul className='list-group' key={index}>
 													<li className='list-group-item'>
 														<span className='d-inline'> {item.name} </span>
 														<span className='d-inline'>
@@ -151,7 +151,7 @@ const SalesPitch = () => {
 											</h5>
 										</div>
 
-										<div className='d-flex flex-row w-100 p-5'>
+										<div className='d-flex flex-row  w-100 p-5'>
 											<div className='form-group h-center p-5 '>
 												<button
 													onClick={(e) => removeBasket(e)}

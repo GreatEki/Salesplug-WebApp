@@ -42,4 +42,22 @@
 	color: var(--primary-color);
 }
 
+.signOut {
+	text-decoration: underline;
+}
+
 /* ================== End of Menu Nav ============== */
+
+@media (min-width: 100px) and (max-width: 767px) {
+	.menuNav .hamburger {
+		font-size: 14px;
+	}
+
+	.menuNav a {
+		font-size: 14px;
+	}
+
+	.accountHolder {
+		font-size: 14px;
+	}
+}

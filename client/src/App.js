@@ -29,13 +29,13 @@ function App() {
 		<div className='App'>
 			<BrowserRouter>
 				<Switch>
-					<AuthContextProvider>
-						<ReportContextProvider>
-							<StorageAdminContextProvider>
-								<SalesPitchContextProvider>
-									<InboundContextProvider>
-										<AccessContextProvider>
-											<StyleContextProvider>
+					<ReportContextProvider>
+						<StorageAdminContextProvider>
+							<SalesPitchContextProvider>
+								<InboundContextProvider>
+									<AccessContextProvider>
+										<StyleContextProvider>
+											<AuthContextProvider>
 												<Route exact path='/' component={Home} />
 												<Route path='/login' component={Auth} />
 												<Route path='/sales-pitch' component={Salespitch} />
@@ -82,13 +82,13 @@ function App() {
 													path='/access/dept/add'
 													component={AddNewDept}
 												/>
-											</StyleContextProvider>
-										</AccessContextProvider>
-									</InboundContextProvider>
-								</SalesPitchContextProvider>
-							</StorageAdminContextProvider>
-						</ReportContextProvider>
-					</AuthContextProvider>
+											</AuthContextProvider>
+										</StyleContextProvider>
+									</AccessContextProvider>
+								</InboundContextProvider>
+							</SalesPitchContextProvider>
+						</StorageAdminContextProvider>
+					</ReportContextProvider>
 				</Switch>
 			</BrowserRouter>
 		</div>
