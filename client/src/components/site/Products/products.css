@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Montserrat: 'Montserrat', sans-serif;
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.montserrat {
+	font-family: var(--Montserrat);
+}
+
+.product-banner {
+	background: linear-gradient(white, var(--primary-color));
+	background: -moz-linear-gradient(white, var(--primary-color));
+	background: -webkit-linear-gradient(white, var(--primary-color));
+}
+
+.definitionText {
+	width: 50%;
+	/* border: 1px solid white; */
+	margin: 2em auto;
+	padding: 2em;
+}
+
+.definitionText h5 {
+	font-family: var(--Roboto);
+	text-align: center;
+	font-size: 28px;
+}
+
+.definitionText p {
+	font-family: var(--Roboto);
+	font-size: 20px;
+}
+
+.webDiv {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.webDiv img {
+	width: 40%;
+	height: 350px;
+	z-index: 2;
+}
+
+.container-1 {
+	padding: 1.5em 1em 1.5em 20em;
+	/* background: green; */
+}
+
+.cap4 {
+	font-family: var(--Montserrat);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.container-1 h6 {
+	font-size: 38px;
+	font-family: var(--Abel);
+}
+
+.text-normal {
+	font-family: var(--ComicNueue);
+	font-size: 18px;
+	/* font-weight: 300px; */
+}
+
+.getStarted-btn {
+	background-color: var(--primary-color);
+	padding: 1em;
+	border-radius: 1em;
+	color: white;
+}
+
+.getStarted-btn:hover {
+	text-decoration: none;
+	color: white;
+}
+.marginY-2 {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.marginTop-10 {
+	margin-top: 10em !important;
+}
+
+.x-center {
+	margin: 0 auto;
+}
+
+.container-1 .flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.highlights img {
+	height: 80px;
+}
+
+.highlights p {
+	padding: 5px;
+	font-family: var(--Abel);
+	font-weight: 500;
+}
+
+.highlights p:last-child {
+	font-family: var(--Montserrat);
+	color: #6096fd;
+	/* font-weight: bold; */
+}
+
+.companies h5 {
+	font-family: var(--Lato);
+	font-size: 20px;
+	font-weight: bold;
+	color: #403f3e;
+}
+
+.companies flex-row {
+	justify-content: space-evenly;
+}
+
+.flex-row .company-img {
+	width: 100px;
+	height: 50px;
+	margin: 0 1.5em;
+}

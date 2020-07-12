@@ -37,37 +37,37 @@ const Home = () => {
 				<div className='d-flex flex-md-row flex-column justify-content-between px-5 py-5'>
 					<div className='card mt-3 mr-lg-3'>
 						<i className='fas fa-adjust fa-4x text-center'></i>
-						<p className='text-center'> Adaptable </p>
+						<h5 className='text-center'> Adaptable </h5>
 						<span className='text-center py-2 px-md-5'>
 							Sensitive and responsive to different nature of retail businesses{' '}
 						</span>
 						<button className='rounded-0 my-5 section2-btn'>
 							{' '}
-							Learn More>{' '}
+							Learn More &gt;{' '}
 						</button>
 					</div>
 					<div className='card mt-3 mr-lg-3'>
 						<i className='fas fa-wrench fa-4x text-center'></i>
-						<p className='text-center'> Adjustable </p>
+						<h5 className='text-center'> Adjustable </h5>
 						<span className='text-center py-2 px-md-5'>
 							{' '}
 							Customisable to suit operational activites{' '}
 						</span>
 						<button className='rounded-0 my-5 section2-btn'>
 							{' '}
-							Learn More>{' '}
+							Learn More &gt;{' '}
 						</button>
 					</div>
 					<div className='card mt-3 mr-lg-3'>
 						<i className='fas fa-cog text-center fa-4x'></i>
-						<p className='text-center'> Service </p>
+						<h5 className='text-center'> Service </h5>
 						<span className='text-center py-2 px-md-5'>
 							{' '}
 							Efficient Solutions to inhibitions of data integrity and data flow
 						</span>
 						<button className='rounded-0 my-5 section2-btn'>
 							{' '}
-							Learn More>{' '}
+							Learn More &gt;{' '}
 						</button>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ const Home = () => {
 						</div>
 
 						<div className='flex-fill pb-md-5'>
-							<h5> Designed for Start-ups and SMEs</h5>
+							<h5> For Start-ups and SMEs</h5>
 
 							<p>
 								{' '}
@@ -94,9 +94,9 @@ const Home = () => {
 								different retail ventures.
 							</p>
 
-							<li> Explore solutions butilt to help every business.</li>
-							<li> Repeat the same with another one</li>
-							<li> Complete the list with the last.</li>
+							<li> Explore solutions built to help every business.</li>
+							<li> Different aspects of sales</li>
+							<li> Easy to use interface.</li>
 						</div>
 					</div>
 				</div>
@@ -111,10 +111,10 @@ const Home = () => {
 
 							<p>
 								{' '}
-								Integrating teams and sub units into one platform. Providing
-								quick communications across teams and issue resolutions. A
-								platform with expandable feature, also providing reports on
-								activity trends and business growth.
+								Integrating teams and sub units into one platform. Ensuring
+								quick communications across teams for issue resolutions. A
+								platform with expandable features which includes providing
+								reports on activity trends and business growth.
 							</p>
 
 							<li> SMEs and LEs</li>
@@ -135,7 +135,7 @@ const Home = () => {
 
 			<section className='trial'>
 				<div className='container'>
-					<h5> Sell faster and smarter with the world’s #1 retail platform.</h5>
+					<h5> Sell faster and smarter with a smart retail platform.</h5>
 				</div>
 			</section>
 

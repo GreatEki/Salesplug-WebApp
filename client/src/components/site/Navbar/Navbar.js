@@ -9,18 +9,18 @@ const Navbar = () => {
 		<>
 			<div className='container-fluid'>
 				<nav className='row nav'>
-					<div className='col-2 logo'>
+					<Link to='/' className='col-2 logo'>
 						<img
 							src='/webImages/salesplug-logo.png'
 							alt='logo'
 							className='site-logo'
 						/>
-					</div>
+					</Link>
 
 					<div className='col-7 wrapper-nav-menu'>
 						<ul className='navbar-menu'>
 							<li>
-								<Link to='/' className='menu-item'>
+								<Link to='/products' className='menu-item'>
 									{' '}
 									Product
 								</Link>
