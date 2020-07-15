@@ -24,6 +24,7 @@ import SearchProd from './components/webapp/StorageAdmin/SearchProd';
 import ReportContextProvider from './contexts/ReportContext';
 import AuthContextProvider from './contexts/AuthContext';
 import Products from './components/site/Products/Products';
+import Solutions from './components/site/Solutions/Solutions';
 
 function App() {
 	return (
@@ -39,6 +40,7 @@ function App() {
 											<AuthContextProvider>
 												<Route exact path='/' component={Home} />
 												<Route exact path='/products' component={Products} />
+												<Route exact path='/solutions' component={Solutions} />
 												<Route path='/login' component={Auth} />
 												<Route path='/sales-pitch' component={Salespitch} />
 												<Route exact path='/inbound' component={Inbound} />

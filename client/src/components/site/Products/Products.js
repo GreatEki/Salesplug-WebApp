@@ -25,7 +25,7 @@ const Products = () => {
 						{' '}
 						Salesplug is a technology solution to business activities. It is a
 						sales activity management application. We help your sales, commerce,
-						inventory, procurement process fast and efficient — enforcing data
+						inventory, procurement process — ensuring proper data documentation,
 						integrity and accuracy.
 					</p>
 				</div>
@@ -48,9 +48,9 @@ const Products = () => {
 					<p class='text-normal'>
 						{' '}
 						Salesplug unites your sales, commerce, inventory, procurement
-						process fast and efficient — enforcing data integrity and accuracy.
-						We provide a way for start-ups to have the edge that digital cloud
-						solutions bring to modern businesses
+						process — enforcing data integrity and accuracy. We provide a way
+						for start-ups to have the edge that digital cloud solutions bring to
+						modern businesses
 					</p>
 
 					<div className='marginY-2'>

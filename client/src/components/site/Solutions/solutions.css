@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--secondary-color: rgb(196, 120, 120);
+	--Montserrat: 'Montserrat', sans-serif;
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.solutionsBanner {
+	background-image: url('/webImages/counter.jpg');
+	background-repeat: round;
+	background-size: cover;
+	height: 600px;
+	padding: 6.5em 12em;
+}
+
+.solutionsBanner p {
+	font-family: var(--Roboto);
+	font-size: 22px;
+	text-transform: normal;
+	color: var(--secondary-color);
+}
+
+.solutionsBanner h5 {
+	width: 40%;
+	font-size: 56px;
+	color: #6a6b6a;
+	font-family: var(--Abel);
+	/* color: var(--fade-black); */
+}
+
+.solutionsBanner .d-flex div {
+	margin: 1.5em 1.5em 0 0;
+}
+
+.btn-bg-primary {
+	border-radius: 0.5em;
+	background-color: var(--primary-color);
+	padding: 1em 2em;
+	color: white;
+}
+
+.btn-white-bg {
+	border-radius: 0.5em;
+	background-color: var(--secondary-color);
+	padding: 1em 2em;
+	color: whitesmoke;
+}
+
+.btn-bg-primary:hover,
+.btn-white-bg:hover {
+	text-decoration: none;
+	color: white;
+	filter: brightness(120%);
+}
