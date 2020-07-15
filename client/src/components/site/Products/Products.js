@@ -23,15 +23,11 @@ const Products = () => {
 
 					<p>
 						{' '}
-						Salesplug is a technology solution to business activities. It is a
-						sales activity management application. We help your sales, commerce,
-						inventory, procurement process — ensuring proper data documentation,
-						integrity and accuracy.
+						Salesplug is a technological solution to business activities. It is
+						a sales activity management application. We help your sales,
+						commerce, inventory, procurement process — ensuring proper data
+						documentation, integrity and accuracy.
 					</p>
-				</div>
-
-				<div className='webDiv marginY-2'>
-					<img src='webImages/graph.png' className='productImage1' />
 				</div>
 			</section>
 

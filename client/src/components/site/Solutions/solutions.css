@@ -17,19 +17,19 @@
 	background-repeat: round;
 	background-size: cover;
 	height: 600px;
-	padding: 7.5em 12em;
+	padding: 7em 7.4em;
 }
 
 .solutionsBanner p {
 	font-family: var(--Roboto);
-	font-size: 22px;
+	font-size: 28px;
 	text-transform: normal;
 	color: var(--secondary-color);
 }
 
 .solutionsBanner h5 {
 	width: 40%;
-	font-size: 56px;
+	font-size: 54px;
 	/* color: #6a6b6a; */
 	color: black;
 	font-family: var(--Abel);

@@ -16,13 +16,22 @@
 }
 
 .product-banner {
+	/* background-image: url('/webImages/banner.jpg'); */
+	/* background-repeat: round; */
+	/* background-size: cover; */
 	background: linear-gradient(white, var(--primary-color));
 	background: -moz-linear-gradient(white, var(--primary-color));
 	background: -webkit-linear-gradient(white, var(--primary-color));
+	height: 530px;
 }
 
 .product-banner h2 {
 	color: whitemsoke;
+}
+
+.product-banner h5.text-center {
+	font-family: var(--Montserrat);
+	font-size: 32px;
 }
 
 .definitionText {
@@ -40,7 +49,8 @@
 
 .definitionText p {
 	font-family: var(--Roboto);
-	font-size: 20px;
+	font-size: 32px;
+	color: rgb(7, 7, 73);
 }
 
 .webDiv {

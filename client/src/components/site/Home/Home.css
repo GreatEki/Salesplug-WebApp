@@ -12,10 +12,14 @@
 
 /*============== Home Component Styling ==================*/
 .banner-1 {
-	background-image: url('/webImages/banner.jpg');
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background: linear-gradient(white, var(--primary-color));
+	background: -moz-linear-gradient(white, var(--primary-color));
+	background: -webkit-linear-gradient(white, var(--primary-color));
+	/* background-image: url('/webImages/banner.jpg');
+	background-repeat: round;
+	background-size: cover;
 	background-attachment: fixed;
+	height: 800px; */
 }
 
 .banner-1 .intro {
@@ -37,7 +41,8 @@
 }
 
 .banner-txt {
-	color: rgb(48, 46, 46);
+	/* color: rgb(48, 46, 46); */
+	color: black;
 	font-family: var(--Amiri);
 	letter-spacing: 2px;
 }
@@ -46,6 +51,11 @@
 	font-family: var(--Amiri);
 	font-size: 26px;
 	background-color: var(--primary-color);
+	color: white;
+}
+
+.start-btn:hover {
+	filter: brightness(90%);
 	color: white;
 }
 
@@ -62,7 +72,7 @@
 }
 
 .section-2 h5 {
-	padding-top: 40px;
+	padding-top: 5em;
 	text-align: center;
 	font-family: var(--ComicNueue);
 	font-weight: bold;

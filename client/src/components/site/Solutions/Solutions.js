@@ -80,7 +80,7 @@ const Solutions = () => {
 
 							<p>
 								{' '}
-								helps you save time spinning your wheels trying to keep track of
+								Helps you save time spinning your wheels trying to keep track of
 								everything. It helps you see and manage your pipeline more
 								effectively. Try it today. Just sign up to get started with
 								Salesplug

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -22,7 +23,12 @@ const Home = () => {
 					<h1 className='banner-txt'> #No.1 Sales Manager</h1>
 
 					<div>
-						<button className='btn btn-sm start-btn'> Get Started </button>
+						{/* <button className='btn btn-sm start-btn'> Get Started </button> */}
+						<div className='marginY-2'>
+							<Link to='/' className='btn-bg-primary'>
+								Get Started
+							</Link>
+						</div>
 					</div>
 				</div>
 
