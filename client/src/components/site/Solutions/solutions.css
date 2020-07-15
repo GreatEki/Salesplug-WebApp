@@ -17,7 +17,7 @@
 	background-repeat: round;
 	background-size: cover;
 	height: 600px;
-	padding: 6.5em 12em;
+	padding: 7.5em 12em;
 }
 
 .solutionsBanner p {
@@ -30,9 +30,9 @@
 .solutionsBanner h5 {
 	width: 40%;
 	font-size: 56px;
-	color: #6a6b6a;
+	/* color: #6a6b6a; */
+	color: black;
 	font-family: var(--Abel);
-	/* color: var(--fade-black); */
 }
 
 .solutionsBanner .d-flex div {
@@ -58,4 +58,96 @@
 	text-decoration: none;
 	color: white;
 	filter: brightness(120%);
+}
+
+.section2 {
+	padding: 7em;
+	/* background-color: #edf7f0; */
+}
+
+.section2 div h6 {
+	font-size: 54px;
+	font-family: var(--Lato);
+	text-align: center;
+}
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	/* border: 1px solid black; */
+	margin-top: 2em;
+}
+
+.imageBox {
+	/* border: 1px solid black; */
+	width: 40%;
+}
+
+.imageBox img {
+	width: 100%;
+	height: 100%;
+}
+
+.textBlock h5 {
+	font-size: 28px;
+	font-family: var(--Montserrat);
+}
+
+.textBlock p {
+	font-family: var(--Lato);
+	font-size: 18px;
+	text-align: justify;
+	line-height: 1.8em;
+}
+
+.flexRow .textBlock {
+	width: 40%;
+}
+
+.section3 {
+	padding: 5em 0 10em 0;
+}
+
+.smallCap {
+	font-size: 18px;
+}
+
+.midCap {
+	font-size: 28px;
+	font-family: var(--Montserrat);
+	margin-top: 2em;
+}
+
+.para {
+	text-align: justify;
+	font-size: 20px;
+	font-family: var(--ComicNueue);
+	font-weight: normal;
+}
+
+.section3 .flexRow .card {
+	width: 25%;
+	border: none;
+	/* padding: 2em; */
+}
+
+.section3 .flexRow .card .fa-4x {
+	padding: 0.2em;
+	color: var(--secondary-color);
+}
+
+.section3 .flexRow .card h6 {
+	font-size: 32px;
+	margin: 1em 0;
+	color: var(--primary-color);
+	filter: brightness(110%);
+	text-align: center;
+}
+
+.section3 .flexRow .card p {
+	font-size: 16px;
+	font-weight: normal;
+	font-family: sans-serif;
+	text-align: justify;
 }
