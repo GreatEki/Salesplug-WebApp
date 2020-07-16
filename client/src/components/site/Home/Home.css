@@ -12,19 +12,23 @@
 
 /*============== Home Component Styling ==================*/
 .banner-1 {
-	background: linear-gradient(white, var(--primary-color));
-	background: -moz-linear-gradient(white, var(--primary-color));
-	background: -webkit-linear-gradient(white, var(--primary-color));
-	/* background-image: url('/webImages/banner.jpg');
+	/* background: linear-gradient(white, var(--primary-color)); */
+	/* background: -moz-linear-gradient(white, var(--primary-color)); */
+	/* background: -webkit-linear-gradient(white, var(--primary-color)); */
+	background-image: url('/webImages/marek-levak.jpg');
 	background-repeat: round;
 	background-size: cover;
-	background-attachment: fixed;
-	height: 800px; */
+	/* background-attachment: scroll; */
+	height: 800px;
 }
 
 .banner-1 .intro {
-	padding: 100px 0px 100px 225px;
 	overflow-x: hidden;
+	background-color: whitesmoke;
+	opacity: 0.7;
+	width: 600px;
+	padding: 1.5em 1em;
+	margin: 4em 0 0 10em;
 }
 
 .pandemic {
@@ -47,16 +51,8 @@
 	letter-spacing: 2px;
 }
 
-.start-btn {
-	font-family: var(--Amiri);
-	font-size: 26px;
-	background-color: var(--primary-color);
-	color: white;
-}
-
-.start-btn:hover {
-	filter: brightness(90%);
-	color: white;
+.banner-1 div.marginY-2 {
+	margin-left: 10em;
 }
 
 .banner-base {
@@ -219,16 +215,18 @@
 		background-attachment: scroll;
 	}
 	.banner-1 .intro {
-		padding: 40px 0px 100px 50px;
+		padding: 1.5em 1em;
 		overflow-x: hidden;
+		margin: 4em 2em;
+		width: 70%;
 	}
 
-	.start-btn {
-		font-size: 16px;
+	.banner-1 div.marginY-2 {
+		margin: 4em 2em;
 	}
 
 	.banner-txt {
-		font-size: 20px;
+		font-size: 32px;
 		font-weight: bolder;
 	}
 

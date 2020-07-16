@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--secondary-color: rgb(196, 120, 120);
+	--Montserrat: 'Montserrat', sans-serif;
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.supportBlock-1 {
+	background-image: url('/webImages/marek-levak.jpg');
+	background-repeat: round;
+	background-size: cover;
+	height: 700px;
+}
+
+.supportBlock-1 h5 {
+	font-size: 48px;
+	font-family: var(--Montserrat);
+	font-weight: normal;
+	text-align: center;
+	margin-top: 2em;
+}
+
+.supportBlock-1 .div2 {
+	/* background-color: #ccc; */
+	width: 750px;
+	margin: 0 auto;
+	opacity: 1;
+}
+
+.supportBlock-1 .pandemic {
+	background-color: #ccc;
+	opacity: 0.5;
+	resize: both;
+	/* margin: 0 auto; */
+}
+
+.supportBlock-1 .flexRow {
+	justify-content: center;
+}
+
+.supportBlock-1 .div3 > .Box {
+	background-color: #ccc;
+	outline: 2px solid #ccc;
+	margin-top: 0.5em;
+	padding: 0.5em;
+	max-width: 15%;
+	opacity: 0.8;
+	margin-left: 7px;
+}
+
+.supportBlock-1 .div3 > .Box p:first-child {
+	font-size: 20px !important;
+}
+
+.supportBlock-1 .div3 > .Box p {
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em;
+	font-family: var(--Abel);
+	font-size: 18px;
+}
+
+.supportBlock-2 {
+	background-color: whitesmoke;
+	padding: 8em 0;
+}
+
+.supportBlock-2 .container h1 {
+	font-family: var(--Abel);
+}
+
+.supportBlock-2 .container h5 {
+	font-family: var(--ComicNueue);
+	margin-top: 2em;
+}
+
+.supportBlock-2 .div1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.supportBlock-2 .div1 .card {
+	border-top: 4px solid var(--secondary-color);
+	padding: 0.7em;
+	font-size: 20px;
+	color: var(--primary-color);
+	z-index: 2;
+	width: 20%;
+	margin: 1em 0.5em 0.1em 0em;
+}
+
+.supportBlock-3 .flexRow {
+	padding: 2em;
+}
+.supportBlock-3 .flexRow div h1 {
+	font-size: 48px;
+}
+.supportBlock-3 .flexRow div p {
+	font-size: 20px;
+}
+
+/* .supportBlock-4 .container .flexRow {
+	width: 100%;
+} */
+.supportBlock-4 {
+	padding: 5em 2em;
+	background-color: whitesmoke;
+}
+
+.supportBlock-4 h2 {
+	font-size: 44px;
+	color: var(--fade-black);
+}
+.supportBlock-4 h5 {
+	font-size: 20px;
+	margin-top: 2em;
+}
+.supportBlock-4 .container .flexRow .image {
+	/* border: 1px solid black; */
+	width: 35%;
+	margin-left: 1em;
+}
+
+.supportBlock-4 .container .flexRow .image img {
+	height: 200px;
+	width: 100%;
+}

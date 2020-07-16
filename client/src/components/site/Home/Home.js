@@ -21,15 +21,13 @@ const Home = () => {
 					<h1 className='banner-txt'> The Smart way to manage Sales</h1>
 					<h1 className='banner-txt'> The Front to Back of Retail</h1>
 					<h1 className='banner-txt'> #No.1 Sales Manager</h1>
+				</div>
 
-					<div>
-						{/* <button className='btn btn-sm start-btn'> Get Started </button> */}
-						<div className='marginY-2'>
-							<Link to='/' className='btn-bg-primary'>
-								Get Started
-							</Link>
-						</div>
-					</div>
+				{/* <button className='btn btn-sm start-btn'> Get Started </button> */}
+				<div className='marginY-2'>
+					<Link to='/' className='btn-bg-primary'>
+						Get Started
+					</Link>
 				</div>
 
 				<div className='banner-base'>

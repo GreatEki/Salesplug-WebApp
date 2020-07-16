@@ -32,13 +32,13 @@ const Navbar = () => {
 								</Link>
 							</li>
 							<li>
-								<Link to='/' className='menu-item'>
+								<Link to='/events' className='menu-item'>
 									{' '}
 									Events
 								</Link>
 							</li>
 							<li>
-								<Link to='/' className='menu-item'>
+								<Link to='/support' className='menu-item'>
 									{' '}
 									Support
 								</Link>
