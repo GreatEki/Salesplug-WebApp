@@ -12,7 +12,7 @@ const Solutions = () => {
 				<p> Sales Management Web Application</p>
 				<h5> Improve the sales experience of your business</h5>
 
-				<div className='d-flex flex-row'>
+				<div className='d-flex flex	'>
 					<div className='marginY-2'>
 						<Link to='/' className='btn-bg-primary'>
 							Get Started
@@ -96,7 +96,7 @@ const Solutions = () => {
 				</div>
 			</section>
 
-			<section className='container-fluid section3'>
+			<section className='container-fluid section3 m-0'>
 				<div className='container'>
 					<h5 className='smallCap'> FREE YOUR MIND </h5>
 					<h5 className='midCap'> Gain far more than capital</h5>
@@ -133,7 +133,7 @@ const Solutions = () => {
 							</p>
 						</div>
 						<div className='card'>
-							<i class='text-center fas fa-poll fa-4x'></i>
+							<i className='text-center fas fa-poll fa-4x'></i>
 							<h6> Trend Analysis </h6>
 
 							<p>

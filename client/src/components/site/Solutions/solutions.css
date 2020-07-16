@@ -15,7 +15,7 @@
 .solutionsBanner {
 	background-image: url('/webImages/counter.jpg');
 	background-repeat: round;
-	background-size: cover;
+	background-size: 100vw;
 	height: 600px;
 	padding: 7em 7.4em;
 }
@@ -150,4 +150,120 @@
 	font-weight: normal;
 	font-family: sans-serif;
 	text-align: justify;
+}
+
+/* PHONES: SMALL AND BIG PHONES  */
+@media (min-width: 100px) and (max-width: 767px) {
+	.solutionsBanner {
+		padding: 0em 0.7em;
+		background-size: 100vw;
+		background-repeat: round;
+		height: 300px;
+	}
+
+	.solutionsBanner p {
+		font-size: 16px;
+	}
+
+	.solutionsBanner h5 {
+		font-size: 20px;
+	}
+
+	.solutionsBanner .flex {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btn-bg-primary {
+		padding: 0.5em;
+	}
+
+	.btn-white-bg {
+		padding: 0.5em;
+	}
+
+	.section2 {
+		padding: 0.5em 1em;
+		/* background-color: #edf7f0; */
+	}
+
+	.section2 div h6 {
+		font-size: 28px;
+	}
+
+	.flexRow {
+		flex-direction: column;
+	}
+
+	.imageBox {
+		width: 100%;
+	}
+
+	.textBlock {
+		min-width: 100%;
+		padding: 0.2em;
+	}
+
+	.section3 {
+		max-width: 100vw;
+	}
+
+	.para {
+		font-size: 14px;
+	}
+
+	.flexRow .card {
+		min-width: 100%;
+		margin: 1em 0;
+	}
+
+	.section3 .flexRow .card h6 {
+		margin: 0.5em 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.solutionsBanner {
+		padding: 1em 1em;
+	}
+
+	.solutionsBanner p {
+		font-size: 24px;
+	}
+
+	.solutionsBanner h5 {
+		font-size: 40px;
+	}
+
+	.solutionsBanner .flex {
+		flex-direction: column;
+	}
+
+	.solutionsBanner .flex div {
+		margin: 2em 0;
+	}
+
+	.section2 div h6 {
+		font-size: 40px;
+	}
+
+	.section2 .flexRow {
+		flex-direction: column;
+	}
+
+	.section2 .flexRow div {
+		min-width: 100%;
+	}
+
+	.section2 .textBlock p {
+		font-size: 24px;
+	}
+
+	.section3 .flexRow .card h6 {
+		font-size: 26px;
+	}
+
+	.section3 .flexRow .card p {
+		font-size: 14px;
+	}
 }
