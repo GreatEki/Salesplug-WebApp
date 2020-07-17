@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--secondary-color: rgb(196, 120, 120);
+	--Montserrat: 'Montserrat', sans-serif;
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+	--lightblack: #4b4c4d;
+}
+
+.fadedWhite {
+	/* background-color: #f5faf9 !important; */
+	background-color: #e9f5f2 !important;
+}
+
+.resourcesBlock-1 {
+	background-image: url('/webImages/books.jpg');
+	background-size: cover;
+	background-repeat: round;
+	height: 600px;
+	padding: 0em 6em;
+}
+
+.resourcesBlock-1 .row .col-md-6 h4 {
+	font-size: 44px;
+	font-weight: 700;
+	font-family: var(--Abel);
+}
+
+.resourcesBlock-1 .row .col-md-6 p {
+	font-size: 24px;
+}
+
+.resourcesBlock-1 .imageBox img {
+	width: 400px;
+}
+
+.resourcesBlock-1 .row {
+	margin-top: 2em;
+	z-index: 2;
+}
+
+.resourcesBlock-1 .row .flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.resourcesBlock-1 .row .flex .imageFlex {
+	display: flex;
+	flex-direction: row;
+}
+
+.resourcesBlock-1 .row .flex .imageFlex img {
+	width: 40%;
+	height: 130px;
+}
+
+.resourcesBlock-1 .row .flex .imageFlex h5 {
+	font-family: var(--Lato);
+	font-size: 24px;
+	background: #ccc;
+	color: #6090db;
+	width: 40%;
+	height: 130px;
+	padding: 1em;
+}
+
+/* ===== Block Two ===== */
+.resourcesBlock-Two {
+	background-color: whitesmoke;
+	padding: 4em 0;
+}
+
+.resourcesBlock-Two .container h1 {
+	width: 60%;
+	/* background: yellow; */
+	font-size: 3rem;
+	margin-bottom: 1em;
+}
+
+.resourcesBlock-Two .flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/* background-color: yellow; */
+	max-width: 100%;
+}
+
+.resourcesBlock-Two .flex .card {
+	width: 30%;
+	margin-right: 1.5em;
+	margin-top: 2em;
+	border: none;
+}
+
+.resourcesBlock-Two .flex .card img {
+	height: 200px;
+	width: 100%;
+}
+
+.resourcesBlock-Two .flex .card .card-body {
+	padding: 1em;
+	height: 170px;
+}
+
+.resourcesBlock-Two .card-body p {
+	font-size: 16px;
+	color: var(--secondary-color);
+}
+
+.resourcesBlock-Two .card-body h6 {
+	font-size: 20px;
+	color: #4b4c4d;
+	margin-bottom: 2em;
+}
+
+.resourcesBlock-Two .card a.Link {
+	padding: 1em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* ===== End of Block Two ===== */
+
+/* ===== Block Four ====== */
+
+.resourcesBlock-Four {
+	/* background: #ebfffc; */
+	background-color: white;
+	padding: 4em 0 1.5em 0;
+}
+
+.resourcesBlock-Four .container {
+	display: flex;
+	flex-direction: row;
+}
+
+.resourcesBlock-Four .imageBox img {
+	height: 300px;
+}
+
+.resourcesBlock-Four .container .div1 {
+	margin: 0 auto;
+	width: 60%;
+}
+
+.resourcesBlock-Four .container .div1 h2 {
+	font-family: var(--Montserrat);
+}
+
+.resourcesBlock-Four .div1 .form {
+	width: 100%;
+	margin: 4em auto;
+}
+
+.resourcesBlock-Four .div1 .form input {
+	width: 20em;
+	height: 50px;
+	border-radius: 0.5em;
+	margin-right: 0.5em;
+	outline: none;
+}
+
+.resourcesBlock-Four .div1 .form button {
+	width: 20em;
+	height: 50px;
+	border-radius: 0.5em;
+	color: white;
+	font-weight: 700;
+	background-color: var(--primary-color);
+	/* background-color: var(--lightblack); */
+	filter: brightness(90%);
+}
+/* ===== End of Block Four ===== */

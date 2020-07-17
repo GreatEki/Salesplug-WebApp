@@ -26,6 +26,7 @@ import AuthContextProvider from './contexts/AuthContext';
 import Products from './components/site/Products/Products';
 import Solutions from './components/site/Solutions/Solutions';
 import Support from './components/site/Events/Support';
+import Resources from './components/site/Resources/Resources';
 
 function App() {
 	return (
@@ -43,6 +44,7 @@ function App() {
 												<Route exact path='/products' component={Products} />
 												<Route exact path='/solutions' component={Solutions} />
 												<Route exact path='/support' component={Support} />
+												<Route exact path='/resources' component={Resources} />
 												<Route path='/login' component={Auth} />
 												<Route path='/sales-pitch' component={Salespitch} />
 												<Route exact path='/inbound' component={Inbound} />

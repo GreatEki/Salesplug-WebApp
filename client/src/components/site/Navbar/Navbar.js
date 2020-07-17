@@ -32,9 +32,9 @@ const Navbar = () => {
 								</Link>
 							</li>
 							<li>
-								<Link to='/events' className='menu-item'>
+								<Link to='/resources' className='menu-item'>
 									{' '}
-									Events
+									Resources
 								</Link>
 							</li>
 							<li>
@@ -43,12 +43,12 @@ const Navbar = () => {
 									Support
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link to='/' className='menu-item'>
 									{' '}
 									About Us
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 

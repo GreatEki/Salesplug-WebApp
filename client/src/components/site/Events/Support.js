@@ -27,8 +27,8 @@ const Support = () => {
 
 				<div className='div3 flexRow'>
 					<div className='Box'>
-						<p> Get the right level of support every time</p>
-						<p>
+						<p> Get the right level of support every time.</p>
+						<p className='Link'>
 							<Link to='#' className='text-center'>
 								{' '}
 								LEARN MORE &gt;
@@ -37,7 +37,7 @@ const Support = () => {
 					</div>
 					<div className='Box'>
 						<p>Get strategic and technical guidance from Salesplug experts.</p>
-						<p>
+						<p className='Link'>
 							<Link to='#' className='text-center'>
 								{' '}
 								LEARN MORE &gt;
@@ -49,7 +49,7 @@ const Support = () => {
 							{' '}
 							Take advantage of the free resource available to every customer
 						</p>
-						<p>
+						<p className='Link'>
 							<Link to='#' className='text-center'>
 								{' '}
 								LEARN MORE &gt;

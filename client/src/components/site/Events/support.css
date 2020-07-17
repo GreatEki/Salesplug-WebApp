@@ -46,6 +46,8 @@
 }
 
 .supportBlock-1 .div3 > .Box {
+	display: flex;
+	justify-content: center;
 	background-color: #ccc;
 	outline: 2px solid #ccc;
 	margin-top: 0.5em;
@@ -53,6 +55,7 @@
 	max-width: 15%;
 	opacity: 0.8;
 	margin-left: 7px;
+	height: 220px;
 }
 
 .supportBlock-1 .div3 > .Box p:first-child {
@@ -60,11 +63,15 @@
 }
 
 .supportBlock-1 .div3 > .Box p {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	text-align: center;
 	padding: 1em;
 	font-family: var(--Abel);
 	font-size: 18px;
+}
+.supportBlock-1 .flexRow .Box .Link {
+	position: absolute;
+	bottom: 30px;
 }
 
 .supportBlock-2 {
