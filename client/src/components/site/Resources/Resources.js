@@ -143,15 +143,15 @@ const Resources = () => {
 						<div className='card'>
 							<img
 								className='card-image'
-								src='/webImages/client-engagement.jpg'
+								src='/webImages/customer-service.jpg'
 								alt='prop'
 							/>
 							<div className='card-body'>
-								<p> Client Engagement</p>
+								<p> Customer Service</p>
 								<h6>
 									{' '}
-									Boost engagement by delivering the experience your client's
-									want.
+									Keeping customer satisfaction with efficient customer service
+									delivery.
 								</h6>
 							</div>
 							<Link className='Link'> Learn More &gt;</Link>
@@ -159,14 +159,26 @@ const Resources = () => {
 						<div className='card'>
 							<img
 								className='card-image'
-								src='/webImages/artificial-intelligence.jpg'
+								src='/webImages/marketing.jpg'
 								alt='prop'
 							/>
 							<div className='card-body'>
-								<p> Artificial Intelligence</p>
+								<p> Marketing </p>
+								<h6> Increase product and service awareness.</h6>
+							</div>
+							<Link className='Link'> Learn More &gt;</Link>
+						</div>
+						<div className='card'>
+							<img
+								className='card-image'
+								src='/webImages/entrepreneur.jpg'
+								alt='prop'
+							/>
+							<div className='card-body'>
+								<p> Entrepreneurship</p>
 								<h6>
 									{' '}
-									Unify various aspects of your business with digital solutions
+									Transform your business with innovative Entrepreneurship{' '}
 								</h6>
 							</div>
 							<Link className='Link'> Learn More &gt;</Link>
@@ -174,48 +186,36 @@ const Resources = () => {
 						<div className='card'>
 							<img
 								className='card-image'
-								src='/webImages/meeting.jpg'
+								src='/webImages/fitness.jpg'
 								alt='prop'
 							/>
 							<div className='card-body'>
-								<p> Digital Transformation</p>
-								<h6> Do more for Less with AI</h6>
+								<p> Health and Fitness</p>
+								<h6> Acquaint yourself with tips for healthy living</h6>
 							</div>
 							<Link className='Link'> Learn More &gt;</Link>
 						</div>
 						<div className='card'>
 							<img
 								className='card-image'
-								src='/webImages/future.jpg'
+								src='/webImages/programmer.jpg'
 								alt='prop'
 							/>
 							<div className='card-body'>
-								<p> Future Jobs</p>
-								<h6> Setting your workforce for the future.</h6>
+								<p> Software Development</p>
+								<h6> Keeping up with the ever changing world of software.</h6>
 							</div>
 							<Link className='Link'> Learn More &gt;</Link>
 						</div>
 						<div className='card'>
 							<img
 								className='card-image'
-								src='/webImages/leading.jpg'
+								src='/webImages/campaign.jpg'
 								alt='prop'
 							/>
 							<div className='card-body'>
-								<p> Leadership</p>
-								<h6> Leading in Todays world.</h6>
-							</div>
-							<Link className='Link'> Learn More &gt;</Link>
-						</div>
-						<div className='card'>
-							<img
-								className='card-image'
-								src='/webImages/media.jpg'
-								alt='prop'
-							/>
-							<div className='card-body'>
-								<p> Media</p>
-								<h6> Impactful Journalism for Change</h6>
+								<p> Data Analyst</p>
+								<h6> Leading transformation with numbers.</h6>
 							</div>
 							<Link className='Link'> Learn More &gt;</Link>
 						</div>
