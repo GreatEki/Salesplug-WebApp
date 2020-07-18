@@ -38,7 +38,7 @@ const Home = () => {
 			<div className='container section-2'>
 				<h5> Adjustable, Adaptable to suit various retail needs</h5>
 
-				<div className='d-flex flex-md-row flex-column justify-content-between px-5 py-5'>
+				<div className='d-flex flex-lg-row flex-column justify-content-between px-5 py-5'>
 					<div className='card mt-3 mr-lg-3'>
 						<i className='fas fa-adjust fa-4x text-center'></i>
 						<h5 className='text-center'> Adaptable </h5>

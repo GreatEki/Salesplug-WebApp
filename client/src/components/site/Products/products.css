@@ -25,9 +25,9 @@
 	height: 530px;
 }
 
-.product-banner h2 {
+/* .product-banner h2 {
 	color: whitemsoke;
-}
+} */
 
 .product-banner h5.text-center {
 	font-family: var(--Montserrat);
@@ -53,11 +53,11 @@
 	color: rgb(7, 7, 73);
 }
 
-.webDiv {
+/* .webDiv {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-}
+} */
 
 .webDiv img {
 	width: 40%;
@@ -112,7 +112,7 @@
 	margin: 0 auto;
 }
 
-.container-1 .flex-row {
+.container-1 .flex {
 	display: flex;
 	flex-direction: row;
 }
@@ -140,12 +140,103 @@
 	color: #403f3e;
 }
 
-.companies flex-row {
+.companies .flex {
 	justify-content: space-evenly;
 }
 
-.flex-row .company-img {
+.flex .company-img {
 	width: 100px;
 	height: 50px;
 	margin: 0 1.5em;
+}
+
+/* ===== SMALL SCREENS: SMALL AND BIG PHONES ===== */
+@media (min-width: 100px) and (max-width: 767px) {
+	.product-banner {
+		height: 380px;
+		max-width: 100%;
+		/* padding: 1.4em; */
+	}
+	.product-banner .pandemic h2 {
+		font-size: 12px;
+	}
+	.definitionText {
+		padding: 1em;
+		width: 80%;
+		margin: 3em 0;
+	}
+
+	.definitionText h5 {
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.definitionText p {
+		font-size: 16px;
+		text-align: justify;
+	}
+
+	.container-1 {
+		padding-left: 1.5em;
+		/* background-color: yellow; */
+		/* width: 100vw; */
+	}
+
+	.container-1 h6 {
+		font-size: 24px;
+		margin-bottom: 1.5em;
+	}
+
+	.companies .flex {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.companies h5 {
+		font-size: 14px;
+		width: 100%;
+		line-height: 1.5em;
+	}
+
+	.flex .company-img {
+		margin-bottom: 1em;
+	}
+
+	.highlights div {
+		/* background: yellow; */
+		width: 100%;
+	}
+
+	.highlights img {
+		width: 50px;
+		height: 100px;
+	}
+}
+
+/* ===== END OF SMALL SCREENS: SMALL AND BIG PHONES ===== */
+
+/* ===== Medium Screens: Tablets and Ipads ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.definitionText {
+		margin: 2em 2em;
+	}
+	.container-1 {
+		padding-left: 2em;
+	}
+
+	.container-1 h6 {
+		margin-bottom: 1.5em;
+	}
+}
+
+/* ===== End of Medium Screens: Tablets and Ipads ===== */
+
+/* ===== WIDE SCREENS: Ipad Pro and Mini Laptop ===== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.definitionText {
+		margin: 2em 2em;
+	}
+	.container-1 {
+		padding-left: 2em;
+	}
 }

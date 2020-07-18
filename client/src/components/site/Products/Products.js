@@ -31,7 +31,7 @@ const Products = () => {
 				</div>
 			</section>
 
-			<section className='container-fluid m-0'>
+			<section className='container-fluid m-0 p-0'>
 				<div className='container container-1 x-center marginTop-10'>
 					<p className='cap4'> What does Salesplug do? </p>
 
@@ -41,7 +41,7 @@ const Products = () => {
 						size.
 					</h6>
 
-					<p class='text-normal'>
+					<p className='text-normal'>
 						{' '}
 						Salesplug unites your sales, commerce, inventory, procurement
 						process — enforcing data integrity and accuracy. We provide a way
@@ -57,10 +57,10 @@ const Products = () => {
 				</div>
 			</section>
 
-			<section className='container  container-1 marginY-2'>
+			<section className='container container-1 marginY-2'>
 				<p className='cap4'> Benefits of Salesplug </p>
 
-				<div className='flex-row highlights marginY-2'>
+				<div className='flex highlights marginY-2'>
 					<img
 						src='/webImages/search-lens.jpg'
 						alt='prop
@@ -75,7 +75,7 @@ const Products = () => {
 					</div>
 				</div>
 
-				<div className='flex-row highlights marginY-2'>
+				<div className='flex highlights marginY-2'>
 					<img
 						src='/webImages/wrench-icon.jpg'
 						alt='prop
@@ -88,7 +88,7 @@ const Products = () => {
 					</div>
 				</div>
 
-				<div className='flex-row highlights marginY-2'>
+				<div className='flex highlights marginY-2'>
 					<img
 						src='/webImages/settings-icon.png'
 						alt='prop
@@ -102,7 +102,7 @@ const Products = () => {
 						<p> LEARN MORE </p>
 					</div>
 				</div>
-				<div className='flex-row highlights marginY-2'>
+				<div className='flex highlights marginY-2'>
 					<img
 						src='/webImages/thunder-icon.png'
 						alt='prop
@@ -116,13 +116,13 @@ const Products = () => {
 				</div>
 			</section>
 
-			<section className='container-fluid m-0'>
+			<section className='container-fluid m-0 p-0'>
 				<section className='container container-1 x-center'>
 					<p className='cap4'> What does Salesplug Stand For? </p>
 
 					<h6> Our core values help make Salesforce a platform for change.</h6>
 
-					<p class='text-normal'>
+					<p className='text-normal'>
 						{' '}
 						Ever since the conception of salesplug, we've believed that doing
 						well as a company means doing good in the world. That's why we've
@@ -138,7 +138,7 @@ const Products = () => {
 				</section>
 			</section>
 
-			<section className='container-fluid'>
+			<section className='container-fluid m-0 p-0'>
 				<div className='companies container container-1'>
 					<h5>
 						{' '}
@@ -146,7 +146,7 @@ const Products = () => {
 						business with Salesplug
 					</h5>
 
-					<div className='flex-row p-5'>
+					<div className='flex p-5'>
 						<img
 							src='/webImages/brunello.png'
 							alt='prop'
