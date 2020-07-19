@@ -35,11 +35,7 @@ const Products = () => {
 				<div className='container container-1 x-center marginTop-10'>
 					<p className='cap4'> What does Salesplug do? </p>
 
-					<h6>
-						{' '}
-						We brign the advantage of cloud solutions to businesses of various
-						size.
-					</h6>
+					<h6> We brign the advantage of cloud solutions to business.</h6>
 
 					<p className='text-normal'>
 						{' '}

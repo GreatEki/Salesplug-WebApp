@@ -166,6 +166,7 @@
 	border-radius: 0.5em;
 	margin-right: 0.5em;
 	outline: none;
+	/* background: yellow; */
 }
 
 .resourcesBlock-Four .div1 .form button {
@@ -179,3 +180,150 @@
 	filter: brightness(90%);
 }
 /* ===== End of Block Four ===== */
+
+/* Media Query */
+/* SMALL SCREENS: SMALL PHONES  */
+@media (min-width: 100px) and (max-width: 767px) {
+	.resourcesBlock-1 {
+		padding: 0em 1.5em;
+		height: 1100px;
+	}
+	.resourcesBlock-1 .pandemic {
+		/* background: yellow; */
+		width: 100%;
+	}
+
+	.resourcesBlock-1 .imageBox img {
+		/* width: 380px; */
+		width: 100%;
+	}
+
+	.resourcesBlock-1 .flex {
+		margin-top: 1.5em;
+		width: 100%;
+	}
+
+	.resourcesBlock-1 .flex .imageFlex {
+		/* background: yellow; */
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex img {
+		width: 50%;
+		height: 170px;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex h5 {
+		height: 170px;
+		width: 50%;
+	}
+
+	.resourcesBlock-Two .container h1 {
+		/* background: yellow; */
+		width: 100%;
+		font-size: 2.3em;
+	}
+
+	.resourcesBlock-Two .flex {
+		flex-direction: column;
+	}
+
+	.resourcesBlock-Two .flex .card {
+		/* background: yellow; */
+		width: 100%;
+		margin-bottom: 2em;
+		z-index: 2;
+	}
+
+	.resourcesBlock-Four .container {
+		flex-direction: column;
+	}
+
+	.resourcesBlock-Four .container .div1 {
+		width: 100%;
+	}
+
+	.resourcesBlock-Four .div1 .form input {
+		margin-left: 3em;
+		background: yellow;
+	}
+
+	.resourcesBlock-Four .div1 .form button {
+		margin-left: 3em;
+		margin-top: 1em;
+		padding: 1em;
+	}
+}
+
+/* MEDIUM SCREENS: TABLETS AND IPADS  */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.resourcesBlock-1 {
+		padding: 0 1em;
+		height: 700px;
+	}
+
+	.resourcesBlock-1 .row .imageBox img {
+		width: 360px;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex img {
+		height: 170px;
+		width: 50%;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex h5 {
+		width: 50%;
+		height: 170px;
+	}
+
+	.resourcesBlock-Two .container h1 {
+		width: 100%;
+	}
+
+	.resourcesBlock-Two .container .flex .card {
+		width: 45%;
+	}
+
+	.resourcesBlock-Four .div1 .form button {
+		margin-top: 1em;
+	}
+}
+
+/* WIDE SCREENS: IPAD PROS AND MINI LAPTOPS */
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.resourcesBlock-1 {
+		height: 630px;
+		padding: 0 3em;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex img {
+		width: 50%;
+		height: 170px;
+	}
+
+	.resourcesBlock-1 .row .flex .imageFlex h5 {
+		width: 50%;
+		height: 170px;
+	}
+	.resourcesBlock-Four .div1 .form button {
+		margin-top: 1em;
+	}
+}
+
+/* Extra wide Screens */
+@media (min-width: 1500px) and (max-width: 2390px) {
+	.resourcesBlock-1 {
+		padding: 0 10em;
+	}
+}
+
+/* Ultra Wide Screens: TVS */
+@media (min-width: 2391px) and (max-width: 5000px) {
+	.resourcesBlock-1 {
+		padding: 0 50em;
+	}
+}

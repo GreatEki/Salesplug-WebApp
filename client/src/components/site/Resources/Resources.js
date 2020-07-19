@@ -8,7 +8,7 @@ const Resources = () => {
 	return (
 		<div className='wrapper'>
 			<Navbar />
-			<div className='container-fluid resourcesBlock-1'>
+			<section className='container-fluid resourcesBlock-1'>
 				<div className='pandemic'>
 					<h2>
 						<i className='fas fa-user-shield text-primary'></i> &nbsp; Remember
@@ -17,7 +17,7 @@ const Resources = () => {
 					</h2>
 				</div>
 				<section className='row'>
-					<div className='col-md-6'>
+					<div className='col-md-6 col-sm-12'>
 						<small>Resources</small>
 						<h4> COVID-19 HEALTH TIPS</h4>
 						<p> What you need to know to stay safe.</p>
@@ -28,7 +28,7 @@ const Resources = () => {
 						</div>
 					</div>
 
-					<div className='col-md-6 flex'>
+					<div className='col-md-6 col-sm-12 flex'>
 						<Link to='#' className=' imageFlex'>
 							<img src='/webImages/sales-expert.jpg' alt='prop' />
 							<h5> Get Insights from Leading Sales Experts</h5>
@@ -43,7 +43,7 @@ const Resources = () => {
 						</Link>
 					</div>
 				</section>
-			</div>
+			</section>
 
 			<section className='container-fluid resourcesBlock-Two'>
 				<div className='container'>
@@ -67,7 +67,10 @@ const Resources = () => {
 									want.
 								</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -82,7 +85,10 @@ const Resources = () => {
 									Unify various aspects of your business with digital solutions
 								</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -94,7 +100,10 @@ const Resources = () => {
 								<p> Digital Transformation</p>
 								<h6> Do more for Less with AI</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -106,7 +115,10 @@ const Resources = () => {
 								<p> Future Jobs</p>
 								<h6> Setting your workforce for the future.</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -118,7 +130,10 @@ const Resources = () => {
 								<p> Leadership</p>
 								<h6> Leading in Todays world.</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -130,7 +145,10 @@ const Resources = () => {
 								<p> Media</p>
 								<h6> Impactful Journalism for Change</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -154,7 +172,10 @@ const Resources = () => {
 									delivery.
 								</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -166,7 +187,10 @@ const Resources = () => {
 								<p> Marketing </p>
 								<h6> Increase product and service awareness.</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -181,7 +205,10 @@ const Resources = () => {
 									Transform your business with innovative Entrepreneurship{' '}
 								</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -193,7 +220,10 @@ const Resources = () => {
 								<p> Health and Fitness</p>
 								<h6> Acquaint yourself with tips for healthy living</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -205,7 +235,10 @@ const Resources = () => {
 								<p> Software Development</p>
 								<h6> Keeping up with the ever changing world of software.</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 						<div className='card'>
 							<img
@@ -217,7 +250,10 @@ const Resources = () => {
 								<p> Data Analyst</p>
 								<h6> Leading transformation with numbers.</h6>
 							</div>
-							<Link className='Link'> Learn More &gt;</Link>
+							<Link to='#' className='Link'>
+								{' '}
+								Learn More &gt;
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -236,7 +272,11 @@ const Resources = () => {
 						</h2>
 
 						<div className='form '>
-							<input type='text' className='p-2' />
+							<input
+								type='text'
+								className='p-2'
+								placeholder='type your email here'
+							/>
 
 							<button> SUBSCRIBE </button>
 						</div>
