@@ -17,6 +17,7 @@
 	background-repeat: round;
 	background-size: cover;
 	height: 700px;
+	padding: 0 0;
 }
 
 .supportBlock-1 h5 {
@@ -35,13 +36,14 @@
 }
 
 .supportBlock-1 .pandemic {
-	background-color: #ccc;
-	opacity: 0.5;
+	background-color: white;
+	opacity: 1;
 	resize: both;
-	/* margin: 0 auto; */
 }
 
 .supportBlock-1 .flexRow {
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 }
 
@@ -140,4 +142,190 @@
 .supportBlock-4 .container .flexRow .image img {
 	height: 200px;
 	width: 100%;
+}
+
+/* Media Queries */
+/* SMALL SCREENS: SMALL PHONES */
+@media (min-width: 100px) and (max-width: 575px) {
+	.supportBlock-1 {
+		padding: 0 0.2em;
+		height: 500px;
+		width: 100%;
+	}
+	.supportBlock-1 .pandemic {
+		background-color: white;
+		opacity: 1;
+		resize: both;
+	}
+
+	.supportBlock-1 .div2 {
+		background: #ccc;
+		opacity: 0.9;
+		font-size: 24px;
+		word-wrap: wrap;
+		width: 90%;
+		height: 250px;
+	}
+
+	.supportBlock-1 .div3 > .Box {
+		display: none;
+	}
+
+	.supportBlock-2 .div1 .card {
+		width: 45%;
+	}
+
+	.supportBlock-3 .flexRow div img {
+		width: 100%;
+	}
+
+	.supportBlock-4 .container {
+		width: 100%;
+	}
+
+	.supportBlock-4 .container h2 {
+		font-size: 28px;
+	}
+
+	.supportBlock-4 {
+		padding: 5em 1em;
+	}
+
+	.supportBlock-4 .container .flexRow {
+		/* background: blue; */
+		padding: 0;
+	}
+
+	.supportBlock-4 .container .flexRow .image {
+		width: 100%;
+		margin-bottom: 3em;
+		margin-left: 0;
+		padding: 0;
+	}
+
+	.supportBlock-4 .container .flexRow.image img {
+		width: 80%;
+	}
+}
+
+/* SMALL SCREENS: BIG PHONES */
+@media (min-width: 576px) and (max-width: 767px) {
+	.supportBlock-1 {
+		padding: 0 0.2em;
+		height: 500px;
+		width: 100%;
+	}
+	.supportBlock-1 .pandemic {
+		background-color: white;
+		opacity: 1;
+		resize: both;
+	}
+
+	.supportBlock-1 .div2 {
+		background: #ccc;
+		opacity: 0.9;
+		font-size: 24px;
+		word-wrap: wrap;
+		width: 90%;
+		height: 190px;
+	}
+
+	.supportBlock-1 .div3 > .Box {
+		display: none;
+	}
+
+	.supportBlock-2 .div1 .card {
+		width: 45%;
+	}
+
+	.supportBlock-3 .flexRow div img {
+		width: 100%;
+	}
+
+	.supportBlock-4 .container {
+		width: 100%;
+	}
+
+	.supportBlock-4 .container h2 {
+		font-size: 28px;
+	}
+
+	.supportBlock-4 {
+		padding: 5em 1em;
+	}
+
+	.supportBlock-4 .container .flexRow {
+		/* background: blue; */
+		padding: 0;
+	}
+
+	.supportBlock-4 .container .flexRow .image {
+		width: 100%;
+		margin-bottom: 3em;
+		margin-left: 0;
+		padding: 0;
+	}
+
+	.supportBlock-4 .container .flexRow.image img {
+		width: 80%;
+	}
+}
+/* END OF SMALL SCREENS: BIG PHONES */
+
+/* MEDIUM SCREENS: TABLETS AND IPADS */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.supportBlock-1 {
+		padding: 0 0.2em;
+	}
+
+	.supportBlock-1 .pandemic {
+		background-color: white;
+		opacity: 1;
+		resize: both;
+	}
+
+	.supportBlock-1 .flexRow {
+		/* background: yellow; */
+	}
+
+	.supportBlock-1 .flexRow .Box {
+		max-width: 25%;
+		height: 230px;
+	}
+
+	.supportBlock-1 .flexRow .Box .Link {
+		position: absolute;
+		bottom: 250px;
+	}
+
+	.supportBlock-3 .flexRow {
+		flex-direction: column;
+	}
+}
+/* END OF MEDIUM SCREENS: TABLETS AND IPADS */
+
+/* Wide Screens: Ipad Pro and Mini Laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.supportBlock-1 .flexRow .Box {
+		height: 230px;
+		max-width: 25%;
+	}
+
+	.supportBlock-1 .flexRow .Box .Link {
+		position: absolute;
+		bottom: 600px;
+	}
+
+	.supportBlock-3 .flexRow div:last-child {
+		display: flex;
+		align-content: flex-end;
+		/* align-items: flex-end; */
+	}
+}
+
+/* Extra wide Screens */
+@media (min-width: 1500px) and (max-width: 2390px) {
+	.supportBlock-1 .flexRow .Box .Link {
+		bottom: 650px;
+	}
 }
