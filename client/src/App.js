@@ -22,13 +22,17 @@ import SalesPitchContextProvider from './contexts/SalesPitchContext';
 import StorageAdminContextProvider from './contexts/StorageAdminContext';
 import SearchProd from './components/webapp/StorageAdmin/SearchProd';
 import ReportContextProvider from './contexts/ReportContext';
-import AuthContextProvider from './contexts/AuthContext';
+import AuthContextProvider, { AuthContext } from './contexts/AuthContext';
 import Products from './components/site/Products/Products';
 import Solutions from './components/site/Solutions/Solutions';
 import Support from './components/site/Events/Support';
 import Resources from './components/site/Resources/Resources';
+import PrivateRoute from './PrivateRouter/PrivateRoute';
+import PublicRoute from './PublicRouter/PublicRoute';
 
 function App() {
+	// const [isAuthenticated, setIsAuthenticated] = useState(false);
+
 	return (
 		<div className='App'>
 			<BrowserRouter>
@@ -46,14 +50,24 @@ function App() {
 												<Route exact path='/support' component={Support} />
 												<Route exact path='/resources' component={Resources} />
 												<Route path='/login' component={Auth} />
-												<Route path='/sales-pitch' component={Salespitch} />
-												<Route exact path='/inbound' component={Inbound} />
-												<Route
+												<PublicRoute
+													exact
+													path='/sales-pitch'
+													component={Salespitch}
+												/>
+
+												<PublicRoute
+													exact
+													path='/inbound'
+													component={Inbound}
+												/>
+												{/* <Route exact path='/inbound' component={Inbound} /> */}
+												<PublicRoute
 													exact
 													path='/inbound/add-qty/:id'
 													component={AddQty}
 												/>
-												<Route
+												<PublicRoute
 													exact
 													path='/inbound/history'
 													component={InboundHistory}

@@ -69,6 +69,7 @@ const SalesPitchContextProvider = (props) => {
 				category: item.category,
 				price: item.price * qty,
 				qty: qty,
+				productDept: item.productDept,
 			};
 		}
 

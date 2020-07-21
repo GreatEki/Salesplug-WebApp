@@ -173,7 +173,7 @@
 			"consumable": "yes",
 			"costPrice": "1700",
 			"price": 1800,
-			"currentQty": 80,
+			"currentQty": 78,
 			"productDept": "SuperMarket"
 		},
 		{
@@ -282,7 +282,7 @@
 			"consumable": "No",
 			"costPrice": "80000",
 			"price": "95000",
-			"currentQty": "36",
+			"currentQty": 34,
 			"productDept": "Gadgets",
 			"id": "vcJD1c3"
 		},
@@ -467,14 +467,16 @@
 					"name": "Golden Penny Spaghetti",
 					"category": "Food and Drinks",
 					"price": 500,
-					"qty": 2
+					"qty": 2,
+					"productDept": "SuperMarket"
 				},
 				{
 					"id": "106",
 					"name": "Indomie HungryMan",
 					"category": "Food and Drinks",
 					"price": 450,
-					"qty": 3
+					"qty": 3,
+					"productDept": "SuperMarket"
 				}
 			],
 			"amount": 950,
@@ -488,14 +490,16 @@
 					"name": "Golden Penny Poundo Yam",
 					"category": "Food and Drinks",
 					"price": 600,
-					"qty": 2
+					"qty": 2,
+					"productDept": "SuperMarket"
 				},
 				{
 					"id": "100",
 					"name": "BlueBand Mayonnaise",
 					"category": "Food and Drinks",
 					"price": 1100,
-					"qty": 2
+					"qty": 2,
+					"productDept": "SuperMarket"
 				}
 			],
 			"amount": 1700,
@@ -509,19 +513,51 @@
 					"name": "Augmentin x360",
 					"category": "Total Health",
 					"price": 4000,
-					"qty": 2
+					"qty": 2,
+					"productDept": "Pharmacy"
 				},
 				{
 					"id": "118",
 					"name": "Gi Vital Softgel",
 					"category": "Vitamins $ Supplements",
 					"price": 10000,
-					"qty": 1
+					"qty": 1,
+					"productDept": "Pharmacy"
 				}
 			],
 			"amount": 14000,
 			"date": "Sat, May 16, 2020",
 			"id": "dYfon0-"
+		},
+		{
+			"products": [
+				{
+					"id": "108",
+					"name": "St Remy",
+					"category": "Food and Drinks",
+					"price": 3600,
+					"qty": 2,
+					"productDept": "SuperMarket"
+				}
+			],
+			"amount": 3600,
+			"date": "Tue, Jul 21, 2020",
+			"id": "iAoIFZ8"
+		},
+		{
+			"products": [
+				{
+					"id": "vcJD1c3",
+					"name": "Hp Pavillon 15",
+					"category": "Laptops and Computers",
+					"price": 190000,
+					"qty": 2,
+					"productDept": "Gadgets"
+				}
+			],
+			"amount": 190000,
+			"date": "Tue, Jul 21, 2020",
+			"id": "YXTWNbG"
 		}
 	]
 }

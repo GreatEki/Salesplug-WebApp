@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amiri|Comic+Neue|Lato|Roboto&display=swap');
+
+:root {
+	--primary-color: rgb(197, 109, 109);
+	--Roboto: 'Roboto, sans-serif';
+	--Lato: 'Lato', sans-serif;
+	--ComicNueue: 'Comic Neue', cursive;
+	--Abel: 'Abel', sans-serif;
+	--Amiri: 'Amiri', serif;
+	--fade-black: rgb(48, 46, 46);
+}
+
+.outer-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 9fr 1fr;
+	grid-auto-rows: minmax(50px auto);
+	margin: 1.5em 0;
+	padding: 2em;
+	align-items: center;
+}
+
+.outer-grid > div {
+	margin: 0 1.5em;
+}
+.report-sales-title div {
+	color: var(--primary-color);
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.outer-flex {
+	display: flex;
+	flex-direction: column;
+	/* background-color: yellow; */
+	flex-wrap: wrap;
+}
+
+.inner-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* grid-template-columns: repeat(3, 1fr); */
+
+	/* grid-gap: 0.5em; */
+}
+
+.inner-flex div {
+	width: 30%;
+	margin: 0 0.5em;
+	/* background: yellow; */
+}
+
+.item-display-layout {
+	display: grid;
+}

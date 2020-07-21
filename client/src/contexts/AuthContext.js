@@ -20,13 +20,17 @@ const AuthContextProvider = (props) => {
 		role: '',
 	});
 
+	const [isAuth, setIsAuth] = useState(false);
+
 	let history = useHistory();
 
 	useEffect(() => {
 		sessionStorage.setItem('AuthUser', JSON.stringify(authenticatedUser));
+		sessionStorage.setItem('isAuth', JSON.stringify(isAuth));
+		sessionStorage.setItem('role', JSON.stringify(authenticatedUser.role));
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [authenticatedUser]);
+	}, [authenticatedUser, isAuth]);
 
 	const userSignIn = async (e, username, password) => {
 		e.preventDefault();
@@ -47,6 +51,7 @@ const AuthContextProvider = (props) => {
 					setAuthErrMsg('Authentication Denied');
 					return authErrMsg;
 				} else {
+					setIsAuth(true);
 					setAuthenticatedUser(() => {
 						return {
 							firstname: user[0].firstname,
@@ -69,14 +74,42 @@ const AuthContextProvider = (props) => {
 		const sessionUser = sessionStorage.getItem('AuthUser');
 		setAuthenticatedUser(JSON.parse(sessionUser));
 
-		return authenticatedUser;
+		const sessionAuth = sessionStorage.getItem('isAuth');
+		setIsAuth(JSON.parse(sessionAuth));
+
+		return isAuth;
+	};
+
+	const isLogin = () => {
+		const sessionAuth = sessionStorage.getItem('isAuth');
+		const status = JSON.parse(sessionAuth);
+		// console.log(typeof status);
+
+		if (status === true) {
+			return true;
+		} else {
+			return false;
+		}
+	};
+
+	const isAdmin = () => {
+		const Storeduser = sessionStorage.getItem('AuthUser');
+		const user = JSON.parse(Storeduser);
+		// console.log(user.role);
+		if (user.role === 'Admin') {
+			return true;
+		} else {
+			return false;
+		}
 	};
 
 	const signOutUser = () => {
 		sessionStorage.setItem('AuthUser', JSON.stringify({}));
 		setAuthenticatedUser({});
 
-		history.push('login');
+		sessionStorage.setItem('isAuth', JSON.stringify(setIsAuth(false)));
+
+		history.push('../login');
 		window.location.reload(true);
 	};
 	return (
@@ -92,6 +125,10 @@ const AuthContextProvider = (props) => {
 				setAuthenticatedUser,
 				getSignedInUser,
 				signOutUser,
+				isAuth,
+				setIsAuth,
+				isLogin,
+				isAdmin,
 			}}>
 			{' '}
 			{props.children}

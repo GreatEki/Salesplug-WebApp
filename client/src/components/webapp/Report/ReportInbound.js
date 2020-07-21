@@ -8,7 +8,7 @@ const ReportInbound = () => {
 	const {
 		setChosenDept,
 		chosenDept,
-		filterByDept,
+		inboundsByDept,
 		filteredProducts,
 	} = useContext(ReportContext);
 
@@ -16,7 +16,7 @@ const ReportInbound = () => {
 
 	// useEffect function to run with change in state to chosenDept
 	useEffect(() => {
-		filterByDept(chosenDept);
+		inboundsByDept(chosenDept);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [chosenDept]);
