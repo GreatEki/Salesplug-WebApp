@@ -29,6 +29,7 @@ import Support from './components/site/Events/Support';
 import Resources from './components/site/Resources/Resources';
 import PrivateRoute from './PrivateRouter/PrivateRoute';
 import PublicRoute from './PublicRouter/PublicRoute';
+import Unauthorised from './components/webapp/Error/Unauthorised';
 
 function App() {
 	// const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -72,38 +73,48 @@ function App() {
 													path='/inbound/history'
 													component={InboundHistory}
 												/>
-												<Route exact path='/report' component={ReportSales} />
-												<Route
+												<PrivateRoute
+													exact
+													path='/report'
+													component={ReportSales}
+												/>
+												<PrivateRoute
 													exact
 													path='/report/inbound'
 													component={ReportInbound}
 												/>
-												<Route
+												<PrivateRoute
 													exact
 													path='/storage/admin'
 													component={StorageAdmin}
 												/>
-												<Route
+												<PrivateRoute
 													exact
 													path='/storage/admin/new-product'
 													component={NewProduct}
 												/>
-												<Route
+												<PrivateRoute
 													exact
 													path='/storage/search/:value'
 													component={SearchProd}
 												/>
-												<Route exact path='/access' component={AccessControl} />
-												<Route
+												<PrivateRoute
+													exact
+													path='/access'
+													component={AccessControl}
+												/>
+												<PrivateRoute
 													exact
 													path='/access/staff/add'
 													component={AddNewStaff}
 												/>
-												<Route
+												<PrivateRoute
 													exact
 													path='/access/dept/add'
 													component={AddNewDept}
 												/>
+
+												<PublicRoute path='/401' component={Unauthorised} />
 											</AuthContextProvider>
 										</StyleContextProvider>
 									</AccessContextProvider>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
 import './addqty.css';
 import { InboundContext } from '../../../contexts/InboundContext';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const AddQty = (props) => {
 	const {
@@ -12,6 +13,10 @@ const AddQty = (props) => {
 		handleUpdateQtySubmit,
 		respMsg,
 	} = useContext(InboundContext);
+
+	const { authenticatedUser } = useContext(AuthContext);
+
+	// const { firstname, lastname} = authenticatedUser;
 
 	const id = props.match.params.id;
 	useEffect(() => {
@@ -39,7 +44,14 @@ const AddQty = (props) => {
 							<p> </p>
 						)}
 						<form
-							onSubmit={(e) => handleUpdateQtySubmit(e, inboundProd, addedQty)}
+							onSubmit={(e) =>
+								handleUpdateQtySubmit(
+									e,
+									inboundProd,
+									addedQty,
+									authenticatedUser
+								)
+							}
 							className='w-50 h-center'>
 							<div className='form-group w-50'>
 								<label htmlFor='itemName'> Item Name</label>

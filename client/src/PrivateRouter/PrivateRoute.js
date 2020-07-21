@@ -16,7 +16,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 				isLogin() && isAdmin() ? (
 					<Component {...props} />
 				) : (
-					<Redirect to={{ pathname: '/login' }} />
+					<Redirect to={{ pathname: '/401' }} />
 				)
 			}
 		/>

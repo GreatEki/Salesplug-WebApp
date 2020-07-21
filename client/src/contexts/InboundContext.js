@@ -16,7 +16,7 @@ const InboundContextProvider = (props) => {
 	const [inboundHistoryProduct, setInboundHistoryProduct] = useState([]);
 
 	const userDept = 'SuperMarket';
-	const personnel = 'Patience Edo';
+	// const [personnel, setPersonnel] = useState('');
 
 	// Fetch SuperMarket Products
 	const fetchSupMktProducts = async () => {
@@ -87,9 +87,10 @@ const InboundContextProvider = (props) => {
 	/*  Create handleSubmit method to inbound product
         Method is executed in the AddQty Component
     */
-	const handleUpdateQtySubmit = (e, prod, addedQty) => {
+	const handleUpdateQtySubmit = (e, prod, addedQty, staff) => {
 		e.preventDefault();
 
+		let { firstname, lastname } = staff;
 		//setting the parameters for the product whose qty we want to update
 		const product = {
 			id: prod.id,
@@ -107,6 +108,9 @@ const InboundContextProvider = (props) => {
 		let today = new Date();
 
 		let dept = '';
+
+		// setting staff who inbounds
+		const personnel = firstname + ' ' + lastname;
 
 		//Creating our inbound object
 		const inbound = {
