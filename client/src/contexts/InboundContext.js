@@ -18,24 +18,10 @@ const InboundContextProvider = (props) => {
 	const userDept = 'SuperMarket';
 	// const [personnel, setPersonnel] = useState('');
 
-	// Fetch SuperMarket Products
-	const fetchSupMktProducts = async () => {
+	const fetchInboundItems = async (dept) => {
 		try {
 			const res = await Axios.get(
-				`${calls.ENDPOINT}/products?productDept=SuperMarket`
-			);
-
-			setProducts(res.data);
-		} catch (err) {
-			console.log(err.message);
-		}
-	};
-
-	//Fetch Gadget Products
-	const fetchGadgetProducts = async () => {
-		try {
-			const res = await Axios.get(
-				`${calls.ENDPOINT}/products?productDept=Gadgets`
+				`${calls.ENDPOINT}/products?productDept=${dept}`
 			);
 
 			setProducts(res.data);
@@ -127,10 +113,10 @@ const InboundContextProvider = (props) => {
 		updateProduQty(product, inbound);
 	};
 
-	const getInboundHistoryforSupMarket = async () => {
+	const getInboundHistoryforSupMarket = async (dept) => {
 		try {
 			const res = await Axios.get(
-				`${calls.ENDPOINT}/inbounds?productDept=SuperMarket`
+				`${calls.ENDPOINT}/inbounds?productDept=${dept}`
 			);
 
 			setInboundHistoryProduct(res.data);
@@ -141,8 +127,7 @@ const InboundContextProvider = (props) => {
 	return (
 		<InboundContext.Provider
 			value={{
-				fetchSupMktProducts,
-				fetchGadgetProducts,
+				fetchInboundItems,
 				getProdForAddQty,
 				setAddedQty,
 				updateProduQty,

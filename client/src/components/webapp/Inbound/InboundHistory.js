@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MenuBar from '../MenuBar/MenuBar';
 import { InboundContext } from '../../../contexts/InboundContext';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const InboundHistory = () => {
 	const {
@@ -10,10 +11,10 @@ const InboundHistory = () => {
 		userDept,
 	} = useContext(InboundContext);
 
+	const { authenticatedUser } = useContext(AuthContext);
+
 	useEffect(() => {
-		if (userDept === 'SuperMarket') {
-			getInboundHistoryforSupMarket();
-		}
+		getInboundHistoryforSupMarket(authenticatedUser.dept);
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (

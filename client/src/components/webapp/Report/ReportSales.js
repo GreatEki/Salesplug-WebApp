@@ -61,9 +61,7 @@ const ReportSales = () => {
 
 					{/* Items Display Layout */}
 					{soldRecords.map((record, index) => (
-						<section
-							className='outer-grid item-display-layout bg-light'
-							key={index}>
+						<section className='outer-grid item-display-layout' key={index}>
 							<div> {record.date} </div>
 							<div> {record.id}</div>
 

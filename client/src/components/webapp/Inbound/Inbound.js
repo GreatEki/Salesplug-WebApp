@@ -3,22 +3,15 @@ import MenuBar from '../MenuBar/MenuBar';
 import { Link } from 'react-router-dom';
 import './inbound.css';
 import { InboundContext } from '../../../contexts/InboundContext';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const Inbound = () => {
-	const {
-		fetchSupMktProducts,
-		userDept,
-		fetchGadgetProducts,
-		products,
-	} = useContext(InboundContext);
+	const { products, fetchInboundItems } = useContext(InboundContext);
 
+	const { authenticatedUser } = useContext(AuthContext);
+	// console.log(authenticatedUser.dept);
 	useEffect(() => {
-		if (userDept === 'SuperMarket') {
-			fetchSupMktProducts();
-		}
-		if (userDept === 'Gadgets') {
-			fetchGadgetProducts();
-		}
+		fetchInboundItems(authenticatedUser.dept);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
@@ -33,7 +26,7 @@ const Inbound = () => {
 
 				{/* Main Content of Component */}
 				<section className='col-md-10 p-0'>
-					<h2 className='pageTitle p-4'> Inbound </h2>
+					<h2 className='pageTitle p-4'> Inbound (SHELF ITEMS) </h2>
 					{/* ===== Header ===== */}
 					<header className='d-flex flex-row p-4'>
 						<button className='btn btn-info mr-5 rounded-0'> Refresh </button>
@@ -57,7 +50,7 @@ const Inbound = () => {
 					<div className='pageBody p-0'>
 						<small className='text-info ml-2 d-inline'>
 							{' '}
-							Click on item to inbound{' '}
+							Click on Item to Inbound{' '}
 						</small>
 						<Link to='/inbound/history' className='text-info ml-5 d-inline'>
 							<small>View Inbound History</small>
