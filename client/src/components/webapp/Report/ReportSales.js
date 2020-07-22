@@ -4,11 +4,16 @@ import './reportsales.css';
 import MenuBar from '../MenuBar/MenuBar';
 import NavTab from './NavTab';
 import { ReportContext } from '../../../contexts/ReportContext';
+import { numberWithCommas } from '../utils/commasWithNumbers';
 
 const ReportSales = () => {
-	const { chosenDept, setChosenDept, salesByDept, soldRecords } = useContext(
-		ReportContext
-	);
+	const {
+		chosenDept,
+		setChosenDept,
+		salesByDept,
+		soldRecords,
+		salesTotal,
+	} = useContext(ReportContext);
 
 	useEffect(() => {
 		salesByDept();
@@ -27,7 +32,13 @@ const ReportSales = () => {
 					<h2 className='pageTitle p-4'> Sales Report </h2>
 					<NavTab />
 
-					<section className='ml-4 p-2 form-group w-25'>
+					<h5>
+						{' '}
+						Total Sales: <del className='del'>N </del> &nbsp;
+						{numberWithCommas(salesTotal)}
+					</h5>
+
+					{/* <section className='ml-4 p-2 form-group w-25'>
 						<label htmlFor='dept_filt'> Filter by Dept: </label>
 						&nbsp;
 						<select
@@ -41,9 +52,9 @@ const ReportSales = () => {
 							<option value='Health and Fitness'> Health and Fitness</option>
 							<option value='Fashion'> Fashion</option>
 						</select>
-					</section>
+					</section> */}
 
-					<hr />
+					{/* <hr /> */}
 					{/* Title Bar */}
 					<section className='outer-grid report-sales-title bg-light'>
 						<div> Time </div>
@@ -82,12 +93,7 @@ const ReportSales = () => {
 					{/* End of Items Display Layout */}
 
 					<section className='pageBottom'>
-						<div className='h-center w-25'>
-							<h3>
-								{' '}
-								Total Sales: <del className='del'>N </del> 250, 000{' '}
-							</h3>
-						</div>
+						<div className='h-center w-25'></div>
 					</section>
 				</section>
 				{/*  ====== End of Main Content of Component ===== */}

@@ -173,7 +173,7 @@
       "consumable": "yes",
       "costPrice": "1700",
       "price": 1800,
-      "currentQty": 78,
+      "currentQty": 76,
       "productDept": "SuperMarket"
     },
     {
@@ -272,7 +272,7 @@
       "consumable": "No",
       "costPrice": "73000",
       "price": "92000",
-      "currentQty": "45",
+      "currentQty": 44,
       "productDept": "Gadgets",
       "id": "hIObjl3"
     },
@@ -282,7 +282,7 @@
       "consumable": "No",
       "costPrice": "80000",
       "price": "95000",
-      "currentQty": 60,
+      "currentQty": 59,
       "productDept": "Gadgets",
       "id": "vcJD1c3"
     },
@@ -488,12 +488,6 @@
   ],
   "sales": [
     {
-      "id": "800",
-      "products": [],
-      "amount": 0,
-      "date": "Wed, May 12, 2020"
-    },
-    {
       "products": [
         {
           "id": "102",
@@ -591,6 +585,37 @@
       "amount": 190000,
       "date": "Tue, Jul 21, 2020",
       "id": "YXTWNbG"
+    },
+    {
+      "products": [
+        {
+          "id": "hIObjl3",
+          "name": "Samsung Notebook 2016",
+          "category": "Laptops and Computers",
+          "price": 92000,
+          "qty": 1,
+          "productDept": "Gadgets"
+        },
+        {
+          "id": "vcJD1c3",
+          "name": "Hp Pavillon 15",
+          "category": "Laptops and Computers",
+          "price": 95000,
+          "qty": 1,
+          "productDept": "Gadgets"
+        },
+        {
+          "id": "108",
+          "name": "St Remy",
+          "category": "Food and Drinks",
+          "price": 3600,
+          "qty": 2,
+          "productDept": "SuperMarket"
+        }
+      ],
+      "amount": 190600,
+      "date": "Wed, Jul 22, 2020",
+      "id": "NTJ0g2X"
     }
   ]
 }

@@ -3,6 +3,7 @@ import MenuBar from '../MenuBar/MenuBar';
 import './salespitch.css';
 import { SalesPitchContext } from '../../../contexts/SalesPitchContext';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { numberWithCommas } from '../utils/commasWithNumbers';
 
 const SalesPitch = () => {
 	const {
@@ -103,12 +104,12 @@ const SalesPitch = () => {
 														/>
 													</div>
 													<div className='d-flex flex-row'>
-														<div className=' p-5'>
+														{/* <div className=' p-5'>
 															<button className='form-control btn-danger clearBtn rounded-0'>
 																{' '}
 																Clear{' '}
 															</button>
-														</div>
+														</div> */}
 														<div className=' p-5'>
 															<button
 																onClick={(e) => addToBasket(e, item, qty)}
@@ -147,7 +148,8 @@ const SalesPitch = () => {
 
 										<div>
 											<h5 className='Comic my-4 text-center'>
-												Total Price: <del className='del'>N </del> {basketPrice}{' '}
+												Total Price: <del className='del'>N </del>{' '}
+												{numberWithCommas(basketPrice)}{' '}
 											</h5>
 										</div>
 

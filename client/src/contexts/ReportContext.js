@@ -10,6 +10,8 @@ const ReportContextProvider = (props) => {
 
 	const [chosenDept, setChosenDept] = useState('nill');
 
+	const [salesTotal, setSalesTotal] = useState(0);
+
 	const inboundsByDept = async (dept) => {
 		try {
 			const res = await Axios.get(
@@ -29,7 +31,14 @@ const ReportContextProvider = (props) => {
 
 			const result = res.data;
 			setSoldRecords(res.data);
-			console.log(result);
+
+			// Logic to get the total amount in sales done.
+			let total = 0;
+			result.map((item) => {
+				total += item.amount;
+			});
+			// console.log(total);
+			setSalesTotal(total);
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -44,6 +53,7 @@ const ReportContextProvider = (props) => {
 				filteredProducts,
 				soldRecords,
 				chosenDept,
+				salesTotal,
 			}}>
 			{props.children}
 		</ReportContext.Provider>
